@@ -9,7 +9,7 @@
     <Grid>
         <TabControl TabStripPlacement="Bottom">
             <TabItem x:Name="Inicio" Header="Início" >
-                
+                <Frame Source="Inicio.xaml"></Frame>
             </TabItem>
             <TabItem Header="Favoritos">
                 <Frame Source="Favoritos.xaml"></Frame>
@@ -18,7 +18,7 @@
                 <Frame Source="Adocoes.xaml"></Frame>
             </TabItem>
             <TabItem Header="Loja">
-                <!--Frame Source="Loja.xaml"></-->
+                <Frame Source="Loja.xaml"></Frame>
             </TabItem>
             
             <TabItem Header="Perfil">
