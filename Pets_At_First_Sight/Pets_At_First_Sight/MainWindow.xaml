@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="667" Width="375">
     <Grid>
-        
+        <TabControl TabStripPlacement="Bottom">
+            <TabItem x:Name="Inicio" Header="Início" >
+                
+            </TabItem>
+            <TabItem Header="Favoritos">
+                <Frame Source="Favoritos.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Adoções">
+                <Frame Source="Adocoes.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Loja">
+                <!--Frame Source="Loja.xaml"></-->
+            </TabItem>
+            
+            <TabItem Header="Perfil">
+                <Frame Source="Perfil.xaml"></Frame>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
