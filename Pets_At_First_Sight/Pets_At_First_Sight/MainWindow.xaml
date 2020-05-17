@@ -8,24 +8,49 @@
         Title="MainWindow" Height="667" Width="375">
     <Grid>
         <TabControl TabStripPlacement="Bottom">
-            <TabItem x:Name="Inicio" Header="Início" >
-                <Frame Source="Inicio.xaml"></Frame>
-                <!-- Complicado colocar texto e icon mas não impossivel -->
-            </TabItem>
-            <TabItem Header="Favoritos">
-                <Frame Source="Favoritos.xaml"></Frame>
-            </TabItem>
-            <TabItem Header="Adoções">
-                <Frame Source="Adocoes.xaml"></Frame>
-            </TabItem>
-            <TabItem Header="Loja">
-
-                <Frame Source="Loja.xaml"></Frame>
+            <TabItem x:Name="Inicio" Height="40" Width="72.5" MaxWidth="73">
+                <TabItem.Header>
+                    <Image Source="Icons/home_tab.png" Height="35.41" Width="79.8"></Image>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Frame Source="Inicio.xaml"></Frame>
+                </TabItem.Content>
 
             </TabItem>
-            
-            <TabItem Header="Perfil">
-                <Frame Source="Perfil.xaml"></Frame>
+            <TabItem Height="40" Width="71" MaxWidth="72">
+                <TabItem.Header>
+                    <Image Source="Icons/favoritos_tab.png" Height="35.41" Width="79.8"></Image>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Frame Source="Favoritos.xaml"></Frame>
+                </TabItem.Content>
+                
+            </TabItem>
+            <TabItem Height="40" Width="71" MaxWidth="72">
+                <TabItem.Header>
+                    <Image Source="Icons/adocoes_tab.png" Height="35.41" Width="79.8"></Image>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Frame Source="Adocoes.xaml"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Height="40" Width="71" MaxWidth="72">
+                <TabItem.Header>
+                    <Image Source="Icons/loja_tab.png" Height="35.41" Width="55.5"></Image>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Frame Source="Loja.xaml"></Frame>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Height="40" Width="71" MaxWidth="72">
+                <TabItem.Header>
+                    <Image Source="Icons/perfil_tab.png" Height="35.41" Width="79.8"></Image>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Frame Source="Perfil.xaml"></Frame>
+                </TabItem.Content>
+                
             </TabItem>
         </TabControl>
     </Grid>
