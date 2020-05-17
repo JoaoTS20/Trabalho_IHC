@@ -172,10 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\adocoes_tab.png" />
-    <Resource Include="Icons\favoritos_tab.png" />
     <Resource Include="Icons\Home_tab.png" />
     <Resource Include="Icons\Loja_tab.png" />
     <Resource Include="Icons\perfil_tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\favoritos_tab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
