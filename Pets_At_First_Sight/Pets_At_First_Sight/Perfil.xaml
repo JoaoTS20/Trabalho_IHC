@@ -9,8 +9,7 @@
       Title="Perfil" 
       WindowHeight="667"
       WindowWidth="375"
-      Background="#FEFAE0"
-      Loaded="Window_Loaded">
+      Background="#FEFAE0">
     <!-- Main grid -->
     <Grid >
         <Grid.ColumnDefinitions>
@@ -18,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition  Height="200"/>
-            <RowDefinition  Height="150"/>
+            <RowDefinition Name="InfosRow" Height="70"/>
             <RowDefinition  Height="70" />
             <RowDefinition  Height="800" />
         </Grid.RowDefinitions>
@@ -37,13 +36,24 @@
             <Label Grid.Column="0" Grid.Row="1"  FontSize="15" HorizontalContentAlignment="Center" Content="M0dernCaty0ga" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="150"/>
         </Grid>
         <!-- Second grid, which includes "mais informações" and infos about the user -->
-        <Grid Grid.Column="0" Grid.Row="1">
+        <Grid Grid.Column="0" Grid.Row="1" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Name="rowtohide" Height="Auto"/>
+                <RowDefinition>
+                    <RowDefinition.Style>
+                        <Style TargetType="RowDefinition">
+                            <Setter Property="Height" Value="*" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsColumnVisible}" Value="False">
+                                    <Setter Property="Height" Value="0" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RowDefinition.Style>
+                </RowDefinition>
             </Grid.RowDefinitions>
             <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Style="{StaticResource ButtonStyle}" Click="More_info_button" />
             <StackPanel Height="0"  Visibility="Collapsed" Name="Infos" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">

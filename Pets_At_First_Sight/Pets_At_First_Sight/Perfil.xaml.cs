@@ -13,16 +13,27 @@ namespace Pets_At_First_Sight
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-           rowtohide.Height = new GridLength(0);
-        }
+        bool check = true;
 
         private void More_info_button(object sender, System.Windows.RoutedEventArgs e)
         {
-            Infos.Visibility = Visibility.Visible;
-            rowtohide.Height = new GridLength(80);
-            Infos.Height = 100;
+            if (check == true)
+            {
+                InfosRow.Height = new GridLength(150);
+                Infos.Height = 100;
+                Infos.Visibility = Visibility.Visible;
+                check = false;
+            } else
+            {
+                InfosRow.Height = new GridLength(70);
+                Infos.Height = 100;
+                Infos.Visibility = Visibility.Collapsed;
+                check = true;
+
+            }
+            
+           
+           
         }
     }
 }
