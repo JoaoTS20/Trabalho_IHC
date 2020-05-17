@@ -24,7 +24,7 @@
             </Grid>
 
         </ScrollViewer>
-        <Button Content="Filtros" Background="#0D2020" Foreground="#DCE3E7" Margin="274,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75">
+        <Button Content="Filtros" Background="#0D2020" Foreground="#DCE3E7" Margin="274,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Button_Click">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="LightBlue" />

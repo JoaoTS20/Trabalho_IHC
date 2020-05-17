@@ -67,7 +67,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InicioFiltros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Loja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LojaFiltros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,8 +96,14 @@
     <Compile Include="Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InicioFiltros.xaml.cs">
+      <DependentUpon>InicioFiltros.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Loja.xaml.cs">
       <DependentUpon>Loja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LojaFiltros.xaml.cs">
+      <DependentUpon>LojaFiltros.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace Pets_At_First_Sight
 {
     /// <summary>
-    /// Interaction logic for Loja.xaml
+    /// Interaction logic for LojaFiltros.xaml
     /// </summary>
-    public partial class Loja : Page
+    public partial class LojaFiltros : Page
     {
-        public Loja()
+        public LojaFiltros()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LojaFiltros lojaFiltros = new LojaFiltros();
-            NavigationService.Navigate(lojaFiltros);
         }
     }
 }
