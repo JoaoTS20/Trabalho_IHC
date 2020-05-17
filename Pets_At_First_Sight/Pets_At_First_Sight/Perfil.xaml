@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Pets_At_First_Sight"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="667" d:DesignWidth="375"
       Title="Perfil" 
       WindowHeight="667"
       WindowWidth="375"
@@ -21,7 +21,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Border Width="150" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
-            <Image Grid.Row="0" Source="Imagem1.jpg" Width="150" Height="150" />
+            <Image Grid.Row="0" Source="Imagens\ImgPerfil.jpg" Width="150" Height="150" />
         </Border>
         <Label Content="M0dernCaty0ga" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15"/>
         <Button Grid.Column="1" Grid.Row="1" Name="Mais_Info" Content="Mais Informações" Style="{StaticResource ButtonStyle}" />

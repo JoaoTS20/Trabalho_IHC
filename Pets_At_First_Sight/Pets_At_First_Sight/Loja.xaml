@@ -16,7 +16,7 @@
         <ScrollViewer Margin="0,120.728,0,49.6" >
             <Grid Width="375">
                 <Grid Margin="25,18,32,377.4" Background="#B7CAD4">
-                    <Image Grid.Row="0" Source="stock_dog1.jpg" Width="150" Height="150" Margin="10,0,155,0" />
+                    <Image Grid.Row="0" Source="Imagens\escova_cabelo.jpg" Width="150" Height="150" Margin="10,0,155,0" />
                 </Grid>
             </Grid>
 

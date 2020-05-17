@@ -137,17 +137,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="WIN_20200103_23_46_06_Pro.jpg" />
+    <Resource Include="Imagens\ffs.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagem1.jpg" />
+    <Resource Include="Imagens\ImgPerfil.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="stock_dog1.jpg" />
-    <Resource Include="stock_gato1.jpg" />
+    <Resource Include="Imagens\stock_dog1.jpg" />
+    <Resource Include="Imagens\stock_gato1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Coracaofull.png" />
+    <Resource Include="Icons\blackheart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\blackstar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\whiteheart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\whitestar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\escova_cabelo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\home.png" />
+    <Resource Include="Icons\perfil.png" />
+    <Resource Include="Icons\loja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\back-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
