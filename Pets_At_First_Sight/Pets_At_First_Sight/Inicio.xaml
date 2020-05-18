@@ -16,10 +16,21 @@
         <ScrollViewer Margin="0,120.728,0,49.6" >
             <Grid Width="375">
                 <Grid Margin="25,18,32,377.4" Background="#B7CAD4">
-                    <Image Source="Icons\whitestar.png" HorizontalAlignment="Left" Height="20.864" Margin="278.8,10.8,0,0" VerticalAlignment="Top" Width="24.2" RenderTransformOrigin="0.289,0.546"/>
-                    <Image Grid.Row="0" Source="Imagens\stock_dog1.jpg" Width="150" Height="150" Margin="10,0,155,0" />
-                    <Image Source="Icons\whiteheart.png" HorizontalAlignment="Left" Height="20.864" Margin="278.8,104.8,0,0" VerticalAlignment="Top" Width="24.2"/>
 
+                    <StackPanel HorizontalAlignment="Left" Height="30" Margin="265,05,0,0" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.289,0.546">
+                        <Button Background="#B7CAD4" BorderThickness="0" Click="Adopt">
+                            <Image Source="Icons\whitestar.png" HorizontalAlignment="Left" Width="24" />
+                        </Button>
+                    </StackPanel>
+
+
+                    <Image Grid.Row="0" Source="Imagens\stock_dog1.jpg" Width="150" Height="150" Margin="10,0,155,0" />
+
+                    <StackPanel HorizontalAlignment="Left" Height="30" Margin="265,125,0,0" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.289,0.546">
+                        <Button Background="#B7CAD4" BorderThickness="0" Click="Fave">
+                            <Image Source="Icons\whiteheart.png" HorizontalAlignment="Left" Width="24" />
+                        </Button>
+                    </StackPanel>
                 </Grid>
             </Grid>
 

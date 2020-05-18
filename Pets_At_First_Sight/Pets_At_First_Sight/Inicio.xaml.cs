@@ -30,5 +30,15 @@ namespace Pets_At_First_Sight
             InicioFiltros inicioFiltros = new InicioFiltros();
             NavigationService.Navigate(inicioFiltros);
         }
+
+        private void Adopt(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Fave(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
