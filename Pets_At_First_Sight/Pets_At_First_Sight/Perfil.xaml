@@ -79,7 +79,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Criar_Post" Content="Criar Novo Post" Style="{StaticResource ButtonStyle}" />
+            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Criar_Post"  Content="Criar Novo Post" Style="{StaticResource ButtonStyle}" Click="Criar_Post_Click" />
         </Grid>
         <!-- Fourth grid, which includes "Posts" -->
         <Grid Grid.Column="0" Grid.Row="3">

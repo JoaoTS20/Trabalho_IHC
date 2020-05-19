@@ -128,6 +128,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Produto.cs" />
     <Compile Include="VerFoto.xaml.cs">
       <DependentUpon>VerFoto.xaml</DependentUpon>
     </Compile>

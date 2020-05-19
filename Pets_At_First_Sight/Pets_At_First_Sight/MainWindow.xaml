@@ -8,7 +8,7 @@
         Title="MainWindow" Height="667" Width="375">
     <Grid>
         <TabControl TabStripPlacement="Bottom">
-            <TabItem x:Name="Inicio" Height="40" Width="72.5" MaxWidth="73">
+            <TabItem x:Name="Inicio" Height="40" Width="72.5" MaxWidth="73" >
                 <TabItem.Header>
                     <Image Source="Icons/home_tab.png" Height="35" Width="48"></Image>
                 </TabItem.Header>
@@ -17,7 +17,7 @@
                 </TabItem.Content>
 
             </TabItem>
-            <TabItem Height="40" Width="71" MaxWidth="72">
+            <TabItem x:Name="tabcontrol80" Height="40" Width="71" MaxWidth="72">
                 <TabItem.Header>
                     <Image Source="Icons/favoritos_tab.png" Height="35" Width="43"></Image>
                 </TabItem.Header>

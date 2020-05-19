@@ -36,18 +36,18 @@
 
             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Label Style="{StaticResource LabelPostSmall}">Espécie:</Label>
-                <ComboBox Style="{StaticResource ComboBoxPost}" >
+                <ComboBox x:Name="EspecieAnimal" Style="{StaticResource ComboBoxPost}" >
                     <ComboBoxItem IsSelected="True">Cão</ComboBoxItem>
                     <ComboBoxItem>Gato</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Label Style="{StaticResource LabelPostSmall}">Nome:</Label>
-                <TextBox Height="30" Width="100" Name="Nome" />
+                <TextBox Height="30" Width="100" Name="NomeAnimal" />
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Label Style="{StaticResource LabelPostSmall}">Idade:</Label>
-                <ComboBox Style="{StaticResource ComboBoxPost}" >
+                <ComboBox Name="IdadeAnimal" Style="{StaticResource ComboBoxPost}" >
                     <ComboBoxItem>Indefinida</ComboBoxItem>
                     <ComboBoxItem>menos de 1</ComboBoxItem>
                     <ComboBoxItem>1</ComboBoxItem>
@@ -60,7 +60,7 @@
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Label Style="{StaticResource LabelPostSmall}">Género:</Label>
-                <ComboBox Style="{StaticResource ComboBoxPost}" >
+                <ComboBox Name="GeneroAnimal" Style="{StaticResource ComboBoxPost}" >
                     <ComboBoxItem>Masculino</ComboBoxItem>
                     <ComboBoxItem>Feminino</ComboBoxItem>
                 </ComboBox>
@@ -81,7 +81,7 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Style="{StaticResource LabelPostBig}">Tipo doador:</Label>
-                <ComboBox Style="{StaticResource ComboBoxPost}" >
+                <ComboBox Name="TipoDoador"  Style="{StaticResource ComboBoxPost}" >
                     <ComboBoxItem IsSelected="True">Abrigo</ComboBoxItem>
                     <ComboBoxItem>Particular</ComboBoxItem>
                 </ComboBox>
@@ -92,14 +92,14 @@
             </StackPanel>
             <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Style="{StaticResource LabelPostBig}">Vacinas:</Label>
-                <ComboBox Style="{StaticResource ComboBoxPost}" >
+                <ComboBox Name="Vacinas"  Style="{StaticResource ComboBoxPost}" >
                     <ComboBoxItem>Sim</ComboBoxItem>
                     <ComboBoxItem IsSelected="True">Não</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Style="{StaticResource LabelPostBig}">Chip:</Label>
-                <ComboBox Style="{StaticResource ComboBoxPost}" >
+                <ComboBox Name="Chip"  Style="{StaticResource ComboBoxPost}" >
                     <ComboBoxItem>Sim</ComboBoxItem>
                     <ComboBoxItem IsSelected="True">Não</ComboBoxItem>
                 </ComboBox>
@@ -115,9 +115,9 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Border Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Height="75" Width="300" BorderThickness="1"  BorderBrush="#FF000000">
-                <TextBox Height="75" Width="300" Name="Post" AcceptsReturn="True" TextWrapping="Wrap" Text="Insira aqui o seu texto" GotFocus="TextBox_GotFocus" TextAlignment="Center" VerticalContentAlignment="Center"/>
+                <TextBox Height="75" Width="300" Name="PostTexto" AcceptsReturn="True" TextWrapping="Wrap" Text="Insira aqui o seu texto" GotFocus="TextBox_GotFocus" TextAlignment="Center" VerticalContentAlignment="Center"/>
             </Border>
-            <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyle}">Submeter Post</Button>
+            <Button Name="SubmeterPost" Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyle}" Click="ButtonSubmeter_Click">Submeter Post</Button>
         </Grid>
 
     </Grid>

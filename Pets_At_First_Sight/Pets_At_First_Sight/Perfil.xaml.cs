@@ -35,5 +35,11 @@ namespace Pets_At_First_Sight
            
            
         }
+
+        private void Criar_Post_Click(object sender, RoutedEventArgs e)
+        {
+            Page1 cursosPage = new Page1();
+            this.NavigationService.Navigate(cursosPage);
+        }
     }
 }

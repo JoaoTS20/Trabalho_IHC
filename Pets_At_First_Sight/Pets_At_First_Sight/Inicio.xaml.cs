@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +25,12 @@ namespace Pets_At_First_Sight
     {
         public Inicio()
         {
-
+            
             InitializeComponent();
-            Dados_Originais();
+            
+            //Dados_Originais();
+            Posts.ItemsSource = Container.animais;
+            //refresh();
 
         }
 
@@ -89,5 +93,7 @@ namespace Pets_At_First_Sight
         {
 
         }
+
+        private void refresh() { new Inicio(); }
     }
 }
