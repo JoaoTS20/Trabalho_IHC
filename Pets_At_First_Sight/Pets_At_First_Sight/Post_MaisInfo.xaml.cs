@@ -23,6 +23,7 @@ namespace Pets_At_First_Sight
         public Post_MaisInfo()
         {
             InitializeComponent();
+          
         }
     }
 

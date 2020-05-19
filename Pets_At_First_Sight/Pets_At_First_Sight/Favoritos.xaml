@@ -18,7 +18,7 @@
                     <Label Content="Grande Triste" HorizontalAlignment="Left" Height="25.2" Margin="137.4,49.8,0,0" VerticalAlignment="Top" Width="157.2"/>
                     <Label Content="5 anos" HorizontalAlignment="Left" Height="24.8" Margin="137.4,75,0,0" VerticalAlignment="Top" Width="160.8"/>
                     <Label Content="Mas." HorizontalAlignment="Left" Height="24.4" Margin="137.4,104.8,0,0" VerticalAlignment="Top" Width="82.2"/>
-                    <Image Source="Icons\blackheart.png" HorizontalAlignment="Left" Height="20.864" Margin="278.8,104.8,0,0" VerticalAlignment="Top" Width="24.2"/>
+                    
                 </Grid>
                 <Grid Margin="25,190.272,32,225.128" Background="#B7CAD4">
                     <Image Grid.Row="0" Source="Imagens\stock_gato1.jpg" Margin="10,22.8,209.6,19.605" />

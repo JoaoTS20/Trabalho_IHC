@@ -57,7 +57,7 @@
             </Grid.RowDefinitions>
             <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Style="{StaticResource ButtonStyle}" Click="More_info_button" />
             <StackPanel Height="0"  Visibility="Collapsed" Name="Infos" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-                <Label HorizontalContentAlignment="Center">Nome: Anthony Pereira</Label>
+                <Label x:Name="nome_para_ver_" HorizontalContentAlignment="Center">Nome: Anthony Pereira</Label>
                 <Label HorizontalContentAlignment="Center">Email: anthonypereira@ua.pt </Label>
                 <Label HorizontalContentAlignment="Center">Localidade: Ovar</Label>
             </StackPanel>

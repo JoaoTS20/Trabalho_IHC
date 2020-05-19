@@ -18,11 +18,19 @@ namespace Pets_At_First_Sight
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    static class Container
+    {
+        public static List<ANIMAL> animais = new List<ANIMAL>();
+    }
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+
+           
+
         }
     }
 }

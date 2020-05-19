@@ -86,6 +86,7 @@
     <Compile Include="Adocoes.xaml.cs">
       <DependentUpon>Adocoes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ANIMAL.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
