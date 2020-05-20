@@ -1,5 +1,6 @@
 ﻿using System.Windows.Controls;
 using System.Windows;
+using System.Collections.Generic;
 
 namespace Pets_At_First_Sight
 {
@@ -11,6 +12,8 @@ namespace Pets_At_First_Sight
         public Perfil()
         {
             InitializeComponent();
+            List<ANIMAL> op = MeusPosts();
+            My_Posts.ItemsSource = op;
         }
 
         bool check = true;
@@ -40,6 +43,19 @@ namespace Pets_At_First_Sight
         {
             Page1 cursosPage = new Page1();
             this.NavigationService.Navigate(cursosPage);
+        }
+
+
+        private List<ANIMAL> MeusPosts() {
+            List<ANIMAL> my = new List<ANIMAL>();
+            foreach (ANIMAL m in Container.animais)
+            {
+                if (m.User_Name.Equals(username.Content.ToString()))
+                {
+                    my.Add(m);
+                }
+            }
+            return my;
         }
     }
 }

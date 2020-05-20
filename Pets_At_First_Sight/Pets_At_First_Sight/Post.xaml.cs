@@ -57,6 +57,7 @@ namespace Pets_At_First_Sight
                 User_Name = _NomeDoador
             };
             Container.animais.Add(N1);
+            new Inicio(); //MILAGRE
             Perfil cursosPage = new Perfil();
             this.NavigationService.Navigate(cursosPage);
                     }

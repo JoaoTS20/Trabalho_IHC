@@ -23,6 +23,8 @@ namespace Pets_At_First_Sight
         public Favoritos()
         {
             InitializeComponent();
+
+            My_Favoritos.ItemsSource = Container.favoritos;
         }
     }
 }

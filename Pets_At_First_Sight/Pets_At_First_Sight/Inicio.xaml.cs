@@ -30,6 +30,8 @@ namespace Pets_At_First_Sight
             
             //Dados_Originais();
             Posts.ItemsSource = Container.animais;
+            CollectionViewSource.GetDefaultView(Container.animais).Refresh();
+
             //refresh();
 
         }
@@ -76,7 +78,8 @@ namespace Pets_At_First_Sight
             Container.animais.Add(new ANIMAL() { Nome = "Stock#1", Idade = "8 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "João" });
             Posts.ItemsSource = Container.animais;
         }
-
+        bool taFav = false;
+        bool taDoa = false;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -86,14 +89,32 @@ namespace Pets_At_First_Sight
 
         private void Adopt(object sender, RoutedEventArgs e)
         {
-
+            //mesma coisa
         }
-
         private void Fave(object sender, RoutedEventArgs e)
         {
+            if (!taFav) //teste
+            {
+                //Buscar labels e tal
+                String s = "Imagens\\";
+                Container.favoritos.Add(new ANIMAL() { Nome = "Cãoasdasd", Idade = "5 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Filipa" });
+                new Favoritos();
+                //Mudar imagem source
+                taFav = true;
+            }
+
+            else if(taFav)
+            {
+                Container.favoritos.Clear(); //testar
+                new Favoritos();
+                //Mudar imagem source
+                taFav = false;
+
+            }
+        }
+
 
         }
 
-        private void refresh() { new Inicio(); }
     }
-}
+

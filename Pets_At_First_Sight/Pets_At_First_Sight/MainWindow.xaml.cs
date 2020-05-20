@@ -24,6 +24,7 @@ namespace Pets_At_First_Sight
         public static List<ANIMAL> animais = new List<ANIMAL>();
         public static List<ANIMAL> favoritos = new List<ANIMAL>();
         public static List<ANIMAL> doacoes = new List<ANIMAL>();
+        
     }
     public partial class MainWindow : Window
     {
@@ -37,14 +38,11 @@ namespace Pets_At_First_Sight
             Container.animais.Add(new ANIMAL() { Nome = "Piu", Idade = "5 anos", Genero = "Feminino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Anthony Pereira" });
             Container.animais.Add(new ANIMAL() { Nome = "No Name", Idade = "7 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Alexandra" });
             Container.animais.Add(new ANIMAL() { Nome = "Stock#1", Idade = "8 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "João" });
-
+            
 
 
         }
-        private void GoInicio(object sender, RoutedEventArgs e)
-        {
-            new Inicio();
-            //NavigationService.Navigate(ii);
-        }
+
+
     }
 }
