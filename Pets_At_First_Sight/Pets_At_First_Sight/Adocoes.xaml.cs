@@ -27,9 +27,9 @@ namespace Pets_At_First_Sight
             CollectionViewSource.GetDefaultView(Container.adocoes).Refresh(); //faltava esta linha
         }
 
-        Boolean flagAdo = true;
+        
 
-        private void Adopt(object sender, RoutedEventArgs e)
+        private void abandonar(object sender, RoutedEventArgs e)
         {
             Button i = (Button)sender;
             Image b = (Image)i.Content;
@@ -46,18 +46,13 @@ namespace Pets_At_First_Sight
             String Idades = y.Content.ToString();
             String Raca = r.Content.ToString();
             String genero = g.Content.ToString();
-            if (!flagAdo)
+            if (true)
             {
                 foreach (ANIMAL zzs in Container.animais)
                 {
                     if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
                     {
                         Container.adocoes.Remove(zzs);
-
-                        b.BeginInit();
-                        b.Source = new BitmapImage(new Uri("Icons\\whitestar.png", UriKind.RelativeOrAbsolute));
-                        b.EndInit();
-                        flagAdo = true;
                         new Adocoes();
                         break;
 
