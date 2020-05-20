@@ -23,6 +23,50 @@ namespace Pets_At_First_Sight
         public Adocoes()
         {
             InitializeComponent();
+            My_Adocoes.ItemsSource = Container.adocoes;
+            CollectionViewSource.GetDefaultView(Container.adocoes).Refresh(); //faltava esta linha
+        }
+
+        Boolean flagAdo = true;
+
+        private void Adopt(object sender, RoutedEventArgs e)
+        {
+            Button i = (Button)sender;
+            Image b = (Image)i.Content;
+            StackPanel s = (StackPanel)i.Parent;
+            Grid gr = (Grid)s.Parent;
+            //Image u = (Image)gr.Children[1];
+            //String x = u.Source.ToString(); //Não dá o texto de forma correta
+            Label r = (Label)gr.Children[1];
+            Label n = (Label)gr.Children[2];
+            Label y = (Label)gr.Children[3];
+            Label g = (Label)gr.Children[4];
+
+            String Nome_Bicho = n.Content.ToString();
+            String Idades = y.Content.ToString();
+            String Raca = r.Content.ToString();
+            String genero = g.Content.ToString();
+            if (!flagAdo)
+            {
+                foreach (ANIMAL zzs in Container.animais)
+                {
+                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    {
+                        Container.adocoes.Remove(zzs);
+
+                        b.BeginInit();
+                        b.Source = new BitmapImage(new Uri("Icons\\whitestar.png", UriKind.RelativeOrAbsolute));
+                        b.EndInit();
+                        flagAdo = true;
+                        new Adocoes();
+                        break;
+
+                    }
+
+                }
+            }
+
+
         }
     }
 }

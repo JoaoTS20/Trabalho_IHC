@@ -23,7 +23,7 @@ namespace Pets_At_First_Sight
     {
         public static List<ANIMAL> animais = new List<ANIMAL>();
         public static List<ANIMAL> favoritos = new List<ANIMAL>();
-        public static List<ANIMAL> doacoes = new List<ANIMAL>();
+        public static List<ANIMAL> adocoes = new List<ANIMAL>();
         
     }
     public partial class MainWindow : Window
