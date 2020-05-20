@@ -9,7 +9,7 @@
       Title="Favoritos" Height="667" Width="375" Background="#DCE3E7">
 
     <Grid>
-        <Label x:Name="Titulo_Favoritos" Content="        Favoritos" Margin="101.293,40.031,103.869,596.272" FontFamily="Arial" FontSize="18" FontWeight="Bold" Width="169.837" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="Titulo_Favoritos" Content=" Favoritos" Margin="122,40,120,587" FontFamily="Arial" FontSize="25" FontWeight="Bold" VerticalAlignment="Center" Height="40"/>
         <ScrollViewer Margin="0,120.728,0,49.6" >
             <Grid Width="375">
                 <ItemsControl Name="My_Favoritos">
