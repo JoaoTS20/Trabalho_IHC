@@ -13,30 +13,34 @@
     <!-- Main grid here -->
     <Grid>
         <Grid Background="#B7CAD4" HorizontalAlignment="Right" Width="375">
-            <Image Source="Icons\blackheart.png" HorizontalAlignment="Left" Height="46" VerticalAlignment="Bottom" Width="39" Margin="224,0,0,590" RenderTransformOrigin="2.68,1.429"/>
-            <Label Width="100" MaxWidth="300" Height="23" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Adicionar  aos"></Label>
-            <Label Width="100" MaxWidth="300" Height="24" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="favoritos"></Label>
-            <Image Source="Icons\blackstar.png" HorizontalAlignment="Right" Height="44" VerticalAlignment="Bottom" Width="52" Margin="0,0,30,588" RenderTransformOrigin="5.12,1.381"/>
-            <Label Width="100" MaxWidth="300" Height="23" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Estou"></Label>
-            <Label Width="100" MaxWidth="300" Height="24" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="interessado/a"></Label>
-            <Label Style="{StaticResource LabelPostSmall}">Espécie:</Label>
-            <Label Style="{StaticResource LabelPostSmall}">Cão</Label>
-            <Label Style="{StaticResource LabelPostSmall}">Nome:</Label>
-            <Label Style="{StaticResource LabelPostSmall}">Anabela</Label>
-            <Label Style="{StaticResource LabelPostSmall}">Idade:</Label>
-            <Label Style="{StaticResource LabelPostSmall}">20 meses</Label>
-            <Label Style="{StaticResource LabelPostSmall}">Género:</Label>
-            <Label Style="{StaticResource LabelPostSmall}">Feminino</Label>
-            <Image Stretch="Fill"  Source="Imagens\stock_dog1.jpg" x:Name="InfosImage" Height="130" Width="130" HorizontalAlignment="Left" Margin="23,94,0,443"/>
-            <Label Style="{StaticResource LabelPostBig}">Tipo doador:</Label>
-            <Label Style="{StaticResource LabelPostSmall}">Abrigo</Label>
-            <Label Style="{StaticResource LabelPostBig}">Nome doador:</Label>
-            <Label Style="{StaticResource LabelPostSmall}">APADO Ovar</Label>
-            <Label Style="{StaticResource LabelPostBig}">Vacinas:</Label>
-            <Label Style="{StaticResource LabelPostSmall}" Margin="283,254,32,383" RenderTransformOrigin="1.55,0.5">Não</Label>
-            <Label Style="{StaticResource LabelPostSmall}" Content="Não" Margin="283,284,32,353"/>
-            <Label Style="{StaticResource LabelPostBig}" HorizontalAlignment="Left" Margin="178,284,0,353" Content="Chip:"/>
-            <Border Height="75" Width="300" BorderThickness="1"  BorderBrush="#FF000000" HorizontalAlignment="Right" Margin="0,474,37,118">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="224*"/>
+                <ColumnDefinition Width="151*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="Icons\blackheart.png" HorizontalAlignment="Left" Height="46" VerticalAlignment="Bottom" Width="39" Margin="129,0,0,596" RenderTransformOrigin="2.68,1.429"/>
+            <Label FontSize="18" Width="130" MaxWidth="300" Height="31" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Adicionar  aos" Margin="81,0,13,565" VerticalAlignment="Bottom" RenderTransformOrigin="-0.86,-1.217"/>
+            <Label FontSize="18" Width="100" MaxWidth="300" Height="31" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="favoritos" Margin="98,0,26,540" VerticalAlignment="Bottom"/>
+            <Image Source="Icons\blackstar.png" HorizontalAlignment="Right" Height="44" VerticalAlignment="Bottom" Width="44" Margin="0,0,93,594" RenderTransformOrigin="5.12,1.381" Grid.Column="1"/>
+            <Label FontSize="18" Width="100" MaxWidth="300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Estou" Margin="214,70,61,562" Grid.ColumnSpan="2"/>
+            <Label FontSize="18" Width="100" MaxWidth="300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="interessado/a" Margin="215,95,60,538" Grid.ColumnSpan="2"/>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="145,0,0,446" Grid.ColumnSpan="2" Width="88" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="41">Espécie:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="36,179,26,442" Width="Auto" Height="Auto" Grid.Column="1">Cão</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="145,145,150,487" Height="Auto" Grid.ColumnSpan="2" Width="Auto">Nome:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="36,0,0,485" RenderTransformOrigin="0.533,2.4" HorizontalAlignment="Left" Width="106" Height="37" VerticalAlignment="Bottom" Grid.Column="1">Anabela</Label>
+            <Label Style="{StaticResource LabelPostSmall}" HorizontalAlignment="Left" Margin="145,218,0,413" Height="Auto" Width="69">Idade:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="35,0,0,414" VerticalAlignment="Bottom" Width="105" Grid.Column="1" HorizontalAlignment="Left" Height="36">20 meses</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="145,258,150,376" Grid.ColumnSpan="2" Width="Auto" Height="Auto">Género:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" HorizontalAlignment="Left" Margin="33,258,-4,365" Width="122" Height="Auto" Grid.Column="1">Feminino</Label>
+            <Image Stretch="Fill"  Source="Imagens\stock_dog1.jpg" x:Name="InfosImage" Height="130" Width="130" HorizontalAlignment="Left" Margin="15,144,0,393"/>
+            <Label Style="{StaticResource LabelPostBig}" HorizontalAlignment="Left" Margin="101,296,0,333" Height="Auto" Width="122">Tipo doador:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="32,0,0,333" Width="80" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1">Abrigo</Label>
+            <Label Style="{StaticResource LabelPostBig}" Margin="68,0,0,291" HorizontalAlignment="Left" Width="156" VerticalAlignment="Bottom" Height="40">Nome doador:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="32,0,-16,295" Width="135" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="34" Grid.Column="1">APADO Ovar</Label>
+            <Label Style="{StaticResource LabelPostBig}" Margin="125,376,150,258" Grid.ColumnSpan="2" Height="Auto">Vacinas:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="30,376,61,252" RenderTransformOrigin="1.55,0.5" Height="Auto" Grid.Column="1">Não</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Content="Não" Margin="29,414,62,218" Grid.Column="1" Height="Auto"/>
+            <Label Style="{StaticResource LabelPostBig}" HorizontalAlignment="Left" Margin="123,0,0,216" Content="Chip:" VerticalAlignment="Bottom" Height="37"/>
+            <Border Height="75" Width="300" BorderThickness="1"  BorderBrush="#FF000000" HorizontalAlignment="Right" Margin="0,515,37,77" Grid.ColumnSpan="2">
                 <TextBox IsReadOnly="True" Height="75" Width="300" Name="Post" AcceptsReturn="True" TextWrapping="Wrap" Text="Anabela é uma cadela vadia que foi recolhida por um dos nossos voluntários na estrada nacional. É surda, mas muito doce, e por isso procura um dono que lhe possa dar essa atenção." TextAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="-1" VerticalAlignment="Top"/>
             </Border>
         </Grid>
