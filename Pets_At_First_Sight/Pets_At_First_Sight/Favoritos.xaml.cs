@@ -27,8 +27,40 @@ namespace Pets_At_First_Sight
             My_Favoritos.ItemsSource = Container.favoritos;
             CollectionViewSource.GetDefaultView(Container.favoritos).Refresh(); //faltava esta linha
         }
+        private void nãogosto(object sender, RoutedEventArgs e)
+        {
+            Button i = (Button)sender;
+            Image b = (Image)i.Content;
+            StackPanel s = (StackPanel)i.Parent;
+            Grid gr = (Grid)s.Parent;
+            //Image u = (Image)gr.Children[1];
+            //String x = u.Source.ToString(); //Não dá o texto de forma correta
+            Label r = (Label)gr.Children[1];
+            Label n = (Label)gr.Children[2];
+            Label y = (Label)gr.Children[3];
+            Label g = (Label)gr.Children[4];
+
+            String Nome_Bicho = n.Content.ToString();
+            String Idades = y.Content.ToString();
+            String Raca = r.Content.ToString();
+            String genero = g.Content.ToString();
+            if (true)
+            {
+                foreach (ANIMAL zzs in Container.animais)
+                {
+                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    {
+                        Container.favoritos.Remove(zzs);
+                        new Favoritos();
+                        break;
+
+                    }
+
+                }
+            }
 
 
 
+        }
     }
 }
