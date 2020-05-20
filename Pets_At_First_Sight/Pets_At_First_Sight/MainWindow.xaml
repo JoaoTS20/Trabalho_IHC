@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="667" Width="375">
     <Grid>
-        <TabControl x:Name="tabCo"  TabStripPlacement="Bottom">
+        <TabControl x:Name="tabCo"   TabStripPlacement="Bottom">
             <TabItem x:Name="Inicio" Height="40" Width="72.5" MaxWidth="73" >
                 <TabItem.Header>
                     <Image Source="Icons/home_tab.png" Height="35" Width="48"></Image>

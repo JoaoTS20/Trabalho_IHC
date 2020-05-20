@@ -120,11 +120,13 @@ namespace Pets_At_First_Sight
                     if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
                     {
                         Container.favoritos.Add(zzs);
-                        new Favoritos();
+                        
                         b.BeginInit();
                         b.Source = new BitmapImage(new Uri("Icons\\blackheart.png", UriKind.RelativeOrAbsolute));
                         b.EndInit();
                         flagFav = false;
+                        new Favoritos();
+                        //new Inicio();
                         break;
 
                     }
@@ -139,11 +141,12 @@ namespace Pets_At_First_Sight
                     if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
                     {
                         Container.favoritos.Remove(zzs);
-                        new Favoritos();
+                        
                         b.BeginInit();
                         b.Source = new BitmapImage(new Uri("Icons\\whiteheart.png", UriKind.RelativeOrAbsolute));
                         b.EndInit();
                         flagFav = true;
+                        new Favoritos();
                         break;
 
                     }
@@ -151,7 +154,7 @@ namespace Pets_At_First_Sight
                 }
             }
 
-
+            
         }
     }
 

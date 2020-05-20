@@ -25,6 +25,7 @@ namespace Pets_At_First_Sight
             InitializeComponent();
 
             My_Favoritos.ItemsSource = Container.favoritos;
+            CollectionViewSource.GetDefaultView(Container.favoritos).Refresh(); //faltava esta linha
         }
     }
 }
