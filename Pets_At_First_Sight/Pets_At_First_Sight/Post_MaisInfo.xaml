@@ -14,7 +14,7 @@
     <ItemsControl Name="Post_Template" >
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <Grid Background="#B7CAD4" HorizontalAlignment="Right" Width="375">
+    <Grid Background="#B7CAD4" HorizontalAlignment="Right" Width="375">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="224*"/>
             <ColumnDefinition Width="151*"/>
@@ -42,7 +42,7 @@
         <Label Style="{StaticResource LabelPostSmall}" Margin="30,376,61,252" RenderTransformOrigin="1.55,0.5" Height="Auto" Grid.Column="1" Content="{Binding Vacinas}"/>
         <Label Style="{StaticResource LabelPostBig}" HorizontalAlignment="Left" Margin="123,0,0,216" Content="Chip:" VerticalAlignment="Bottom" Height="37"/>
         <Label Style="{StaticResource LabelPostSmall}" Margin="36,409,55,223" Height="Auto" Content="{Binding Chip}" Grid.Column="1"/>
-        <Border Height="75" Width="300" BorderThickness="1"  BorderBrush="#FF000000" HorizontalAlignment="Right" Margin="0,515,37,77">
+        <Border Height="75" BorderThickness="1"  BorderBrush="#FF000000" Margin="37,0,38,77" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
             <TextBox IsReadOnly="True" Height="75" Width="300" Name="Post" AcceptsReturn="True" TextWrapping="Wrap" Text="Anabela é uma cadela vadia que foi recolhida por um dos nossos voluntários na estrada nacional. É surda, mas muito doce, e por isso procura um dono que lhe possa dar essa atenção." TextAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="-1" VerticalAlignment="Top"/>
         </Border>
         <Button Click="Button_Click" Height="44" Background="Transparent" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,161,613" Width="48" VerticalAlignment="Bottom">            <StackPanel>                <Image Source="Icons\setita.png" Height="38" RenderTransformOrigin="0.035,-0.149" />            </StackPanel>        </Button>

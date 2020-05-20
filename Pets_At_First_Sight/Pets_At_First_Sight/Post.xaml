@@ -34,20 +34,20 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Width="187" Grid.Column="1">
-                <Label Style="{StaticResource LabelPostSmall}" Margin="2,7,2,0" Width="79" Height="Auto" Content="Espécie:"/>
-                <ComboBox x:Name="EspecieAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,15,2,-1" Width="99" >
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Width="187" Grid.Column="1" Margin="0,0,0,21" Grid.RowSpan="2">
+                <Label Style="{StaticResource LabelPostSmall}" Margin="2,7,2,-142" Width="79" Height="Auto" Content="Espécie:"/>
+                <ComboBox x:Name="EspecieAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,15,2,21" Width="99" Height="Auto" >
                     <ComboBoxItem IsSelected="True" Content="Cão"/>
                     <ComboBoxItem Content="Gato"/>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,32" Grid.RowSpan="2" Width="187">
-                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,14,2,10" Width="81">Nome:</Label>
-                <TextBox Height="30" Width="99" x:Name="NomeAnimal" Margin="0,14" />
+            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,13" Grid.RowSpan="3" Width="187">
+                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,14,2,-136" Width="81">Nome:</Label>
+                <TextBox Width="99" x:Name="NomeAnimal" Margin="0,14,0,78" />
             </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,8,2,4" Width="79" Content="Idade:"/>
-                <ComboBox x:Name="IdadeAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,8,2,7" Width="99" >
+            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,-15" Grid.RowSpan="2">
+                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,8,2,-137" Width="79" Content="Idade:"/>
+                <ComboBox x:Name="IdadeAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,8,2,60" Width="99" Height="Auto" >
                     <ComboBoxItem Content="Indefinida"/>
                     <ComboBoxItem Content="menos de 1"/>
                     <ComboBoxItem Content="1"/>
@@ -58,9 +58,9 @@
                     <ComboBoxItem Content="5+"/>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,8,2,3" Width="79">Género:</Label>
-                <ComboBox Name="GeneroAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,8,2,7" Width="99" >
+            <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,-34">
+                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,8,2,-74" Width="79">Género:</Label>
+                <ComboBox Name="GeneroAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,8,2,39" Width="99" Height="Auto" >
                     <ComboBoxItem>Masculino</ComboBoxItem>
                     <ComboBoxItem>Feminino</ComboBoxItem>
                 </ComboBox>
@@ -80,25 +80,25 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Width="274">
-                <Label Style="{StaticResource LabelPostBig}" Height="Auto" Margin="2,13,2,6" Width="165">Tipo doador:</Label>
-                <ComboBox Name="TipoDoador"  Style="{StaticResource ComboBoxPost}" Margin="2,13" Width="100" >
+                <Label Style="{StaticResource LabelPostBig}" Height="Auto" Margin="2,13,2,-96" Width="165">Tipo doador:</Label>
+                <ComboBox Name="TipoDoador"  Style="{StaticResource ComboBoxPost}" Margin="2,13,2,10" Width="100" Height="Auto" >
                     <ComboBoxItem IsSelected="True">Abrigo</ComboBoxItem>
                     <ComboBoxItem>Particular</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="-5,0,3,0">
-                <Label Style="{StaticResource LabelPostBig}" Margin="2,13,2,10" Width="275" Height="Auto">Nome doador:</Label>
+                <Label Style="{StaticResource LabelPostBig}" Margin="2,13,2,-15" Width="275" Height="Auto">Nome doador:</Label>
                 <TextBox Height="30" Width="100" Name="NomeDoador" Margin="0,13" />
             </StackPanel>
             <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Width="208">
-                <Label Style="{StaticResource LabelPostBig}" Margin="2,12,2,0" Width="99" Height="Auto">Vacinas:</Label>
+                <Label Style="{StaticResource LabelPostBig}" Margin="2,12,2,-13" Width="99" Height="Auto">Vacinas:</Label>
                 <ComboBox Name="Vacinas"  Style="{StaticResource ComboBoxPost}" Margin="2,12,2,13" Width="100" >
                     <ComboBoxItem>Sim</ComboBoxItem>
                     <ComboBoxItem IsSelected="True">Não</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Label Style="{StaticResource LabelPostBig}" Height="Auto" Margin="2,12,2,5">Chip:</Label>
+                <Label Style="{StaticResource LabelPostBig}" Height="Auto" Margin="2,12,2,-17">Chip:</Label>
                 <ComboBox Name="Chip"  Style="{StaticResource ComboBoxPost}" >
                     <ComboBoxItem>Sim</ComboBoxItem>
                     <ComboBoxItem IsSelected="True">Não</ComboBoxItem>
