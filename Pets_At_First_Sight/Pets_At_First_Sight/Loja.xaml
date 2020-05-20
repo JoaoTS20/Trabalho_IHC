@@ -57,6 +57,12 @@
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Style.Resources>
                 </Style>
             </Button.Style>
         </Button>
