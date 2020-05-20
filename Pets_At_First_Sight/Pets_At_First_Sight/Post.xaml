@@ -34,16 +34,16 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}">Espécie:</Label>
-                <ComboBox x:Name="EspecieAnimal" Style="{StaticResource ComboBoxPost}" >
-                    <ComboBoxItem IsSelected="True">Cão</ComboBoxItem>
-                    <ComboBoxItem>Gato</ComboBoxItem>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Width="187" Grid.Column="1">
+                <Label Style="{StaticResource LabelPostSmall}" Margin="2,7,2,0" Width="78" Height="Auto" Content="Espécie:"/>
+                <ComboBox x:Name="EspecieAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,15,2,-1" >
+                    <ComboBoxItem IsSelected="True" Content="Cão"/>
+                    <ComboBoxItem Content="Gato"/>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}">Nome:</Label>
-                <TextBox Height="30" Width="100" Name="NomeAnimal" />
+            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,32" Grid.RowSpan="2" Width="187">
+                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,14,2,10" Width="82">Nome:</Label>
+                <TextBox Height="30" Width="98" x:Name="NomeAnimal" Margin="0,14" />
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Label Style="{StaticResource LabelPostSmall}">Idade:</Label>

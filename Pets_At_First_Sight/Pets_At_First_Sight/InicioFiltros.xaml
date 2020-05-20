@@ -66,7 +66,7 @@
             </StackPanel>
 
             <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Width="168" Margin="0,0,0,53" Grid.RowSpan="2">
-                <Label Style="{StaticResource LabelPostBig}" Margin="2,22,2,0" Width="125" FontSize="16" Height="Auto" Content="Doador:"/>
+                <Label Style="{StaticResource LabelPostBig}" Margin="2,22,2,0" Width="66" FontSize="16" Height="Auto" Content="Doador:"/>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Width="162" Margin="0,0,0,53" Grid.RowSpan="2">
                 <ComboBox Style="{StaticResource ComboBoxPost}" Margin="2,22,2,23" Width="113">

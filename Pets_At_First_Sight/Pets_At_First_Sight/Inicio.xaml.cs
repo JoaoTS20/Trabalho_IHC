@@ -213,6 +213,32 @@ namespace Pets_At_First_Sight
 
             
         }
+
+        private void ViewPost(object sender, MouseButtonEventArgs e)
+        {
+
+            Grid gr = (Grid)sender;
+            Image u = (Image)gr.Children[1];
+            Label r = (Label)gr.Children[2];
+            Label n = (Label)gr.Children[3];
+            Label y = (Label)gr.Children[4];
+            Label g = (Label)gr.Children[5];
+
+            String Nome_Animal = n.Content.ToString();
+            String Idades = y.Content.ToString();
+            String Raca = r.Content.ToString();
+            String genero = g.Content.ToString();
+
+            foreach (ANIMAL animal in Container.animais)
+            {
+                if (animal.Nome == Nome_Animal && animal.Idade == Idades && animal.Raca == Raca && animal.Genero == genero)
+                {
+                    Container.animal_selecionado.Add(animal);
+                }
+            }
+            Post_MaisInfo post_MaisInfo = new Post_MaisInfo();
+            NavigationService.Navigate(post_MaisInfo);
+        }
     }
 
     }

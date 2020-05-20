@@ -24,6 +24,7 @@ namespace Pets_At_First_Sight
         public static List<ANIMAL> animais = new List<ANIMAL>();
         public static List<ANIMAL> favoritos = new List<ANIMAL>();
         public static List<ANIMAL> adocoes = new List<ANIMAL>();
+        public static List<ANIMAL> animal_selecionado = new List<ANIMAL>();
         public static List<Produto> produtos = new List<Produto>();
         
     }

@@ -12,110 +12,34 @@
       Background="#DCE3E7">
     <!-- Main grid here -->
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <!-- First grid, the one that will have the photo and the first 4 boxes -->
-        <Grid VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-            </Grid.RowDefinitions>
-            <!-- Secondary grid for the icons heart and star -->
-            <Grid Margin="5" Grid.Column="1" Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center">
-                    <Image Source="Icons\blackheart.png" HorizontalAlignment="Center" Height="20.864" VerticalAlignment="Top" Width="24.2"/>
-                    <Label Width="100" MaxWidth="300" Height="23" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Adicionar  aos"></Label>
-                    <Label Width="100" MaxWidth="300" Height="24" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="favoritos"></Label>
-                </StackPanel>
-                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center">
-                    <Image Source="Icons\blackstar.png" HorizontalAlignment="Center" Height="20.864" VerticalAlignment="Top" Width="24.2"/>
-                    <Label Width="100" MaxWidth="300" Height="23" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Estou"></Label>
-                    <Label Width="100" MaxWidth="300" Height="24" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="interessado/a"></Label>
-                </StackPanel>
-            </Grid>
-
-            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}">Espécie:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">Cão</Label>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}">Nome:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">Anabela</Label>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}">Idade:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">20 meses</Label>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Label Style="{StaticResource LabelPostSmall}">Género:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">Feminino</Label>
-            </StackPanel>
-            <Button Grid.Column ="0"  Grid.Row="0" Grid.RowSpan="4" Height="130" Width="130" >
-                <Image Stretch="Fill"  Source="Imagens\stock_dog1.jpg" Name="InfosImage" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="130"/>
-            </Button>
-        </Grid>
-        <!-- Second grid, the one with the last 4 boxes -->
-        <Grid VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition  Height="30" />
-                <RowDefinition  Height="30" />
-                <RowDefinition  Height="30"/>
-                <RowDefinition  Height="30"/>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Style="{StaticResource LabelPostBig}">Tipo doador:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">Abrigo</Label>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Style="{StaticResource LabelPostBig}">Nome doador:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">APADO Ovar</Label>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Style="{StaticResource LabelPostBig}">Vacinas:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">Não</Label>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Style="{StaticResource LabelPostBig}">Chip:</Label>
-                <Label Style="{StaticResource LabelPostSmall}">Não</Label>
-            </StackPanel>
-        </Grid>
-        <!-- Third grid, it contains the pst textbox and the submit button -->
-        <Grid Grid.Column="0" Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Border Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Height="75" Width="300" BorderThickness="1"  BorderBrush="#FF000000">
-                <TextBox IsReadOnly="True" Height="75" Width="300" Name="Post" AcceptsReturn="True" TextWrapping="Wrap" Text="Anabela é uma cadela vadia que foi recolhida por um dos nossos voluntários na estrada nacional. É surda, mas muito doce, e por isso procura um dono que lhe possa dar essa atenção." TextAlignment="Center" VerticalContentAlignment="Center"/>
+        <Grid Background="#B7CAD4" HorizontalAlignment="Right" Width="375">
+            <Image Source="Icons\blackheart.png" HorizontalAlignment="Left" Height="46" VerticalAlignment="Bottom" Width="39" Margin="224,0,0,590" RenderTransformOrigin="2.68,1.429"/>
+            <Label Width="100" MaxWidth="300" Height="23" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Adicionar  aos"></Label>
+            <Label Width="100" MaxWidth="300" Height="24" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="favoritos"></Label>
+            <Image Source="Icons\blackstar.png" HorizontalAlignment="Right" Height="44" VerticalAlignment="Bottom" Width="52" Margin="0,0,30,588" RenderTransformOrigin="5.12,1.381"/>
+            <Label Width="100" MaxWidth="300" Height="23" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Estou"></Label>
+            <Label Width="100" MaxWidth="300" Height="24" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="interessado/a"></Label>
+            <Label Style="{StaticResource LabelPostSmall}">Espécie:</Label>
+            <Label Style="{StaticResource LabelPostSmall}">Cão</Label>
+            <Label Style="{StaticResource LabelPostSmall}">Nome:</Label>
+            <Label Style="{StaticResource LabelPostSmall}">Anabela</Label>
+            <Label Style="{StaticResource LabelPostSmall}">Idade:</Label>
+            <Label Style="{StaticResource LabelPostSmall}">20 meses</Label>
+            <Label Style="{StaticResource LabelPostSmall}">Género:</Label>
+            <Label Style="{StaticResource LabelPostSmall}">Feminino</Label>
+            <Image Stretch="Fill"  Source="Imagens\stock_dog1.jpg" x:Name="InfosImage" Height="130" Width="130" HorizontalAlignment="Left" Margin="23,94,0,443"/>
+            <Label Style="{StaticResource LabelPostBig}">Tipo doador:</Label>
+            <Label Style="{StaticResource LabelPostSmall}">Abrigo</Label>
+            <Label Style="{StaticResource LabelPostBig}">Nome doador:</Label>
+            <Label Style="{StaticResource LabelPostSmall}">APADO Ovar</Label>
+            <Label Style="{StaticResource LabelPostBig}">Vacinas:</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Margin="283,254,32,383" RenderTransformOrigin="1.55,0.5">Não</Label>
+            <Label Style="{StaticResource LabelPostSmall}" Content="Não" Margin="283,284,32,353"/>
+            <Label Style="{StaticResource LabelPostBig}" HorizontalAlignment="Left" Margin="178,284,0,353" Content="Chip:"/>
+            <Border Height="75" Width="300" BorderThickness="1"  BorderBrush="#FF000000" HorizontalAlignment="Right" Margin="0,474,37,118">
+                <TextBox IsReadOnly="True" Height="75" Width="300" Name="Post" AcceptsReturn="True" TextWrapping="Wrap" Text="Anabela é uma cadela vadia que foi recolhida por um dos nossos voluntários na estrada nacional. É surda, mas muito doce, e por isso procura um dono que lhe possa dar essa atenção." TextAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="-1" VerticalAlignment="Top"/>
             </Border>
         </Grid>
-
     </Grid>
 
 </Page>
