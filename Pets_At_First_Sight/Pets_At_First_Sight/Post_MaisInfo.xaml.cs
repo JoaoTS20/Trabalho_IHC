@@ -23,11 +23,16 @@ namespace Pets_At_First_Sight
         public Post_MaisInfo()
         {
             InitializeComponent();
-            //Post_Template.ItemsSource = Container.animal_selecionado;
-            //CollectionViewSource.GetDefaultView(Container.animal_selecionado).Refresh();
+            Post_Template.ItemsSource = Container.animal_selecionado;
+            CollectionViewSource.GetDefaultView(Container.animal_selecionado).Refresh();
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            this.NavigationService.Navigate(inicio);
+            Container.animal_selecionado.RemoveAt(0);
+        }
     }
-
-
-}
+    }

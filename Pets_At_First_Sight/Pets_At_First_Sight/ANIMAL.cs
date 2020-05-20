@@ -14,6 +14,10 @@ namespace Pets_At_First_Sight
         private String _Genero;
 		private String _User_name;
 		private String _Url_Image; //Comentar em BD
+		private String _Tipo_Doador;
+		private String _Vacinas;
+		private String _Chip;
+		private String _Mensagem;
 
 		//Fiz só esta para teste as restantes é a mesma lógica.
 
@@ -55,5 +59,25 @@ namespace Pets_At_First_Sight
 			set {_User_name = value; }
 		}
 
+		public String Tipo_Doador
+		{
+			get { return _Tipo_Doador; }
+			set { _Tipo_Doador = value; }
+		}
+		public String Vacinas
+		{
+			get { return _Vacinas; }
+			set { _Vacinas = value; }
+		}
+		public String Chip
+		{
+			get { return _Chip; }
+			set { _Chip = value; }
+		}
+		public String Mensagem
+		{
+			get { return _Mensagem; }
+			set { _Mensagem = value; }
+		}
 	}
 }
