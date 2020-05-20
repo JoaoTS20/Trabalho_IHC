@@ -14,7 +14,7 @@
         <TextBox x:Name="pesquisa" SpellCheck.IsEnabled="True" Language="pt-PT" KeyDown="OnKeyDownHandler" Height="30" Margin="20,84,109,553"/>
 
         <ScrollViewer Margin="0,121,0.2,88.2" >
-            <Grid Width="375">
+            <Grid  Width="375">
                 <ItemsControl Name="Posts">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>

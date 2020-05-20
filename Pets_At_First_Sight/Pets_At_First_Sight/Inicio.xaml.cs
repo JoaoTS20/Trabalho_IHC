@@ -25,9 +25,9 @@ namespace Pets_At_First_Sight
     {
         public Inicio()
         {
-            
+
             InitializeComponent();
-            
+
             //Dados_Originais();
             Posts.ItemsSource = Container.animais;
             CollectionViewSource.GetDefaultView(Container.animais).Refresh();
@@ -48,12 +48,12 @@ namespace Pets_At_First_Sight
         {
             List<ANIMAL> Filtrar = new List<ANIMAL>();
 
-            if (e.Key == Key.Return && pesquisa.Text!="")
+            if (e.Key == Key.Return && pesquisa.Text != "")
             {
-                
+
                 foreach (ANIMAL m in Container.animais)
                 {
-                    if(m.User_Name.Equals(pesquisa.Text))
+                    if (m.User_Name.Equals(pesquisa.Text))
                     {
                         Filtrar.Add(m);
                     }
@@ -61,7 +61,8 @@ namespace Pets_At_First_Sight
                 Posts.ItemsSource = Filtrar;
 
             }
-            else if (e.Key == Key.Return && pesquisa.Text==""){
+            else if (e.Key == Key.Return && pesquisa.Text == "")
+            {
                 Posts.ItemsSource = null;
                 Posts.ItemsSource = Container.animais;
 
@@ -78,43 +79,81 @@ namespace Pets_At_First_Sight
             Container.animais.Add(new ANIMAL() { Nome = "Stock#1", Idade = "8 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "João" });
             Posts.ItemsSource = Container.animais;
         }
-        bool taFav = false;
-        bool taDoa = false;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             InicioFiltros inicioFiltros = new InicioFiltros();
             NavigationService.Navigate(inicioFiltros);
         }
-
+        Boolean flagAdo = true;
         private void Adopt(object sender, RoutedEventArgs e)
         {
             //mesma coisa
         }
+
+        Boolean flagFav = true;
         private void Fave(object sender, RoutedEventArgs e)
         {
-            if (!taFav) //teste
+
+            //Um pequeno Bug Sai da página o botão deixa de funcionar kinda;
+            //Só copiar esta parte para para o adopt (com as devidas diferenças) do Lado Favoritos só copiar a parte da da Flagser Falsa e a definição da Labels e tals
+
+            Button i = (Button)sender;
+            Image b = (Image)i.Content;
+            StackPanel s = (StackPanel)i.Parent;
+            Grid gr = (Grid)s.Parent;
+            Image u = (Image)gr.Children[1];
+            String x = u.Source.ToString(); //Não dá o texto de forma correta
+            Label r = (Label)gr.Children[2];
+            Label n = (Label)gr.Children[3];
+            Label y = (Label)gr.Children[4];
+            Label g = (Label)gr.Children[5];
+
+            String Nome_Bicho = n.Content.ToString();
+            String Idades = y.Content.ToString();
+            String Raca = r.Content.ToString();
+            String genero = g.Content.ToString();
+            if (flagFav) //teste x== "Icons\\whiteheart.png"
             {
-                //Buscar labels e tal
-                String s = "Imagens\\";
-                Container.favoritos.Add(new ANIMAL() { Nome = "Cãoasdasd", Idade = "5 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Filipa" });
-                new Favoritos();
-                //Mudar imagem source
-                taFav = true;
+                foreach (ANIMAL zzs in Container.animais)
+                {
+                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    {
+                        Container.favoritos.Add(zzs);
+                        new Favoritos();
+                        b.BeginInit();
+                        b.Source = new BitmapImage(new Uri("Icons\\blackheart.png", UriKind.RelativeOrAbsolute));
+                        b.EndInit();
+                        flagFav = false;
+                        break;
+
+                    }
+
+                }
+
+            }
+            else if (!flagFav)
+            {
+                foreach (ANIMAL zzs in Container.animais)
+                {
+                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    {
+                        Container.favoritos.Remove(zzs);
+                        new Favoritos();
+                        b.BeginInit();
+                        b.Source = new BitmapImage(new Uri("Icons\\whiteheart.png", UriKind.RelativeOrAbsolute));
+                        b.EndInit();
+                        flagFav = true;
+                        break;
+
+                    }
+
+                }
             }
 
-            else if(taFav)
-            {
-                Container.favoritos.Clear(); //testar
-                new Favoritos();
-                //Mudar imagem source
-                taFav = false;
-
-            }
-        }
-
 
         }
+    }
 
     }
 
