@@ -24,6 +24,7 @@ namespace Pets_At_First_Sight
         public static List<ANIMAL> animais = new List<ANIMAL>();
         public static List<ANIMAL> favoritos = new List<ANIMAL>();
         public static List<ANIMAL> adocoes = new List<ANIMAL>();
+        public static List<Produto> produtos = new List<Produto>();
         
     }
     public partial class MainWindow : Window
@@ -38,11 +39,14 @@ namespace Pets_At_First_Sight
             Container.animais.Add(new ANIMAL() { Nome = "Piu", Idade = "5 anos", Genero = "Feminino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Anthony Pereira" });
             Container.animais.Add(new ANIMAL() { Nome = "No Name", Idade = "7 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Alexandra" });
             Container.animais.Add(new ANIMAL() { Nome = "Stock#1", Idade = "8 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "João" });
-            
+            // separador
+            Container.produtos.Add(new Produto() { ID = "1000", TipoServico = "Produto", NomeProduto = "Roupão para cão", Empresa="Empresa A", Preco = "5,95", uImage= s + "escova_cabelo.jpg" });
+            Container.produtos.Add(new Produto() { ID = "1001", TipoServico = "Produto", NomeProduto = "Roupão para gato", Empresa = "Empresa B", Preco = "6,95", uImage = s + "escova_cabelo.jpg" });
+            Container.produtos.Add(new Produto() { ID = "1002", TipoServico = "Serviço", NomeProduto = "Esterilização para cão", Empresa = "Empresa C", Preco = "15,00", uImage = s + "escova_cabelo.jpg" });
+            Container.produtos.Add(new Produto() { ID = "1003", TipoServico = "Serviço", NomeProduto = "Manicure para gato", Empresa = "Empresa D", Preco = "8,99", uImage = s + "escova_cabelo.jpg" });
+            Container.produtos.Add(new Produto() { ID = "1003", TipoServico = "Produto", NomeProduto = "Ração tricolor para cão", Empresa = "Empresa E", Preco = "7,99", uImage = s + "escova_cabelo.jpg" });
 
 
         }
-
-
     }
 }

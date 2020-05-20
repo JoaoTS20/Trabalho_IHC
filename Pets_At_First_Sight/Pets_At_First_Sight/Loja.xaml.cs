@@ -23,6 +23,8 @@ namespace Pets_At_First_Sight
         public Loja()
         {
             InitializeComponent();
+            My_Loja.ItemsSource = Container.produtos;
+            CollectionViewSource.GetDefaultView(Container.produtos).Refresh(); //faltava esta linha
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
