@@ -37,15 +37,16 @@ namespace Pets_At_First_Sight
 
         private void ButtonSubmeter_Click(object sender, RoutedEventArgs e)
         {
-            String Especie = EspecieAnimal.SelectedItem.ToString();
+            String Especie = EspecieAnimal.Text.ToString();
             String Nome = NomeAnimal.Text.ToString();
-            String Idade = IdadeAnimal.SelectedItem.ToString();
-            String Genero = GeneroAnimal.SelectedItem.ToString();
-            String _TipoDoador = TipoDoador.SelectedItem.ToString();
+            String Idade = IdadeAnimal.Text.ToString();
+            String Genero = GeneroAnimal.Text.ToString();
+            String _TipoDoador = TipoDoador.Text.ToString();
             String _NomeDoador = NomeDoador.Text.ToString();
-            String _Vacinas = Vacinas.SelectedItem.ToString();
-            String _Chip = Chip.SelectedItem.ToString();
+            String _Vacinas = Vacinas.Text.ToString();
+            String _Chip = Chip.Text.ToString();
             String Testo = PostTexto.Text.ToString();
+            // String _TipoDoador = TipoDoador.SelectedItem.ToString();
             String s = "Imagens\\";
             ANIMAL N1 = new ANIMAL()
             {

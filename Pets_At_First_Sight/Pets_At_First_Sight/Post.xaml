@@ -9,7 +9,7 @@
       Title="Post"
       WindowHeight="667"
       WindowWidth="375"
-      Background="#FEFAE0">
+      Background="#DCE3E7">
     <!-- Main grid here -->
     <Grid>
         <Grid.ColumnDefinitions>
