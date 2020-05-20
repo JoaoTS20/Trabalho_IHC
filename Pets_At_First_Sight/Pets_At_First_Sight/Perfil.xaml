@@ -58,11 +58,11 @@
             <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Style="{StaticResource ButtonStyle}" Click="More_info_button" />
             <StackPanel Height="0"  Visibility="Collapsed" Name="Infos" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="nome_para_ver_" HorizontalContentAlignment="Center">Nome: </Label>
+                    <Label x:Name="nome_para_ver_" HorizontalContentAlignment="Center">Nome:</Label>
                     <Label x:Name="username" HorizontalContentAlignment="Center">Anthony Pereira</Label>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label HorizontalContentAlignment="Center">Email: </Label>
+                    <Label HorizontalContentAlignment="Center">Email:</Label>
                     <Label HorizontalContentAlignment="Center">anthonypereira@ua.pt</Label>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -90,27 +90,27 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="730"/>
             </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Style="{StaticResource ButtonStyle}" />
+            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Style="{StaticResource ButtonStyle}" Margin="39,0,31.8,0" Width="294" />
             <Grid Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center">
-            <ScrollViewer Margin="0,0,-12.2,603.6">
-                <ItemsControl Name="My_Posts">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Margin="25,0,32,10.5" Background="#B7CAD4">
-                                <Image Grid.Row="0" Source="{Binding Url_Image}" Margin="10,22.8,185.6,10" />
-                                <Label x:Name="Raca" Content="{Binding Raca}" HorizontalAlignment="Left" Height="22" Margin="137.4,22.8,0,0" VerticalAlignment="Top" Width="82.2" FontFamily="Arial" Foreground="#FFF1E0E0"/>
-                                <Label x:Name="Nome" Content="{Binding Nome}" HorizontalAlignment="Left" Height="25.2" Margin="137.4,49.8,0,0" VerticalAlignment="Top" Width="157.2"/>
-                                <Label x:Name="Idade" Content="{Binding Idade}" HorizontalAlignment="Left" Height="24.8" Margin="137.4,75,0,0" VerticalAlignment="Top" Width="160.8"/>
-                                <Label x:Name="Genero" Content="{Binding Genero}" HorizontalAlignment="Left" Height="24.4" Margin="137.4,104.8,0,0" VerticalAlignment="Top" Width="82.2"/>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                <ScrollViewer Margin="0,0,-12.2,603.6">
+                    <ItemsControl Name="My_Posts">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="25,0,32,10.5" Background="#B7CAD4">
+                                    <Image Grid.Row="0" Source="{Binding Url_Image}" Margin="10,22.8,185.6,10" />
+                                    <Label x:Name="Raca" Content="{Binding Raca}" HorizontalAlignment="Left" Height="22" Margin="137.4,22.8,0,0" VerticalAlignment="Top" Width="82.2" FontFamily="Arial" Foreground="#FFF1E0E0"/>
+                                    <Label x:Name="Nome" Content="{Binding Nome}" HorizontalAlignment="Left" Height="25.2" Margin="137.4,49.8,0,0" VerticalAlignment="Top" Width="157.2"/>
+                                    <Label x:Name="Idade" Content="{Binding Idade}" HorizontalAlignment="Left" Height="24.8" Margin="137.4,75,0,0" VerticalAlignment="Top" Width="160.8"/>
+                                    <Label x:Name="Genero" Content="{Binding Genero}" HorizontalAlignment="Left" Height="24.4" Margin="137.4,104.8,0,0" VerticalAlignment="Top" Width="82.2"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </ScrollViewer>
 
             </Grid>
         </Grid>
-        
+
 
     </Grid>
 
