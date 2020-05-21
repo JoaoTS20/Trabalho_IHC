@@ -42,11 +42,11 @@
                 </ComboBox>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,13" Grid.RowSpan="3" Width="187">
-                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,2,2,-124.4" Width="81">Nome:</Label>
+                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,2,2,-124.4" Width="81" Content=" Nome:"/>
                 <TextBox Width="99" x:Name="NomeAnimal" Margin="0,8,0,74.6" />
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,-15" Grid.RowSpan="2">
-                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,3,2,-132.2" Width="79" Content="Idade:"/>
+                <Label Style="{StaticResource LabelPostSmall}" Height="Auto" Margin="2,3,2,-132.2" Width="79" Content="  Idade:"/>
                 <ComboBox x:Name="IdadeAnimal" Style="{StaticResource ComboBoxPost}" Margin="2,5,2,62.8" Width="99" Height="Auto" >
                     <ComboBoxItem Content="Indefinida"/>
                     <ComboBoxItem Content="menos de 1"/>
@@ -80,18 +80,18 @@
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Width="274" Margin="0,-7,0.2,3.8">
-                <Label Style="{StaticResource LabelPostBig}" Margin="2,5,2,-88" Width="165">Tipo doador:</Label>
+                <Label Style="{StaticResource LabelPostBig}" Margin="2,0,2,-126" Width="165" Content="      Tipo doador:"/>
                 <ComboBox Name="TipoDoador"  Style="{StaticResource ComboBoxPost}" Margin="2,10" Width="100" Height="Auto" >
                     <ComboBoxItem IsSelected="True">Abrigo</ComboBoxItem>
                     <ComboBoxItem>Particular</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="-7,38,3.2,6.6" Grid.RowSpan="2">
-                <Label Style="{StaticResource LabelPostBig}" Margin="2,-2,2,-0.2" Width="275" Height="Auto">Nome doador:</Label>
+                <Label Style="{StaticResource LabelPostBig}" Margin="2,-2,2,-0.2" Width="141" Height="Auto">Nome doador:</Label>
                 <TextBox Height="30" Width="100" x:Name="NomeDoador" Margin="0,4,0,2.8"  />
             </StackPanel>
             <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Width="208" Margin="0,34.2,0.2,7.4" Grid.RowSpan="2">
-                <Label Style="{StaticResource LabelPostBig}" Margin="2,2,2,-3" Width="99" Height="Auto">Vacinas:</Label>
+                <Label Style="{StaticResource LabelPostBig}" Margin="2,2,2,-3" Width="100" Height="Auto" Content="   Vacinas:"/>
                 <ComboBox x:Name="Vacinas"  Style="{StaticResource ComboBoxPost}" Margin="2,5" Width="100" >
                     <ComboBoxItem Content="Sim"/>
                     <ComboBoxItem IsSelected="True" Content="Não"/>

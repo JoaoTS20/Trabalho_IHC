@@ -54,8 +54,10 @@ namespace Pets_At_First_Sight
                 Idade = Idade,
                 Genero = Genero,
                 Raca = Especie,
-                Url_Image = s + "stock_dog1.jpg",
-                User_Name = _NomeDoador
+                Url_Image = InputImage.Source.ToString(),
+                User_Name = _NomeDoador,
+                Mensagem = Testo
+
             };
             Container.animais.Add(N1);
             new Inicio(); //MILAGRE

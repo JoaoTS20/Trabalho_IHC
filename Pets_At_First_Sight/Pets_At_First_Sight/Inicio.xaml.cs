@@ -53,7 +53,7 @@ namespace Pets_At_First_Sight
 
                 foreach (ANIMAL m in Container.animais)
                 {
-                    if (m.User_Name.Equals(pesquisa.Text))
+                    if (m.User_Name.Equals(pesquisa.Text) | m.Idade.Equals(pesquisa.Text) | m.Raca.Equals(pesquisa.Text) | m.Genero.Equals(pesquisa.Text))
                     {
                         Filtrar.Add(m);
                     }

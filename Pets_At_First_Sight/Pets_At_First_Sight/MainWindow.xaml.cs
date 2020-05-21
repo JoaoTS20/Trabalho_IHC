@@ -35,11 +35,11 @@ namespace Pets_At_First_Sight
             InitializeComponent();
             String s = "Imagens\\"; //Tem de ser assim
             //Façam o mesmo depois para escrever o meses na idade
-            Container.animais.Add(new ANIMAL() { Nome = "Cãoasdasd", Idade = "5 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Filipa", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip="Sim", Mensagem="fuhsd" });
+            Container.animais.Add(new ANIMAL() { Nome = "Cão Fofo", Idade = "5 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Filipa", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip="Sim", Mensagem="fuhsd" });
             Container.animais.Add(new ANIMAL() { Nome = "Princesa", Idade = "10 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Anthony Pereira", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip = "Não", Mensagem = "fuhsd" });
             Container.animais.Add(new ANIMAL() { Nome = "Piu", Idade = "5 anos", Genero = "Feminino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Anthony Pereira", Tipo_Doador = "Particular", Vacinas = "Sim", Chip = "Sim", Mensagem = "fuhsd" });
-            Container.animais.Add(new ANIMAL() { Nome = "No Name", Idade = "7 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Alexandra", Tipo_Doador = "Abrigo", Vacinas = "Não", Chip = "Sim", Mensagem = "fuhsd" });
-            Container.animais.Add(new ANIMAL() { Nome = "Stock#1", Idade = "8 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "João", Tipo_Doador = "Particular", Vacinas = "Não", Chip = "Sim", Mensagem = "fuhsd" });
+            Container.animais.Add(new ANIMAL() { Nome = "Gato das Botas", Idade = "7 anos", Genero = "Masculino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Alexandra", Tipo_Doador = "Abrigo", Vacinas = "Não", Chip = "Sim", Mensagem = "fuhsd" });
+            Container.animais.Add(new ANIMAL() { Nome = "Simba", Idade = "2 anos", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "João", Tipo_Doador = "Particular", Vacinas = "Não", Chip = "Sim", Mensagem = "Cão Muito engraçado" });
             // separador
             Container.produtos.Add(new Produto() { ID = "1000", TipoServico = "Produto", NomeProduto = "Roupão para cão", Empresa="Empresa A", Preco = "5,95", uImage= s + "escova_cabelo.jpg" });
             Container.produtos.Add(new Produto() { ID = "1001", TipoServico = "Produto", NomeProduto = "Roupão para gato", Empresa = "Empresa B", Preco = "6,95", uImage = s + "escova_cabelo.jpg" });
