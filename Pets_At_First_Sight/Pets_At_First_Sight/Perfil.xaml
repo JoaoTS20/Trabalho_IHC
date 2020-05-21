@@ -90,7 +90,7 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="730"/>
             </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Style="{StaticResource ButtonStyle}" Margin="39,0,31.8,0" Width="294" />
+            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Style="{StaticResource ButtonStyle}" Margin="39,0,30.8,0" Width="295" />
             <Grid Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center">
                 <ScrollViewer Margin="0,0,-12.2,603.6">
                     <ItemsControl Name="My_Posts">
