@@ -8,9 +8,12 @@
         mc:Ignorable="d"
         Title="Login" Height="667" Width="375" Background="#DCE3E7">
     <Grid>
+        <Image Source="Imagens/logo1.png" Height="110" Width="110" Margin="139,88,126,469">
 
+        </Image>
         <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="25"  Content="Entrar" HorizontalAlignment="Left" Margin="125,521,0,0" VerticalAlignment="Top" Width="124" Height="49" Click="Button_Click" ToolTip="Entrar">
         </Button>
-
+        <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="54,312" />
+        <PasswordBox x:Name="PasswordBox" Height="38" materialDesign:HintAssist.Hint="Password" materialDesign:TextFieldAssist.HasClearButton="True" VerticalAlignment="Center" Margin="54,388,54,241" />
     </Grid>
 </Page>
