@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pets_At_First_Sight"
         mc:Ignorable="d"
-        Title="MainWindow" Height="667" Width="375">
-    <Grid>
-        <TabControl x:Name="tabCo"   TabStripPlacement="Bottom">
+        Title="MainWindow" Height="701" Width="384">
+    
+        <Frame  Source="Login.xaml" NavigationUIVisibility="Hidden"></Frame>
+            <!--<TabControl x:Name="tabCo"   TabStripPlacement="Bottom">
             <TabItem x:Name="Inicio" Height="40" Width="72.5" MaxWidth="73" >
                 <TabItem.Header>
                     <Image Source="Icons/home_tab.png" Height="35" Width="48"></Image>
@@ -52,6 +53,6 @@
                 </TabItem.Content>
 
             </TabItem>
-        </TabControl>
-    </Grid>
+        </TabControl>-->
+   
 </Window>

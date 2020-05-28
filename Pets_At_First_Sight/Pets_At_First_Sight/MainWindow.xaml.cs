@@ -49,5 +49,22 @@ namespace Pets_At_First_Sight
 
 
         }
+
+        //private void ApplicationStart(object sender, StartupEventArgs e)
+        //{
+           //Window login = new Login;
+           //login.Show();
+
+            //Determine if login was successful
+            //if ()
+            //{
+                //if (!loginVM.LoginSuccessful)
+               //{
+                    // handle any cleanup and close/shutdown app
+              //}
+           //}
+
+            //show your MainWindow
+     // }
     }
 }
