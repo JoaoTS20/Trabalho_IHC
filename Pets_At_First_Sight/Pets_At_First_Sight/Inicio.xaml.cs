@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -90,7 +91,7 @@ namespace Pets_At_First_Sight
         private void Adopt(object sender, RoutedEventArgs e)
         {
             Button i = (Button)sender;
-            Image b = (Image)i.Content;
+            PackIcon b = (PackIcon)i.Content;
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[1];
@@ -113,8 +114,8 @@ namespace Pets_At_First_Sight
                         Container.adocoes.Add(zzs);
 
                         b.BeginInit();
-                        b.Source = new BitmapImage(new Uri("Icons\\blackstar.png", UriKind.RelativeOrAbsolute));
-                        b.EndInit();
+                        b.Kind = PackIconKind.Star;
+                         b.EndInit();
                         flagAdo = false;
                         new Adocoes();
                         //new Inicio();
@@ -134,7 +135,7 @@ namespace Pets_At_First_Sight
                         Container.adocoes.Remove(zzs);
 
                         b.BeginInit();
-                        b.Source = new BitmapImage(new Uri("Icons\\whitestar.png", UriKind.RelativeOrAbsolute));
+                        b.Kind = PackIconKind.StarOutline;
                         b.EndInit();
                         flagAdo = true;
                         new Adocoes();
@@ -156,7 +157,7 @@ namespace Pets_At_First_Sight
             //Só copiar esta parte para para o adopt (com as devidas diferenças) do Lado Favoritos só copiar a parte da da Flagser Falsa e a definição da Labels e tals
 
             Button i = (Button)sender;
-            Image b = (Image)i.Content;
+            PackIcon b = (PackIcon)i.Content;
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[1];
@@ -179,7 +180,7 @@ namespace Pets_At_First_Sight
                         Container.favoritos.Add(zzs);
                         
                         b.BeginInit();
-                        b.Source = new BitmapImage(new Uri("Icons\\blackheart.png", UriKind.RelativeOrAbsolute));
+                        b.Kind = PackIconKind.Heart;
                         b.EndInit();
                         flagFav = false;
                         new Favoritos();
@@ -200,7 +201,7 @@ namespace Pets_At_First_Sight
                         Container.favoritos.Remove(zzs);
                         
                         b.BeginInit();
-                        b.Source = new BitmapImage(new Uri("Icons\\whiteheart.png", UriKind.RelativeOrAbsolute));
+                        b.Kind = PackIconKind.HeartOutline;
                         b.EndInit();
                         flagFav = true;
                         new Favoritos();

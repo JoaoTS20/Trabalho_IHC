@@ -26,7 +26,7 @@ namespace Pets_At_First_Sight
         public static List<ANIMAL> adocoes = new List<ANIMAL>();
         public static List<ANIMAL> animal_selecionado = new List<ANIMAL>();
         public static List<Produto> produtos = new List<Produto>();
-        
+
     }
     public partial class MainWindow : Window
     {
@@ -47,24 +47,24 @@ namespace Pets_At_First_Sight
             Container.produtos.Add(new Produto() { ID = "1003", TipoServico = "Serviço", NomeProduto = "Manicure para gato", Empresa = "Empresa D", Preco = "8,99", uImage = s + "escova_cabelo.jpg" });
             Container.produtos.Add(new Produto() { ID = "1003", TipoServico = "Produto", NomeProduto = "Ração tricolor para cão", Empresa = "Empresa E", Preco = "7,99", uImage = s + "escova_cabelo.jpg" });
 
-
+            InicioFiltros inicioFiltros = new InicioFiltros();
         }
 
         //private void ApplicationStart(object sender, StartupEventArgs e)
         //{
-           //Window login = new Login;
-           //login.Show();
+        //Window login = new Login;
+        //login.Show();
 
-            //Determine if login was successful
-            //if ()
-            //{
-                //if (!loginVM.LoginSuccessful)
-               //{
-                    // handle any cleanup and close/shutdown app
-              //}
-           //}
+        //Determine if login was successful
+        //if ()
+        //{
+        //if (!loginVM.LoginSuccessful)
+        //{
+        // handle any cleanup and close/shutdown app
+        //}
+        //}
 
-            //show your MainWindow
-     // }
+        //show your MainWindow
+        // }
     }
 }

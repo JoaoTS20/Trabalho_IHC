@@ -23,12 +23,64 @@ namespace Pets_At_First_Sight
         public InicioFiltros()
         {
             InitializeComponent();
+            int num_filters = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Inicio inicio = new Inicio();
             this.NavigationService.Navigate(inicio);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            List<ANIMAL> Filtrar = new List<ANIMAL>();
+
+            foreach (ANIMAL m in Container.animais)
+            {
+                Filtrar.Add(m);
+            }
+
+            foreach(ANIMAL animal in Container.animais)
+            {
+                String[] idadeAnimal = animal.Idade.Split(' ');
+
+                int numero = Int32.Parse(idadeAnimal[0]);
+
+                if (Filtrar.Contains(animal) && Especie.SelectedItem != null && !animal.Raca.Equals(Especie.Text.ToString()))
+                {
+                    Filtrar.Remove(animal);
+                    Especie.SelectedIndex = 1;
+                }
+
+                if (slide.Value != 0 && (idadeAnimal[1] == "anos" || idadeAnimal[1] == "ano") && Int32.Parse(idadeAnimal[0]) > slide.Value && Filtrar.Contains(animal))
+                {
+                    Filtrar.Remove(animal);
+                }
+
+                if (Filtrar.Contains(animal) && Genero.SelectedItem != null && !animal.Genero.Equals(Genero.Text.ToString()))
+                {
+                    Filtrar.Remove(animal);
+                }
+
+                if(Filtrar.Contains(animal) && Doador.SelectedItem != null && !animal.Tipo_Doador.Equals(Doador.Text.ToString()))
+                {
+                    Filtrar.Remove(animal);
+                }
+                if((bool)Vacinados.IsChecked && animal.Vacinas.Equals("Não") && Filtrar.Contains(animal))
+                {
+                    Filtrar.Remove(animal);
+                }
+                if ((bool)Chip.IsChecked && animal.Chip.Equals("Não") && Filtrar.Contains(animal))
+                {
+                    Filtrar.Remove(animal);
+                }
+
+            }
+            Inicio inicio = new Inicio();
+            inicio.Posts.ItemsSource = Filtrar;
+            this.NavigationService.Navigate(inicio);
+
         }
     }
 }
