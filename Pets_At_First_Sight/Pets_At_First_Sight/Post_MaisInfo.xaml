@@ -25,23 +25,23 @@
         <Image Source="Icons\blackstar.png" HorizontalAlignment="Right" Height="44" VerticalAlignment="Bottom" Width="44" Margin="0,0,88.2,594.2" RenderTransformOrigin="5.12,1.381" Grid.Column="1"/>
         <Label FontSize="18" Width="100" MaxWidth="300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Estou" Margin="214,70,61,562" Grid.ColumnSpan="2"/>
         <Label FontSize="18" Width="100" MaxWidth="300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="interessado/a" Margin="215,95,60,538" Grid.ColumnSpan="2"/>
-        <Label Style="{StaticResource LabelPostSmall}" Margin="0,0,0,446.2" Width="79" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41">Espécie:</Label>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalContentAlignment="Left" Margin="1,182,0.2,448.2" Width="Auto" Height="Auto" Grid.Column="1" Content="{Binding Raca}"/>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalAlignment="Right" Margin="145,145,150,487" Height="Auto" Grid.ColumnSpan="2" Width="Auto">Nome:</Label>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalContentAlignment="Left" Margin="1,0,0,485.2" RenderTransformOrigin="0.533,2.4" HorizontalAlignment="Left" Width="150" Height="37" VerticalAlignment="Bottom" Grid.Column="1" Content="{Binding Nome}"/>
-        <Label Style="{StaticResource LabelPostSmall}" Margin="162,218,0,413.2" Height="Auto">Idade:</Label>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalContentAlignment="Left" Margin="1,0,0,411.2" VerticalAlignment="Bottom" Width="150" Grid.Column="1" HorizontalAlignment="Left" Height="36" Content="{Binding Idade}"/>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalAlignment="Right" Margin="145,258,150,376" Grid.ColumnSpan="2" Width="Auto" Height="Auto">Género:</Label>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalAlignment="Left" Margin="1,258,0,365.2" Width="150" Height="Auto" Grid.Column="1" Content="{Binding Genero}"/>
+        <Label Margin="0,0,0,446.2" Width="79" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41">Espécie:</Label>
+        <Label HorizontalContentAlignment="Left" Margin="1,182,0.2,448.2" Width="Auto" Height="Auto" Grid.Column="1" Content="{Binding Raca}"/>
+        <Label HorizontalAlignment="Right" Margin="145,145,150,487" Height="Auto" Grid.ColumnSpan="2" Width="Auto">Nome:</Label>
+        <Label HorizontalContentAlignment="Left" Margin="1,0,0,485.2" RenderTransformOrigin="0.533,2.4" HorizontalAlignment="Left" Width="150" Height="37" VerticalAlignment="Bottom" Grid.Column="1" Content="{Binding Nome}"/>
+        <Label Margin="162,218,0,413.2" Height="Auto">Idade:</Label>
+        <Label HorizontalContentAlignment="Left" Margin="1,0,0,411.2" VerticalAlignment="Bottom" Width="150" Grid.Column="1" HorizontalAlignment="Left" Height="36" Content="{Binding Idade}"/>
+        <Label HorizontalAlignment="Right" Margin="145,258,150,376" Grid.ColumnSpan="2" Width="Auto" Height="Auto">Género:</Label>
+        <Label HorizontalAlignment="Left" Margin="1,258,0,365.2" Width="150" Height="Auto" Grid.Column="1" Content="{Binding Genero}"/>
         <Image Stretch="Fill"  Source="{Binding Url_Image}" x:Name="InfosImage" Height="130" Width="130" HorizontalAlignment="Left" Margin="15,144,0,393"/>
-        <Label Style="{StaticResource LabelPostBig}" HorizontalAlignment="Right" Margin="101,296,0,333" Height="Auto" Width="122">Tipo doador:</Label>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalContentAlignment="Left" Margin="1,0,0,333.2" Width="150" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1" Content="{Binding Tipo_Doador}"/>
-        <Label Style="{StaticResource LabelPostBig}" Margin="86,0,0,291.2" VerticalAlignment="Bottom" Height="40">Nome doador:</Label>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalContentAlignment="Left" Margin="0,0,0,292.2" Width="151" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="34" Grid.Column="1" Content="{Binding User_Name}"/>
-        <Label Style="{StaticResource LabelPostBig}" Margin="0,0,0,249.2" HorizontalAlignment="Right" Width="79" VerticalAlignment="Bottom" Height="40">Vacinas:</Label>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalContentAlignment="Left" Margin="0,380,0.2,248.2" RenderTransformOrigin="1.55,0.5" Height="Auto" Grid.Column="1" Content="{Binding Vacinas}"/>
-        <Label Style="{StaticResource LabelPostBig}" HorizontalAlignment="Right" Margin="0,0,0,212.2" Content="Chip:" VerticalAlignment="Bottom" Height="37" Width="55"/>
-        <Label Style="{StaticResource LabelPostSmall}" HorizontalContentAlignment="Left" Margin="1,422,0.2,210.2" Height="Auto" Content="{Binding Chip}" Grid.Column="1"/>
+        <Label HorizontalAlignment="Right" Margin="101,296,0,333" Height="Auto" Width="122">Tipo doador:</Label>
+        <Label HorizontalContentAlignment="Left" Margin="1,0,0,333.2" Width="150" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1" Content="{Binding Tipo_Doador}"/>
+        <Label Margin="86,0,0,291.2" VerticalAlignment="Bottom" Height="40">Nome doador:</Label>
+        <Label HorizontalContentAlignment="Left" Margin="0,0,0,292.2" Width="151" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="34" Grid.Column="1" Content="{Binding User_Name}"/>
+        <Label Margin="0,0,0,249.2" HorizontalAlignment="Right" Width="79" VerticalAlignment="Bottom" Height="40">Vacinas:</Label>
+        <Label HorizontalContentAlignment="Left" Margin="0,380,0.2,248.2" RenderTransformOrigin="1.55,0.5" Height="Auto" Grid.Column="1" Content="{Binding Vacinas}"/>
+        <Label HorizontalAlignment="Right" Margin="0,0,0,212.2" Content="Chip:" VerticalAlignment="Bottom" Height="37" Width="55"/>
+        <Label HorizontalContentAlignment="Left" Margin="1,422,0.2,210.2" Height="Auto" Content="{Binding Chip}" Grid.Column="1"/>
         <Border Height="75" BorderThickness="1"  BorderBrush="#FF000000" Margin="47,0,28.2,125.2" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
             <TextBox IsReadOnly="True" Height="75" Width="300" Name="Post" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Mensagem}" TextAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="-1" VerticalAlignment="Top"/>
         </Border>

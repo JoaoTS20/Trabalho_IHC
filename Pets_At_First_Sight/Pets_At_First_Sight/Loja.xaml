@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:Pets_At_First_Sight"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -38,33 +39,8 @@
                 </ItemsControl>
             </Grid>
         </ScrollViewer>
-
-        <Button Content="Filtros" Background="#0D2020" Foreground="#DCE3E7" Margin="274,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Button_Click">
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="LightBlue" />
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                </Border>
-                                <ControlTemplate.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#728D95" TargetName="Border" />
-                                    </Trigger>
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="BorderThickness" Value="0"/>
-                            <Setter Property="CornerRadius" Value="10"/>
-                        </Style>
-                    </Style.Resources>
-                </Style>
-            </Button.Style>
+        
+        <Button Content="Filtros" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="15" Background="#0D2020" Foreground="#DCE3E7" Margin="274,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Button_Click">
         </Button>
     </Grid>
 </Page>

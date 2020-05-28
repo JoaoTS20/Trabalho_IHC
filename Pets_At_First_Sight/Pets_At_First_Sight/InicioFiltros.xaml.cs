@@ -24,5 +24,11 @@ namespace Pets_At_First_Sight
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            NavigationService.Navigate(inicio);
+        }
     }
 }

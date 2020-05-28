@@ -3,11 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Pets_At_First_Sight"
         mc:Ignorable="d"
         Title="Login" Height="667" Width="375" Background="#DCE3E7">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="125,521,0,0" VerticalAlignment="Top" Width="124" Height="29" Click="Button_Click"/>
+
+        <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="25"  Content="Entrar" HorizontalAlignment="Left" Margin="125,521,0,0" VerticalAlignment="Top" Width="124" Height="49" Click="Button_Click" ToolTip="Entrar">
+        </Button>
 
     </Grid>
 </Page>

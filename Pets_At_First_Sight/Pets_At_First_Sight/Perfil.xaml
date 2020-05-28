@@ -55,7 +55,7 @@
                     </RowDefinition.Style>
                 </RowDefinition>
             </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Style="{StaticResource ButtonStyle}" Click="More_info_button" />
+            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Click="More_info_button" />
             <StackPanel Height="0"  Visibility="Collapsed" Name="Infos" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <Label x:Name="nome_para_ver_" HorizontalContentAlignment="Center">Nome:</Label>
@@ -79,7 +79,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Criar_Post"  Content="Criar Novo Post" Style="{StaticResource ButtonStyle}" Click="Criar_Post_Click" />
+            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Criar_Post"  Content="Criar Novo Post" Click="Criar_Post_Click" />
         </Grid>
         <!-- Fourth grid, which includes "Posts" -->
         <Grid Grid.Column="0" Grid.Row="3" Margin="0,0.6,10.2,483.4">
@@ -90,7 +90,7 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="730"/>
             </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Style="{StaticResource ButtonStyle}" Margin="95,0,87.8,0" Width="182" />
+            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Margin="95,0,87.8,0" Width="182" />
             <Grid Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center">
                 <ScrollViewer Margin="0,0,-12.2,603.6">
                     <ItemsControl Name="My_Posts">

@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pets_At_First_Sight"
         mc:Ignorable="d"
-        Title="MainWindow" Height="701" Width="384">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Pets At First Sight" Height="701" Width="384">
     
         <Frame  Source="Login.xaml" NavigationUIVisibility="Hidden"></Frame>
             <!--<TabControl x:Name="tabCo"   TabStripPlacement="Bottom">
