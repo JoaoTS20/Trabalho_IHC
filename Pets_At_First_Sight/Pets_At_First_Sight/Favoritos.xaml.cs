@@ -1,4 +1,5 @@
 ﻿using System;
+using MaterialDesignThemes.Wpf;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Runtime.CompilerServices;
 
 namespace Pets_At_First_Sight
 {
@@ -30,7 +32,7 @@ namespace Pets_At_First_Sight
         private void nãogosto(object sender, RoutedEventArgs e)
         {
             Button i = (Button)sender;
-            Image b = (Image)i.Content;
+            PackIcon b = (PackIcon)i.Content;
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             //Image u = (Image)gr.Children[1];
@@ -61,6 +63,31 @@ namespace Pets_At_First_Sight
 
 
 
+        }
+
+        private void ViewPost(object sender, MouseButtonEventArgs e, Page Favoritos)
+        {
+            Grid gr = (Grid)sender;
+            Image u = (Image)gr.Children[0];
+            Label r = (Label)gr.Children[1];
+            Label n = (Label)gr.Children[2];
+            Label y = (Label)gr.Children[3];
+            Label g = (Label)gr.Children[4];
+
+            String Nome_Animal = n.Content.ToString();
+            String Idades = y.Content.ToString();
+            String Raca = r.Content.ToString();
+            String genero = g.Content.ToString();
+
+            foreach (ANIMAL animal in Container.animais)
+            {
+                if (animal.Nome == Nome_Animal && animal.Idade == Idades && animal.Raca == Raca && animal.Genero == genero)
+                {
+                    Container.animal_selecionado.Add(animal);
+                }
+            }
+            Post_MaisInfo post_MaisInfo = new Post_MaisInfo();
+            NavigationService.Navigate(post_MaisInfo);
         }
     }
 }

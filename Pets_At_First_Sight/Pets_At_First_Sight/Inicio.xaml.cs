@@ -105,6 +105,7 @@ namespace Pets_At_First_Sight
             String Idades = y.Content.ToString();
             String Raca = r.Content.ToString();
             String genero = g.Content.ToString();
+
             if (flagAdo) //teste x== "Icons\\whiteheart.png"
             {
                 foreach (ANIMAL zzs in Container.animais)

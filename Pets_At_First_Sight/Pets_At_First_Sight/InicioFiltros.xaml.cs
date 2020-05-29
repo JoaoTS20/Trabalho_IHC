@@ -1,4 +1,5 @@
 ﻿using System;
+using MaterialDesignThemes.Wpf;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,8 +29,17 @@ namespace Pets_At_First_Sight
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Inicio inicio = new Inicio();
-            this.NavigationService.Navigate(inicio);
+            MessageBoxResult result = MessageBox.Show("A sua seleção será descartada. Pretende continuar?", "Voltar", MessageBoxButton.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    Inicio inicio = new Inicio();
+                    this.NavigationService.Navigate(inicio);
+                    break;
+                case MessageBoxResult.No:
+                    break;
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -44,8 +54,6 @@ namespace Pets_At_First_Sight
             foreach(ANIMAL animal in Container.animais)
             {
                 String[] idadeAnimal = animal.Idade.Split(' ');
-
-                int numero = Int32.Parse(idadeAnimal[0]);
 
                 if (Filtrar.Contains(animal) && Especie.SelectedItem != null && !animal.Raca.Equals(Especie.Text.ToString()))
                 {

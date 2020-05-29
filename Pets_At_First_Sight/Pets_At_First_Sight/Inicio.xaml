@@ -20,13 +20,13 @@
 
         <ScrollViewer Margin="0,121,0,48" Grid.ColumnSpan="2" >
             <Grid  Width="375">
-                <ItemsControl Name="Posts" Margin="0,0,0,0" >
+                <ItemsControl Name="Posts">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <materialDesign:Card Background="#009688" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" UniformCornerRadius="6" Padding="8" Margin="10,0,20,10">
+                            <materialDesign:Card Background="#80cbc4" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" UniformCornerRadius="6" Padding="8" Margin="10,0,20,10">
                                 <Grid MouseLeftButtonDown="ViewPost">
                                     <StackPanel HorizontalAlignment="Left" Height="60" Margin="265,05,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.289,0.546">
-                                        <Button Background="Transparent" BorderThickness="0" Click="Adopt" Height="60" Margin="0,0,10,0">
+                                        <Button Background="Transparent" BorderThickness="0" Click="Adopt" Height="60" Margin="0,0,10,0" materialDesign:RippleAssist.IsDisabled="True">
                                             <materialDesign:PackIcon Kind="StarOutline"  x:Name="img_bbt_adopt" HorizontalAlignment="Left" Width="40" Height="40" />
                                         </Button>
                                     </StackPanel>
@@ -36,7 +36,7 @@
                                     <Label x:Name="Idade" Content="{Binding Idade}" FontSize="18" HorizontalAlignment="Left" Height="28" Margin="167.4,125,0,0" VerticalAlignment="Top" Width="160.8"/>
                                     <Label x:Name="Genero" Content="{Binding Genero}" FontSize="18" HorizontalAlignment="Left" Height="28" Margin="167.4,150.8,0,0" VerticalAlignment="Top" Width="162.2"/>
                                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Margin="265,125,0,0" Width="80" RenderTransformOrigin="0.289,0.546">
-                                        <Button Background="Transparent" BorderThickness="0" Click="Fave" Height="60" Margin="0,0,10,0">
+                                        <Button Background="Transparent" BorderThickness="0" Click="Fave" Height="60" Margin="0,0,10,0" materialDesign:RippleAssist.IsDisabled="True">
                                             <materialDesign:PackIcon Kind="HeartOutline" x:Name="img_bbt_fav" HorizontalAlignment="Left" Width="40" Height="40" />
                                         </Button>
                                     </StackPanel>
