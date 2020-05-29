@@ -16,26 +16,19 @@ using System.Windows.Shapes;
 namespace Pets_At_First_Sight
 {
     /// <summary>
-    /// Interaction logic for Loja.xaml
+    /// Interaction logic for CriarConta.xaml
     /// </summary>
-    public partial class Loja : Page
+    public partial class CriarConta : Page
     {
-        public Loja()
+        public CriarConta()
         {
             InitializeComponent();
-            My_Loja.ItemsSource = Container.produtos;
-            CollectionViewSource.GetDefaultView(Container.produtos).Refresh(); //faltava esta linha
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LojaFiltros lojaFiltros = new LojaFiltros();
-            NavigationService.Navigate(lojaFiltros);
-        }
-
-        private void Buy(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Funcionalidade disponível em breve. Pedimos desculpa.", "Oops!", MessageBoxButton.OK);
+            Login login = new Login();
+            this.NavigationService.Navigate(login);
         }
     }
 }

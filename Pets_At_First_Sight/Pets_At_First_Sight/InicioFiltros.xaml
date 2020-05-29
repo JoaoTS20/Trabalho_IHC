@@ -37,7 +37,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Label x:Name="Titulo_Loja" Content="Filtros" Margin="149,40,162,596" FontFamily="Arial" FontSize="18" FontWeight="Bold" Width="64" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label x:Name="Titulo_Loja" Content="Filtros" Margin="156,26,145,21" FontFamily="Arial" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Height="27" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
 
             <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Back" Margin="16,20,0,0" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <materialDesign:PackIcon
@@ -97,7 +97,7 @@
             <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Left" Width="158" Margin="10,0,0,0">
                 <CheckBox x:Name="Chip" Margin="2,22,2,23" Width="113"/>
             </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center" Width="144" Grid.ColumnSpan="2">
+            <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="123,21,123,0">
                 <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="25"  Content="Filtrar" HorizontalAlignment="Center" Margin="0,0,0,0" Width="124" Height="49" ToolTip="Filtrar" VerticalAlignment="Bottom" Click="Button_Click_1"/>
             </StackPanel>
 

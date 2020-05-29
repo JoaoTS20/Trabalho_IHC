@@ -1,6 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows;
 using System.Collections.Generic;
+using System;
 
 namespace Pets_At_First_Sight
 {
@@ -18,7 +19,7 @@ namespace Pets_At_First_Sight
 
         bool check = true;
 
-        private void More_info_button(object sender, System.Windows.RoutedEventArgs e)
+        /*private void More_info_button(object sender, System.Windows.RoutedEventArgs e)
         {
             if (check == true)
             {
@@ -37,11 +38,11 @@ namespace Pets_At_First_Sight
             
            
            
-        }
+        }*/
 
         private void Criar_Post_Click(object sender, RoutedEventArgs e)
         {
-            Page1 cursosPage = new Page1();
+            Post cursosPage = new Post();
             this.NavigationService.Navigate(cursosPage);
         }
 
@@ -56,6 +57,37 @@ namespace Pets_At_First_Sight
                 }
             }
             return my;
+        }
+
+        private void ViewPost(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Grid gr = (Grid)sender;
+            Image u = (Image)gr.Children[0];
+            Label r = (Label)gr.Children[1];
+            Label n = (Label)gr.Children[2];
+            Label y = (Label)gr.Children[3];
+            Label g = (Label)gr.Children[4];
+
+            String Nome_Animal = n.Content.ToString();
+            String Idades = y.Content.ToString();
+            String Raca = r.Content.ToString();
+            String genero = g.Content.ToString();
+
+            foreach (ANIMAL animal in Container.animais)
+            {
+                if (animal.Nome == Nome_Animal && animal.Idade == Idades && animal.Raca == Raca && animal.Genero == genero)
+                {
+                    Container.animal_selecionado.Add(animal);
+                }
+            }
+            Post_MaisInfo post_MaisInfo = new Post_MaisInfo();
+            NavigationService.Navigate(post_MaisInfo);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Post x = new Post();
+            this.NavigationService.Navigate(x);
         }
     }
 }

@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:Pets_At_First_Sight"
       mc:Ignorable="d" 
       d:DesignHeight="667" d:DesignWidth="375"
@@ -17,9 +18,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition  Height="200"/>
-            <RowDefinition Name="InfosRow" Height="70"/>
-            <RowDefinition  Height="70" />
-            <RowDefinition  Height="800" />
+            <RowDefinition Name="InfosRow"/>
         </Grid.RowDefinitions>
         <!-- First grid, which includes the photo and username -->
         <Grid Grid.Column="0" Grid.Row="0"  >
@@ -30,14 +29,16 @@
                 <RowDefinition Height="170"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Border VerticalAlignment="Top" Margin="10" Grid.Column="0" Grid.Row="0" Width="150" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
-                <Image Source="Imagens\ImgPerfil.jpg" Width="150" Height="150" />
+            <Border CornerRadius="100" VerticalAlignment="Top" Margin="10" Grid.Column="0" Grid.Row="0" Width="150" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
+                <Border.Background>
+                    <ImageBrush ImageSource="Imagens\ImgPerfil.jpg" />
+                </Border.Background>
             </Border>
             <Label Grid.Column="0" Grid.Row="1"  FontSize="15" HorizontalContentAlignment="Center" Content="M0dernCaty0ga" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="150"/>
         </Grid>
         <!-- Second grid, which includes "mais informações" and infos about the user -->
-        <Grid Grid.Column="0" Grid.Row="1" >
-            <Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Margin="0,44,0,10">
+            <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -54,8 +55,56 @@
                         </Style>
                     </RowDefinition.Style>
                 </RowDefinition>
-            </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Click="More_info_button" />
+            </Grid.RowDefinitions>-->
+
+            <StackPanel Margin="0,0,0,0">
+                <Expander HorizontalAlignment="Stretch" Header="Mais Informações">
+                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="username_label" Opacity=".68" Content="Nome:"/>
+                            <Label x:Name="username" Opacity=".68" Content="Anthony Pereira"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="email_label" Opacity=".68" Content="Email:"/>
+                            <Label x:Name="email" Opacity=".68" Content="anthonypereira@ua.pt"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="localidade_label" Opacity=".68" Content="Localidade: "/>
+                            <Label x:Name="localidade" Opacity=".68" Content="Ovar"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Expander>
+                <Expander  HorizontalAlignment="Stretch" Header="Ver Posts">
+                    <!--<Grid Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center">-->
+                    <ScrollViewer Height="273">
+                        <ItemsControl Name="My_Posts">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <materialDesign:Card Background="#b2bfdb" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" UniformCornerRadius="6" Padding="8" Margin="10,0,20,10">
+                                        <Grid ScrollViewer.CanContentScroll="True"  MouseLeftButtonDown="ViewPost">
+                                            <Image Grid.Row="0" Source="{Binding Url_Image}" Margin="10,22.8,185.6,10" Height="Auto"/>
+                                            <Label x:Name="Raca" Content="{Binding Raca}" FontSize="20" HorizontalAlignment="Left" Height="28" Margin="167.4,62.8,0,0" VerticalAlignment="Top" Width="82.2" FontFamily="Arial" Foreground="#FFF1E0E0"/>
+                                            <Label x:Name="Nome_Animal" Content="{Binding Nome}"  FontSize="18" HorizontalAlignment="Left" Height="28" Margin="167.4,100.8,0,0" VerticalAlignment="Top" Width="157.2"/>
+                                            <Label x:Name="Idade" Content="{Binding Idade}" FontSize="18" HorizontalAlignment="Left" Height="28" Margin="167.4,125,0,0" VerticalAlignment="Top" Width="160.8"/>
+                                            <Label x:Name="Genero" Content="{Binding Genero}" FontSize="18" HorizontalAlignment="Left" Height="28" Margin="167.4,150.8,0,0" VerticalAlignment="Top" Width="162.2"/>
+                                        </Grid>
+                                    </materialDesign:Card>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                    <!--</Grid>-->
+                </Expander>
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" ToolTip="MaterialDesignFloatingActionDarkButton" Margin="0,211,20,0" HorizontalAlignment="Right" Click="Button_Click">
+                    <materialDesign:PackIcon
+                    Kind="Plus"
+                    Height="24"
+                    Width="24"/>
+                </Button>
+
+            </StackPanel>
+
+            <!--<Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Click="More_info_button" />
             <StackPanel Height="0"  Visibility="Collapsed" Name="Infos" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <Label x:Name="nome_para_ver_" HorizontalContentAlignment="Center">Nome:</Label>
@@ -69,10 +118,10 @@
                     <Label HorizontalContentAlignment="Center">Localidade:</Label>
                     <Label HorizontalContentAlignment="Center">Ovar</Label>
                 </StackPanel>
-            </StackPanel>
+            </StackPanel>-->
         </Grid>
         <!-- Third grid, which includes "Criar novo Post" -->
-        <Grid Grid.Column="0" Grid.Row="2">
+        <!--<Grid Grid.Column="0" Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
@@ -81,16 +130,16 @@
             </Grid.RowDefinitions>
             <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Criar_Post"  Content="Criar Novo Post" Click="Criar_Post_Click" />
         </Grid>
-        <!-- Fourth grid, which includes "Posts" -->
-        <Grid Grid.Column="0" Grid.Row="3" Margin="0,0.6,10.2,483.4">
+        <! Fourth grid, which includes "Posts" -->
+        <!--<Grid Grid.Column="0" Grid.Row="3" Margin="0,0.6,10.2,483.4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="730"/>
-            </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Margin="95,0,87.8,0" Width="182" />
+            </Grid.RowDefinitions>-->
+        <!--<Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Margin="95,0,87.8,0" Width="182" />
             <Grid Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center">
                 <ScrollViewer Margin="0,0,-12.2,603.6">
                     <ItemsControl Name="My_Posts">
@@ -109,7 +158,7 @@
                 </ScrollViewer>
 
             </Grid>
-        </Grid>
+        </Grid>-->
 
 
     </Grid>

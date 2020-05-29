@@ -29,11 +29,11 @@ namespace Pets_At_First_Sight
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e, Page p)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            /*Inicio inicio = new Inicio();*/
+            Inicio inicio = new Inicio();
             Container.animal_selecionado.RemoveAt(0);
-            this.NavigationService.Navigate(p);
+            this.NavigationService.Navigate(inicio);
         }
 
         Boolean flagAdo = true;

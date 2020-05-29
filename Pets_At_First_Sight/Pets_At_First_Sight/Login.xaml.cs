@@ -30,5 +30,16 @@ namespace Pets_At_First_Sight
             Windows App = new Windows();
             this.NavigationService.Navigate(App);
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ainda não é possível recuperar a sua password. \n Pedimos desculpa.", "Oops!", MessageBoxButton.OK);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            CriarConta cc = new CriarConta();
+            this.NavigationService.Navigate(cc);
+        }
     }
 }

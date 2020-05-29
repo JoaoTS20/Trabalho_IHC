@@ -65,10 +65,10 @@ namespace Pets_At_First_Sight
 
         }
 
-        private void ViewPost(object sender, MouseButtonEventArgs e, Page Favoritos)
+        private void ViewPost(object sender, MouseButtonEventArgs e)
         {
             Grid gr = (Grid)sender;
-            Image u = (Image)gr.Children[0];
+            //PackIcon u = (PackIcon)gr.Children[0];
             Label r = (Label)gr.Children[1];
             Label n = (Label)gr.Children[2];
             Label y = (Label)gr.Children[3];

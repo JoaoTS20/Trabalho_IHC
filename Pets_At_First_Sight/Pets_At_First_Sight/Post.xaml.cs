@@ -10,9 +10,9 @@ namespace Pets_At_First_Sight
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Post : Page
     {
-        public Page1()
+        public Post()
         {
             InitializeComponent();
         }
