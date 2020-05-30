@@ -1,7 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
 
@@ -15,6 +18,7 @@ namespace Pets_At_First_Sight
         public Post()
         {
             InitializeComponent();
+
         }
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -46,24 +50,47 @@ namespace Pets_At_First_Sight
             String _Vacinas = Vacinas.Text.ToString();
             String _Chip = Chip.Text.ToString();
             String Testo = PostTexto.Text.ToString();
-            // String _TipoDoador = TipoDoador.SelectedItem.ToString();
-            String s = "Imagens\\";
-            ANIMAL N1 = new ANIMAL()
+            String Url_Image_ = InputImage.Source.ToString();
+            if (Especie.Length == 0 | Nome.Length == 0 | Idade.Length == 0 | Genero.Length == 0 | _TipoDoador.Length == 0 | _Vacinas.Length == 0 | _Chip.Length == 0 | Testo.Length == 0)
             {
-                Nome = Nome,
-                Idade = Idade,
-                Genero = Genero,
-                Raca = Especie,
-                Url_Image = InputImage.Source.ToString(),
-                User_Name = _NomeDoador,
-                Mensagem = Testo
+                MessageBox.Show("Prencher todos os campos!!");
+            }
+            /*if (Url_Image_.Length == 0)
+            {
+                MessageBoxResult quit = MessageBox.Show("Não adicionou Image?", "Adicionar", MessageBoxButton.YesNo);
+                switch (quit)
+                {
+                    case MessageBoxResult.Yes:
+                        break;
+                    case MessageBoxResult.No:
+                        Url_Image_ = "Imagens\\NoImage.jpg";
+                       break ;
+                }
 
-            };
-            Container.animais.Add(N1);
-            new Inicio(); //MILAGRE
-            Perfil cursosPage = new Perfil();
-            this.NavigationService.Navigate(cursosPage);
-                    }
+            }*/
+            else
+            {
+                // String _TipoDoador = TipoDoador.SelectedItem.ToString();
+                String s = "Imagens\\";
+
+                ANIMAL N1 = new ANIMAL()
+                {
+                    Nome = Nome,
+                    Idade = Idade,
+                    Genero = Genero,
+                    Raca = Especie,
+                    Url_Image = Url_Image_,
+                    User_Name = _NomeDoador,
+                    Mensagem = Testo
+
+                };
+                Container.animais.Add(N1);
+                new Inicio(); //MILAGRE
+                MessageBox.Show("Post Criado");
+                Perfil cursosPage = new Perfil();
+                this.NavigationService.Navigate(cursosPage);
+            }
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

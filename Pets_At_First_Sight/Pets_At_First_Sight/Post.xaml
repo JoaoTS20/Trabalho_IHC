@@ -12,7 +12,7 @@
       WindowWidth="375"
       Background="#DCE3E7">
     <!-- Main grid here -->
-    <Grid Margin="2,0,-2,0">
+    <Grid Height="667">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="159*"/>
             <ColumnDefinition Width="106*"/>
