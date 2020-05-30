@@ -12,43 +12,30 @@
       WindowWidth="375"
       Background="#DCE3E7">
     <!-- Main grid here -->
-    <Grid>
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition />
+    <Grid Margin="2,0,-2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="110*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <!- First grid, the one that will have the photo and the first 4 boxes -->
-        <!--<Grid Grid.Row="0" Grid.Column="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition  Height="40" />
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-            </Grid.RowDefinitions>-->
 
-        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="187" Margin="0,26,0,21.4">-->
-        <Label Margin="173,156,122,474" FontSize="18" Height="Auto" Content="Espécie:"/>
-        <ComboBox FontSize="18" x:Name="EspecieAnimal" Margin="256,148,42,483" Height="Auto" >
-            <ComboBoxItem IsSelected="True" Content="Cão"/>
-            <ComboBoxItem Content="Gato"/>
-        </ComboBox>
-        <!--</StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,13" Width="187">-->
-        <Label FontSize="18" Height="Auto" Margin="177,53,117,578" Width="81" Content=" Nome:"/>
-        <TextBox x:Name="NomeAnimal" FontSize="18" Margin="256,49,42,588" />
-        <!--</StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,631">-->
-        <Label FontSize="18" Height="Auto" Margin="177,106,119,524" Width="79" Content="  Idade:"/>
-        <ComboBox FontSize="18" x:Name="IdadeAnimal" Margin="256,95,42,536" Height="Auto" >
+        <Label x:Name="Titulo_Loja" Height="35" Content="Post" Margin="0,24,44,607" FontFamily="Arial" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="64" Grid.ColumnSpan="2"/>
+
+        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Back" Margin="16,20,0,0" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <materialDesign:PackIcon
+                Kind="ArrowBack"
+                Height="24"
+                Width="24" />
+        </Button>
+
+        <!--NOME-->
+        <Label FontSize="20" Height="35" HorizontalAlignment="Right" Width="81" Content=" Nome:" Margin="0,75,11,557" Grid.Column="1"/>
+        <TextBox x:Name="NomeAnimal" FontSize="18" Grid.Column="2" Height="35" Margin="10,67,10,565"/>
+
+
+        <!--IDADE-->
+        <Label FontSize="20" Content="  Idade:" Height="35" Margin="14,134,11,498" Grid.Column="1"/>
+        <ComboBox FontSize="18" x:Name="IdadeAnimal" Grid.Column="2" Height="34" Margin="10,127,10,506" >
             <ComboBoxItem Content="Indefinida"/>
             <ComboBoxItem Content="menos de 1"/>
             <ComboBoxItem Content="1"/>
@@ -58,72 +45,58 @@
             <ComboBoxItem Content="5"/>
             <ComboBoxItem Content="5+"/>
         </ComboBox>
-        <!--</StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,41,0,597">-->
-        <Label Height="35" FontSize="18" Margin="174,201,122,0" Width="79" VerticalAlignment="Top" Content="Género:"/>
-        <ComboBox FontSize="18" x:Name="GeneroAnimal" Margin="256,191,42,440" Height="Auto" >
+
+        <!--ESPÉCIE-->
+        <Label Height="35" FontSize="20" VerticalAlignment="Top" Content="Espécie:" Grid.Column="1" Margin="10,194,11,0"/>
+        <ComboBox FontSize="18" x:Name="EspecieAnimal" Height="35" Margin="10,186,10,0" VerticalAlignment="Top" Grid.Column="2" >
+            <ComboBoxItem IsSelected="True" Content="Cão"/>
+            <ComboBoxItem Content="Gato"/>
+        </ComboBox>
+
+        <!--GÉNERO-->
+        <Label Height="35" FontSize="20" VerticalAlignment="Top" Content="Género:" Margin="10,254,15,0" Grid.Column="1"/>
+        <ComboBox FontSize="18" x:Name="GeneroAnimal" Height="34" Margin="10,247,10,386" Grid.Column="2" >
             <ComboBoxItem Content="Masculino"/>
             <ComboBoxItem Content="Feminino"/>
         </ComboBox>
-        <!--</StackPanel>-->
-        <Image Name="InputImage" Grid.Column ="0" HorizontalAlignment="Left" Height="102" Margin="33,58,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button HorizontalAlignment="Left" Height="20" Width="20" Click="BtnLoadFromFile_Click" Margin="82,171,0,476">+</Button>
-        <!--</Grid>-->
-        <!-- Second grid, the one with the last 4 boxes -->
-        <!--<Grid Grid.Column="0" Margin="0,203,0.2,222.2" Grid.RowSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-            </Grid.RowDefinitions>-->
-        <!--<StackPanel Orientation="Horizontal" Margin="0,-7,10,4">-->
-        <Label FontSize="18" Margin="135,240,127,388" Width="113" Content="Tipo doador:"/>
-        <ComboBox FontSize="18" x:Name="TipoDoador" Height="37" Margin="256,236,42,394" >
+
+        <!--TIPO DOADOR-->
+        <Label Height="35" FontSize="18" VerticalAlignment="Top" Content="Tipo doador:" Margin="135,315,15,0" Grid.ColumnSpan="2"/>
+        <ComboBox FontSize="18" x:Name="TipoDoador" Height="37" Margin="10,304,10,326" Grid.Column="2">
             <ComboBoxItem IsSelected="True" Content="Abrigo"/>
             <ComboBoxItem Content="Particular"/>
         </ComboBox>
-        <!--</StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,38,110,597" Width="108">-->
-        <Label FontSize="18" Margin="121,288,121,339" Height="Auto">Nome doador:</Label>
-        <TextBox FontSize="18" Height="30" x:Name="NomeDoador" Margin="256,288,42,349"  />
-        <!--</StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="208" Margin="0,34,0,582">-->
-        <Label FontSize="18" Margin="173,328,125,299" Height="Auto" Content="Vacinas:"/>
-        <ComboBox FontSize="18" x:Name="Vacinas" Margin="256,324,42,307" Height="36" >
-            <ComboBoxItem Content="Sim"/>
-            <ComboBoxItem IsSelected="True" Content="Não"/>
-        </ComboBox>
-        <!--</StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,33,0,582">-->
-        <Label FontSize="18" Height="Auto" Margin="190,373,127,251" Content="Chip:"/>
-        <ComboBox FontSize="18" x:Name="Chip" Margin="256,366,42,0" VerticalAlignment="Top" Height="38" >
-            <ComboBoxItem Content="Sim"/>
-            <ComboBoxItem IsSelected="True" Content="Não"/>
-        </ComboBox>
-        <!--</StackPanel>-->
-        <!--</Grid>-->
-        <!-- Third grid, it contains the pst textbox and the submit button -->
-        <!--<Grid Grid.Column="0" Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>-->
-        <!--<TextBox Width="300" Name="PostTexto" AcceptsReturn="True" TextWrapping="Wrap" Text="Insira aqui o seu texto" GotFocus="TextBox_GotFocus" TextAlignment="Center" VerticalContentAlignment="Center" Margin="0.2,0.2,-1.8,-1"/>-->
-        <Button Name="SubmeterPost" Click="ButtonSubmeter_Click" Height="54" Margin="62,505,70,108">Submeter Post</Button>
-        <TextBox x:Name="PostTexto" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" 
-                     VerticalAlignment="Top" Height="64" AcceptsReturn="True" 
-                     TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" 
-                     materialDesign:HintAssist.Hint="Insira aqui o seu texto."
-                    IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" Margin="79,415,81,0" />
 
-        <!--</Grid>-->
+        <!--NOME DOADOR-->
+        <Label FontSize="18" Height="35" VerticalAlignment="Top"  Content="Nome doador:" Margin="121,376,19,0" Grid.ColumnSpan="2"/>
+        <TextBox FontSize="18" Height="35" x:Name="NomeDoador" Margin="10,366,10,266" Grid.Column="2"/>
+
+        <!--VACINAS-->
+        <Label FontSize="18" Height="35" VerticalAlignment="Top"  Content="Vacinas:" Margin="15,435,18,0" Grid.Column="1"/>
+        <ComboBox FontSize="18" x:Name="Vacinas" Height="36" Margin="10,425,10,206" RenderTransformOrigin="3,2.472" Grid.Column="2" >
+            <ComboBoxItem Content="Sim"/>
+            <ComboBoxItem IsSelected="True" Content="Não"/>
+        </ComboBox>
+
+        <!--CHIP-->
+        <Label FontSize="18" Height="35" VerticalAlignment="Top" Content="Chip:" Margin="38,496,18,0" Grid.Column="1"/>
+        <ComboBox FontSize="18" x:Name="Chip" VerticalAlignment="Top" Height="38" Margin="10,484,10,0" Grid.Column="2" >
+            <ComboBoxItem Content="Sim"/>
+            <ComboBoxItem IsSelected="True" Content="Não"/>
+        </ComboBox>
+
+        <!--IMAGEM-->
+        <Image x:Name="InputImage" Grid.Column="0" HorizontalAlignment="Right" Height="102" VerticalAlignment="Top" Width="120" Margin="0,90,23,0"/>
+        <Button HorizontalAlignment="Right" Height="Auto" Width="55" Click="BtnLoadFromFile_Click" RenderTransformOrigin="3.05,-5.2" Margin="0,202,51,416">
+            <materialDesign:PackIcon Kind="ImageSearchOutline" Height="49" Width="30" Margin="-10"/>
+        </Button>
+
+        <TextBox x:Name="PostTexto" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" 
+                VerticalAlignment="Top" Height="99" AcceptsReturn="True" 
+                TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" 
+                materialDesign:HintAssist.Hint="Insira aqui o seu &#10; texto."
+                IsEnabled="{Binding IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" Margin="16,272,24,0" />
+        <Button x:Name="SubmeterPost" Click="ButtonSubmeter_Click" Height="50" Content="Submeter Post" Margin="87,564,88,53" Grid.ColumnSpan="3"/>
 
     </Grid>
 

@@ -64,5 +64,19 @@ namespace Pets_At_First_Sight
             Perfil cursosPage = new Perfil();
             this.NavigationService.Navigate(cursosPage);
                     }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult quit = MessageBox.Show("O seu post será descartado. Pretende continuar?", "Voltar", MessageBoxButton.YesNo);
+            switch (quit)
+            {
+                case MessageBoxResult.Yes:
+                    Perfil p = new Perfil();
+                    this.NavigationService.Navigate(p);
+                    break;
+                case MessageBoxResult.No:
+                    break;
+            }
+        }
     }
 }
