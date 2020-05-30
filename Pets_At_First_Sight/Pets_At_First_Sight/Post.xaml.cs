@@ -18,6 +18,7 @@ namespace Pets_At_First_Sight
         public Post()
         {
             InitializeComponent();
+            InputImage.Source = new BitmapImage(new Uri("Imagens\\NoImage.jpg", UriKind.Relative));
 
         }
 
@@ -41,6 +42,7 @@ namespace Pets_At_First_Sight
 
         private void ButtonSubmeter_Click(object sender, RoutedEventArgs e)
         {
+            BitmapImage z = new BitmapImage(new Uri("Imagens\\NoImage.jpg", UriKind.Relative));
             String Especie = EspecieAnimal.Text.ToString();
             String Nome = NomeAnimal.Text.ToString();
             String Idade = IdadeAnimal.Text.ToString();
@@ -55,9 +57,9 @@ namespace Pets_At_First_Sight
             {
                 MessageBox.Show("Prencher todos os campos!!");
             }
-            /*if (Url_Image_.Length == 0)
+            /*if (InputImage.Source == z)
             {
-                MessageBoxResult quit = MessageBox.Show("Não adicionou Image?", "Adicionar", MessageBoxButton.YesNo);
+                MessageBoxResult quit = MessageBox.Show("Não adicionou Imagem?", "Adicionar", MessageBoxButton.YesNo);
                 switch (quit)
                 {
                     case MessageBoxResult.Yes:
@@ -71,7 +73,7 @@ namespace Pets_At_First_Sight
             else
             {
                 // String _TipoDoador = TipoDoador.SelectedItem.ToString();
-                String s = "Imagens\\";
+                //String s = "Imagens\\";
 
                 ANIMAL N1 = new ANIMAL()
                 {

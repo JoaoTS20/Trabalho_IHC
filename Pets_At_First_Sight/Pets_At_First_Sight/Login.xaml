@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Login" Height="667" Width="375" Background="#DCE3E7">
     <Grid>
-        <Image Source="Imagens/logo1.png" Height="110" Width="110" Margin="139,88,126,469">
+        <Image Source="Imagens/logo1.png" Height="110" Width="110" Margin="132.5,88,132.5,469">
 
         </Image>
         <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="25"  Content="Entrar" HorizontalAlignment="Left" Margin="125,521,0,0" VerticalAlignment="Top" Width="124" Height="49" Click="Button_Click" ToolTip="Entrar">
