@@ -66,6 +66,15 @@
     <Compile Include="CriarConta.xaml.cs">
       <DependentUpon>CriarConta.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewPost_Adocoes.xaml.cs">
+      <DependentUpon>ViewPost_Adocoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPost_Favoritos.xaml.cs">
+      <DependentUpon>ViewPost_Favoritos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPost_Perfil.xaml.cs">
+      <DependentUpon>ViewPost_Perfil.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows.xaml.cs">
       <DependentUpon>Windows.xaml</DependentUpon>
     </Compile>
@@ -148,6 +157,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Post_MaisInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewPost_Adocoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewPost_Favoritos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewPost_Perfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

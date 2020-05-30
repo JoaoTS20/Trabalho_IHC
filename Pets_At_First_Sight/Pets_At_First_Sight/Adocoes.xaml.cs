@@ -86,8 +86,8 @@ namespace Pets_At_First_Sight
                     Container.animal_selecionado.Add(animal);
                 }
             }
-            Post_MaisInfo post_MaisInfo = new Post_MaisInfo();
-            NavigationService.Navigate(post_MaisInfo);
+            ViewPost_Adocoes vpa = new ViewPost_Adocoes();
+            NavigationService.Navigate(vpa);
         }
     }
 }

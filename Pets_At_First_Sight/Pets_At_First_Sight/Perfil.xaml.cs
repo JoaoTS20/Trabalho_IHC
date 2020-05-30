@@ -80,8 +80,8 @@ namespace Pets_At_First_Sight
                     Container.animal_selecionado.Add(animal);
                 }
             }
-            Post_MaisInfo post_MaisInfo = new Post_MaisInfo();
-            NavigationService.Navigate(post_MaisInfo);
+            ViewPost_Perfil post = new ViewPost_Perfil();
+            NavigationService.Navigate(post);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
