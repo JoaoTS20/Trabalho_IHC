@@ -11,9 +11,9 @@
         <Image Source="Imagens/logo1.png" Height="110" Width="110" Margin="132.5,88,132.5,469">
 
         </Image>
-        <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="25"  Content="Entrar" HorizontalAlignment="Left" Margin="125,521,0,0" VerticalAlignment="Top" Width="124" Height="49" Click="Button_Click" ToolTip="Entrar">
+        <Button Name="Entrar" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="25"  Content="Entrar" HorizontalAlignment="Left" Margin="125,521,0,0" VerticalAlignment="Top" Width="124" Height="49" Click="Button_Click" ToolTip="Entrar">
         </Button>
-        <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="54,312" />
+        <TextBox Name="Email" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="54,312" />
         <PasswordBox x:Name="PasswordBox" Height="38" materialDesign:HintAssist.Hint="Password" materialDesign:TextFieldAssist.HasClearButton="True" VerticalAlignment="Center" Margin="54,388,54,241" />
         <Button Background="Transparent" BorderThickness="0" Margin="70,430,72,205" Click="Button_Click_1">
             <Label Content="Esqueceu-se da palavra passe?"/>

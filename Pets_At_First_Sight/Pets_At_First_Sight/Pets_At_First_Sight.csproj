@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Conta.cs" />
     <Compile Include="CriarConta.xaml.cs">
       <DependentUpon>CriarConta.xaml</DependentUpon>
     </Compile>

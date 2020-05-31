@@ -26,6 +26,7 @@ namespace Pets_At_First_Sight
         public static List<ANIMAL> adocoes = new List<ANIMAL>();
         public static List<ANIMAL> animal_selecionado = new List<ANIMAL>();
         public static List<Produto> produtos = new List<Produto>();
+        public static List<Conta> contas = new List<Conta>();
 
     }
     public partial class MainWindow : Window
@@ -46,7 +47,10 @@ namespace Pets_At_First_Sight
             Container.produtos.Add(new Produto() { ID = "1002", TipoServico = "Serviço", NomeProduto = "Esterilização para cão", Empresa = "Empresa C", Preco = "15,00", uImage = s + "escova_cabelo.jpg" });
             Container.produtos.Add(new Produto() { ID = "1003", TipoServico = "Serviço", NomeProduto = "Manicure para gato", Empresa = "Empresa D", Preco = "8,99", uImage = s + "escova_cabelo.jpg" });
             Container.produtos.Add(new Produto() { ID = "1003", TipoServico = "Produto", NomeProduto = "Ração tricolor para cão", Empresa = "Empresa E", Preco = "7,99", uImage = s + "escova_cabelo.jpg" });
-
+            // separador
+            Container.contas.Add(new Conta() { Email = "anthonypereira@ua.pt", Pass = "Olábomdia.0", NomePessoa = "Anthony Pereira", Username = "M0dernCaty0ga", TipoConta = "Particular", Localidade = "Ovar" });
+            Container.contas.Add(new Conta() { Email = "alexandracarvalho@ua.pt", Pass = "Olábomdia.1", NomePessoa = "Alexandra Carvalho", Username = "Alexandra Carvalho", TipoConta = "Doador", Localidade = "Gaia" });
+            Container.contas.Add(new Conta() { Email = "joaots@ua.pt", Pass = "Olábomdia.2", NomePessoa = "João Soares", Username = "João Soares", TipoConta = "Cliente", Localidade = "Canelas" });
             InicioFiltros inicioFiltros = new InicioFiltros();
         }
 
