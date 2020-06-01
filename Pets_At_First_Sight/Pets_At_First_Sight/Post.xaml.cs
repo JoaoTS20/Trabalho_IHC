@@ -89,10 +89,13 @@ namespace Pets_At_First_Sight
                     Raca = Especie,
                     Url_Image = Url_Image_,
                     User_Name = _NomeDoador,
-                    Mensagem = Testo
-
+                    Mensagem = Testo,
+                    Chip = _Chip,
+                    Vacinas = _Vacinas,
+                    Tipo_Doador = _TipoDoador
                 };
                 Container.animais.Add(N1);
+                MessageBox.Show(N1.ToString());
                 new Inicio(); //MILAGRE
                 MessageBox.Show("Post Criado");
                 Perfil cursosPage = new Perfil();
