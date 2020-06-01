@@ -14,6 +14,7 @@ namespace Pets_At_First_Sight
         public Perfil()
         {
             InitializeComponent();
+            dados_perfil();
             List<ANIMAL> op = MeusPosts();
             My_Posts.ItemsSource = op;
         }
@@ -40,11 +41,14 @@ namespace Pets_At_First_Sight
            
            
         }*/
+        private void dados_perfil()
+        {
+            username.Content = Container.utilizador_logado.First().Username.ToString();
+            nome.Content= Container.utilizador_logado.First().NomePessoa.ToString();
+            email.Content = Container.utilizador_logado.First().Localidade.ToString();
+            localidade.Content = Container.utilizador_logado.First().Localidade.ToString();
+        }
 
-        String PerfilUsername = Container.utilizador_logado.First().Username.ToString();
-        String PerfilNome = Container.utilizador_logado.First().NomePessoa.ToString();
-        String PerfilLocalidade = Container.utilizador_logado.First().Localidade.ToString();
-        String PerfilEmail = Container.utilizador_logado.First().Localidade.ToString();
 
         private void Criar_Post_Click(object sender, RoutedEventArgs e)
         {
@@ -57,8 +61,8 @@ namespace Pets_At_First_Sight
             List<ANIMAL> my = new List<ANIMAL>();
             foreach (ANIMAL m in Container.animais)
             {
-                MessageBox.Show(nome.Content.ToString());
-                if (m.User_Name.Equals(nome.Content.ToString()))
+                //MessageBox.Show(username.Content.ToString());
+                if (m.User_Name.Equals(username.Content.ToString()))
                 {
                     my.Add(m);
                 }

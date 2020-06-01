@@ -34,7 +34,7 @@
                     <ImageBrush ImageSource="Imagens\ImgPerfil.jpg" />
                 </Border.Background>
             </Border>
-            <Label Name="username" Grid.Column="0" Grid.Row="1"  FontSize="15" HorizontalContentAlignment="Center" Content="{Binding PerfilUsername}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="150"/>
+            <Label Name="username" Grid.Column="0" Grid.Row="1"  FontSize="15" HorizontalContentAlignment="Center"  VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="150"/>
         </Grid>
         <!-- Second grid, which includes "mais informações" and infos about the user -->
         <Grid Grid.Row="1" Margin="0,44,0,10">
@@ -62,15 +62,15 @@
                     <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
                         <StackPanel Orientation="Horizontal">
                             <Label x:Name="username_label" Opacity=".68" Content="Nome:"/>
-                            <Label x:Name="nome" Opacity=".68" Content="{Binding PerfilNome}"/>
+                            <Label x:Name="nome" Opacity=".68" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label x:Name="email_label" Opacity=".68" Content="Email:"/>
-                            <Label x:Name="email" Opacity=".68" Content="{Binding PerfilEmail}"/>
+                            <Label x:Name="email" Opacity=".68" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label x:Name="localidade_label" Opacity=".68" Content="Localidade: "/>
-                            <Label x:Name="localidade" Opacity=".68" Content="{Binding PerfilLocalidade}"/>
+                            <Label x:Name="localidade" Opacity=".68" />
                         </StackPanel>
                     </StackPanel>
                 </Expander>
