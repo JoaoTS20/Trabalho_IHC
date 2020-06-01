@@ -24,63 +24,66 @@ namespace Pets_At_First_Sight
         {
             InitializeComponent();
         }
-        bool goodEmail = false;
-        bool goodPass = false;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bool goodEmail = false;
+            bool goodPass = false;
+            bool validEmail = false;
+            bool validPass = false;
+
             // Validação do email
             if (IsValidMailAddress(Email.Text.ToString()) == true)
             {
-                // verificar se o user existe
-                foreach (Conta c in Container.contas)
-                {
-                    if (Email.Text.ToString() == c.Email.ToString())
-                    {
-                        goodEmail = true;
-                        break;
-                    }
-                }
-                if (goodEmail == false)
-                {
-                    MessageBox.Show("Não existe nenhuma conta registada com esse email.");
-                    Email.Text = "";
-                }
-            } else
+                validEmail = true;
+            } else if (IsValidMailAddress(Email.Text.ToString()) == false)
             {
                 MessageBox.Show("Email inválido!");
                 Email.Text = "";
             }
 
-            // Validação da password
-            if (IsValidPass(PasswordBox.Password.ToString()) == true){
-                foreach (Conta c in Container.contas)
-                {
-                    if (PasswordBox.Password.ToString() == c.Pass.ToString())
-                    {
-                        goodPass = true;
-                        break;
-                    } 
-                }
-                if (goodPass == false)
-                {
-                    MessageBox.Show("Não existe nenhuma conta registada com essa password");
-                    PasswordBox.Password = "";
-                }
-            } else
+            // Validação da palavra-passe
+            if (IsValidPass(PasswordBox.Password.ToString()) == true)
+            {
+                validPass = true;
+            }
+            else if (IsValidPass(PasswordBox.Password.ToString()) == false)
             {
                 MessageBox.Show("Password inválida! Tem de conter pelo menos 8 caracteres, 1 número e 1 sinal de pontuação!");
                 PasswordBox.Password = "";
             }
 
-            if (goodEmail == true && goodPass == true)
+            if (validEmail == true || validPass == true)
             {
-                MessageBox.Show("Login efetuado com sucesso!");
-                Windows App = new Windows();
-                this.NavigationService.Navigate(App);
+                foreach (Conta c in Container.contas)
+                {
+                    if (Email.Text.ToString() == c.Email.ToString())
+                    {
+                        goodEmail = true;
+                        if (PasswordBox.Password.ToString() == c.Pass.ToString())
+                        {
+                            goodPass = true;
+                            Container.utilizador_logado.Add(c);
+                            MessageBox.Show(Container.utilizador_logado.First().Username.ToString());
+                            MessageBox.Show("Login efetuado com sucesso!");
+                            Windows App = new Windows();
+                            this.NavigationService.Navigate(App);
+
+                        }
+                    }
+                }
+                if (goodEmail == false && validEmail == true)
+                {
+                    MessageBox.Show("Não existe nenhuma conta registada com esse email.");
+                    Email.Text = "";
+                }
+                if (goodPass == false && validPass == true)
+                {
+                    MessageBox.Show("Não existe nenhuma conta registada com essa password");
+                    PasswordBox.Password = "";
+                }
+
             }
-            
-            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

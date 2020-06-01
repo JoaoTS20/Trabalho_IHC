@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Pets_At_First_Sight
 {
@@ -40,6 +41,11 @@ namespace Pets_At_First_Sight
            
         }*/
 
+        String PerfilUsername = Container.utilizador_logado.First().Username.ToString();
+        String PerfilNome = Container.utilizador_logado.First().NomePessoa.ToString();
+        String PerfilLocalidade = Container.utilizador_logado.First().Localidade.ToString();
+        String PerfilEmail = Container.utilizador_logado.First().Localidade.ToString();
+
         private void Criar_Post_Click(object sender, RoutedEventArgs e)
         {
             Post cursosPage = new Post();
@@ -51,7 +57,8 @@ namespace Pets_At_First_Sight
             List<ANIMAL> my = new List<ANIMAL>();
             foreach (ANIMAL m in Container.animais)
             {
-                if (m.User_Name.Equals(username.Content.ToString()))
+                MessageBox.Show(nome.Content.ToString());
+                if (m.User_Name.Equals(nome.Content.ToString()))
                 {
                     my.Add(m);
                 }
