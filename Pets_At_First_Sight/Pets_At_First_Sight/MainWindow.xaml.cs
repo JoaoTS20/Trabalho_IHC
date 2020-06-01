@@ -38,10 +38,10 @@ namespace Pets_At_First_Sight
             String s = "Imagens\\"; //Tem de ser assim
             //Façam o mesmo depois para escrever o meses na idade
             Container.animais.Add(new ANIMAL() { Nome = "Cão Fofo", Idade = "5 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Filipa", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip="Sim", Mensagem="fuhsd" });
-            Container.animais.Add(new ANIMAL() { Nome = "Princesa", Idade = "10 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Anthony Pereira", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip = "Não", Mensagem = "fuhsd" });
-            Container.animais.Add(new ANIMAL() { Nome = "Piu", Idade = "5 anos", Genero = "Feminino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Anthony Pereira", Tipo_Doador = "Particular", Vacinas = "Sim", Chip = "Sim", Mensagem = "fuhsd" });
-            Container.animais.Add(new ANIMAL() { Nome = "Gato das Botas", Idade = "7 anos", Genero = "Masculino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Alexandra", Tipo_Doador = "Abrigo", Vacinas = "Não", Chip = "Sim", Mensagem = "fuhsd" });
-            Container.animais.Add(new ANIMAL() { Nome = "Simba", Idade = "2 anos", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "João Soares", Tipo_Doador = "Particular", Vacinas = "Não", Chip = "Sim", Mensagem = "Cão Muito engraçado" });
+            Container.animais.Add(new ANIMAL() { Nome = "Princesa", Idade = "10 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "M0dernCaty0ga", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip = "Não", Mensagem = "fuhsd" });
+            Container.animais.Add(new ANIMAL() { Nome = "Piu", Idade = "5 anos", Genero = "Feminino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "M0dernCaty0ga", Tipo_Doador = "Particular", Vacinas = "Sim", Chip = "Sim", Mensagem = "fuhsd" });
+            Container.animais.Add(new ANIMAL() { Nome = "Gato das Botas", Idade = "7 anos", Genero = "Masculino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Alex42000", Tipo_Doador = "Abrigo", Vacinas = "Não", Chip = "Sim", Mensagem = "fuhsd" });
+            Container.animais.Add(new ANIMAL() { Nome = "Simba", Idade = "2 anos", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "J0hnnySoares", Tipo_Doador = "Particular", Vacinas = "Não", Chip = "Sim", Mensagem = "Cão Muito engraçado" });
             // separador
             Container.produtos.Add(new Produto() { ID = "1000", TipoServico = "Produto", NomeProduto = "Roupão para cão", Empresa="Empresa A", Preco = "5,95", uImage= s + "escova_cabelo.jpg" });
             Container.produtos.Add(new Produto() { ID = "1001", TipoServico = "Produto", NomeProduto = "Roupão para gato", Empresa = "Empresa B", Preco = "6,95", uImage = s + "escova_cabelo.jpg" });
@@ -50,8 +50,8 @@ namespace Pets_At_First_Sight
             Container.produtos.Add(new Produto() { ID = "1003", TipoServico = "Produto", NomeProduto = "Ração tricolor para cão", Empresa = "Empresa E", Preco = "7,99", uImage = s + "escova_cabelo.jpg" });
             // separador
             Container.contas.Add(new Conta() { Email = "anthonypereira@ua.pt", Pass = "Olábomdia.0", NomePessoa = "Anthony Pereira", Username = "M0dernCaty0ga", TipoConta = "Particular", Localidade = "Ovar" });
-            Container.contas.Add(new Conta() { Email = "alexandracarvalho@ua.pt", Pass = "Olábomdia.1", NomePessoa = "Alexandra Carvalho", Username = "Alexandra Carvalho", TipoConta = "Doador", Localidade = "Gaia" });
-            Container.contas.Add(new Conta() { Email = "joaots@ua.pt", Pass = "Olábomdia.2", NomePessoa = "João Soares", Username = "João Soares", TipoConta = "Cliente", Localidade = "Canelas" });
+            Container.contas.Add(new Conta() { Email = "alexandracarvalho@ua.pt", Pass = "Olábomdia.1", NomePessoa = "Alexandra Carvalho", Username = "Alex42000", TipoConta = "Doador", Localidade = "Gaia" });
+            Container.contas.Add(new Conta() { Email = "joaots@ua.pt", Pass = "Olábomdia.2", NomePessoa = "João Soares", Username = "J0hnnySoares", TipoConta = "Cliente", Localidade = "Canelas" });
             InicioFiltros inicioFiltros = new InicioFiltros();
         }
 

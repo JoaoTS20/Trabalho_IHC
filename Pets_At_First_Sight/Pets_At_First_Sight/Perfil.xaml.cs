@@ -45,7 +45,7 @@ namespace Pets_At_First_Sight
         {
             username.Content = Container.utilizador_logado.First().Username.ToString();
             nome.Content= Container.utilizador_logado.First().NomePessoa.ToString();
-            email.Content = Container.utilizador_logado.First().Localidade.ToString();
+            email.Content = Container.utilizador_logado.First().Email.ToString();
             localidade.Content = Container.utilizador_logado.First().Localidade.ToString();
         }
 
@@ -62,8 +62,10 @@ namespace Pets_At_First_Sight
             foreach (ANIMAL m in Container.animais)
             {
                 //MessageBox.Show(username.Content.ToString());
+                //MessageBox.Show(m.User_Name);
                 if (m.User_Name.Equals(username.Content.ToString()))
                 {
+                    //MessageBox.Show("Encontrei um post meu!");
                     my.Add(m);
                 }
             }

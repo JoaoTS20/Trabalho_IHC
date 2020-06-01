@@ -18,8 +18,14 @@ namespace Pets_At_First_Sight
         public Post()
         {
             InitializeComponent();
+            adicionarUser();
             InputImage.Source = new BitmapImage(new Uri("Imagens\\NoImage.jpg", UriKind.Relative));
 
+        }
+
+        public void adicionarUser()
+        {
+            UserName.Content = Container.utilizador_logado.First().Username.ToString();
         }
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -48,7 +54,7 @@ namespace Pets_At_First_Sight
             String Idade = IdadeAnimal.Text.ToString();
             String Genero = GeneroAnimal.Text.ToString();
             String _TipoDoador = TipoDoador.Text.ToString();
-            String _NomeDoador = NomeDoador.Text.ToString();
+            String _NomeDoador = UserName.Content.ToString();
             String _Vacinas = Vacinas.Text.ToString();
             String _Chip = Chip.Text.ToString();
             String Testo = PostTexto.Text.ToString();

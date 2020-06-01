@@ -68,8 +68,8 @@
         </ComboBox>
 
         <!--NOME DOADOR-->
-        <Label FontSize="18" Height="35" VerticalAlignment="Top"  Content="Nome doador:" Margin="121,376,19,0" Grid.ColumnSpan="2"/>
-        <TextBox FontSize="18" Height="35" x:Name="NomeDoador" Margin="10,366,10,266" Grid.Column="2"/>
+        <Label FontSize="18" Height="35" VerticalAlignment="Top"  Content="User Name:" Margin="106,372,33.8,0" Grid.ColumnSpan="2"/>
+        <Label FontSize="18" Height="35" x:Name="UserName" Margin="47.8,373,10.2,259" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <!--VACINAS-->
         <Label FontSize="18" Height="35" VerticalAlignment="Top"  Content="Vacinas:" Margin="15,435,18,0" Grid.Column="1"/>
