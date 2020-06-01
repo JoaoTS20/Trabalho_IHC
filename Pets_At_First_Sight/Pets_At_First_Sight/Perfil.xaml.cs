@@ -46,8 +46,27 @@ namespace Pets_At_First_Sight
         private void dados_perfil()
         {
             //MessageBox.Show(Container.utilizador_logado.First().Foto.ToString());
-            String z = "pack://application:,,,/Imagens/" + Container.utilizador_logado.First().Foto.ToString();
+            String content = Container.utilizador_logado.First().Foto.ToString();
+            String z = null;
+            if (content.Contains("pack://application:"))
+            {
+                z = content;
+            } else
+            {
+                z = "pack://application:,,,/Imagens/" + content;
+            }
+            
+            if (content.Contains("Imagens")) //OMG É ISTO HUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUE
+                // huehuehuehuehue SOCORRO ISTO FINALMENTE FUNCIONA, HELP
+            {
+                int found = content.IndexOf("Imagens");
+                String subs = content.Substring(found);
+                z = "pack://application:,,,/Pets_At_First_Sight;component/" + subs;
+            }
+            
             //MessageBox.Show(z);
+            //MessageBox.Show(z);
+            
             Imagem.ImageSource= new BitmapImage(new Uri(z, UriKind.RelativeOrAbsolute));
             //FotoPerfil.Background = new System.Windows.Media.ImageBrush(bi);
             username.Content = Container.utilizador_logado.First().Username.ToString();

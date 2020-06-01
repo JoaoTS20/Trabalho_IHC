@@ -49,7 +49,7 @@ namespace Pets_At_First_Sight
             }
             else if (IsValidPass(PasswordBox.Password.ToString()) == false)
             {
-                MessageBox.Show("Password inválida! Tem de conter pelo menos 8 caracteres, 1 número e 1 sinal de pontuação!");
+                MessageBox.Show("Password inválida! Tem de conter pelo menos 8 caracteres, 1 número e 1 caracter especial/sinal de pontuação!");
                 PasswordBox.Password = "";
             }
 
@@ -64,7 +64,7 @@ namespace Pets_At_First_Sight
                         {
                             goodPass = true;
                             Container.utilizador_logado.Add(c);
-                            MessageBox.Show(Container.utilizador_logado.First().Username.ToString());
+                            //MessageBox.Show(Container.utilizador_logado.First().Username.ToString());
                             MessageBox.Show("Login efetuado com sucesso!");
                             Windows App = new Windows();
                             this.NavigationService.Navigate(App);

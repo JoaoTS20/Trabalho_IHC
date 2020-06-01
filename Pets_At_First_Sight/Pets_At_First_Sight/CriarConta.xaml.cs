@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,10 +25,13 @@ namespace Pets_At_First_Sight
         public CriarConta()
         {
             InitializeComponent();
+            InputImage.Source = new BitmapImage(new Uri("Imagens\\NoImage.jpg", UriKind.Relative));
         }
    
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            BitmapImage z = new BitmapImage(new Uri("Imagens\\NoImage.jpg", UriKind.Relative));
+
             if (criar_localidade.Text == "" || criar_nome.Text == "" || criar_username.Text == "")
             {
                 MessageBox.Show("Existem 1 ou mais campos em branco!");
@@ -63,7 +67,7 @@ namespace Pets_At_First_Sight
                 if (IsValidMailAddress(criar_email.Text.ToString()) == true && IsValidPass(criar_pass.Password.ToString()) == true)
                 {
                     MessageBox.Show("Conta criada com sucesso!");
-                    Container.contas.Add(new Conta() { Email = criar_email.Text.ToString(), Pass = criar_pass.Password.ToString(), NomePessoa = criar_nome.Text.ToString(), Username = criar_username.Text.ToString(), TipoConta = "Particular", Localidade = criar_localidade.Text.ToString() });
+                    Container.contas.Add(new Conta() { Email = criar_email.Text.ToString(), Pass = criar_pass.Password.ToString(), NomePessoa = criar_nome.Text.ToString(), Username = criar_username.Text.ToString(), TipoConta = "Particular", Localidade = criar_localidade.Text.ToString(), Foto = InputImage.Source.ToString() });
                     Login login = new Login();
                     this.NavigationService.Navigate(login);
                 }
@@ -136,6 +140,16 @@ namespace Pets_At_First_Sight
             else
             {
                 return false;
+            }
+        }
+
+        private void BtnLoadFromFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                Uri fileUri = new Uri(openFileDialog.FileName);
+                InputImage.Source = new BitmapImage(fileUri);
             }
         }
     }
