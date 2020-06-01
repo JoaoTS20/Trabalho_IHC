@@ -88,18 +88,18 @@ namespace Pets_At_First_Sight
         }
         Boolean flagAdo = true;
 
-        private void Adopt(object sender, RoutedEventArgs e)
+        public void Adopt(object sender, RoutedEventArgs e)
         {
             Button i = (Button)sender;
             PackIcon b = (PackIcon)i.Content;
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
-            Image u = (Image)gr.Children[1];
+            Image u = (Image)gr.Children[5];
             String x = u.Source.ToString(); //Não dá o texto de forma correta
-            Label r = (Label)gr.Children[2];
-            Label n = (Label)gr.Children[3];
-            Label y = (Label)gr.Children[4];
-            Label g = (Label)gr.Children[5];
+            Label r = (Label)gr.Children[1];
+            Label n = (Label)gr.Children[2];
+            Label y = (Label)gr.Children[3];
+            Label g = (Label)gr.Children[4];
 
             String Nome_Bicho = n.Content.ToString();
             String Idades = y.Content.ToString();
@@ -151,7 +151,7 @@ namespace Pets_At_First_Sight
         }
 
         Boolean flagFav = true;
-        private void Fave(object sender, RoutedEventArgs e)
+        public void Fave(object sender, RoutedEventArgs e)
         {
 
             //Um pequeno Bug Sai da página o botão deixa de funcionar kinda;
@@ -161,12 +161,12 @@ namespace Pets_At_First_Sight
             PackIcon b = (PackIcon)i.Content;
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
-            Image u = (Image)gr.Children[1];
+            Image u = (Image)gr.Children[5];
             String x = u.Source.ToString(); //Não dá o texto de forma correta
-            Label r = (Label)gr.Children[2];
-            Label n = (Label)gr.Children[3];
-            Label y = (Label)gr.Children[4];
-            Label g = (Label)gr.Children[5];
+            Label r = (Label)gr.Children[1];
+            Label n = (Label)gr.Children[2];
+            Label y = (Label)gr.Children[3];
+            Label g = (Label)gr.Children[4];
 
             String Nome_Bicho = n.Content.ToString();
             String Idades = y.Content.ToString();

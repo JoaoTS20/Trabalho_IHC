@@ -18,15 +18,15 @@ namespace Pets_At_First_Sight
         public Post()
         {
             InitializeComponent();
-            adicionarUser();
+            //adicionarUser();
             InputImage.Source = new BitmapImage(new Uri("Imagens\\NoImage.jpg", UriKind.Relative));
 
         }
 
-        public void adicionarUser()
+        /*public void adicionarUser()
         {
             UserName.Content = Container.utilizador_logado.First().Username.ToString();
-        }
+        }*/
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
