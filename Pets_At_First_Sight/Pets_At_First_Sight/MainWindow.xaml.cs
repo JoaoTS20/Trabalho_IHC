@@ -51,7 +51,7 @@ namespace Pets_At_First_Sight
             // separador
             Container.contas.Add(new Conta() { Email = "anthonypereira@ua.pt", Pass = "Olábomdia.0", NomePessoa = "Anthony Pereira", Username = "M0dernCaty0ga", TipoConta = "Particular", Localidade = "Ovar", Foto = "ImgPerfil.jpg" });
             Container.contas.Add(new Conta() { Email = "alexandracarvalho@ua.pt", Pass = "Olábomdia.1", NomePessoa = "Alexandra Carvalho", Username = "Alex42000", TipoConta = "Doador", Localidade = "Gaia", Foto = "alexandra.jpg" });
-            Container.contas.Add(new Conta() { Email = "joaots@ua.pt", Pass = "Olábomdia.2", NomePessoa = "João Soares", Username = "J0hnnySoares", TipoConta = "Cliente", Localidade = "Canelas", Foto = "joao.jpg" });
+            Container.contas.Add(new Conta() { Email = "joaots@ua.pt", Pass = "Olábomdia.2", NomePessoa = "João Soares", Username = "J0hnnySoares", TipoConta = "Cliente", Localidade = "Canelas", Foto = "NoImage.jpg" });
             InicioFiltros inicioFiltros = new InicioFiltros();
         }
 

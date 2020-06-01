@@ -31,7 +31,7 @@
             </Grid.RowDefinitions>
             <Border Name="FotoPerfil" CornerRadius="100" VerticalAlignment="Top" Margin="10" Grid.Column="0" Grid.Row="0" Width="150" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
                 <Border.Background>
-                    <ImageBrush ImageSource="Imagens\ImgPerfil.jpg" />
+                    <ImageBrush x:Name="Imagem"  ImageSource="Imagens\ImgPerfil.jpg" />
                 </Border.Background>
             </Border>
             <Label Name="username" Grid.Column="0" Grid.Row="1"  FontSize="15" HorizontalContentAlignment="Center"  VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="150"/>

@@ -45,9 +45,11 @@ namespace Pets_At_First_Sight
         }*/
         private void dados_perfil()
         {
-            MessageBox.Show(Container.utilizador_logado.First().Foto.ToString());
-            BitmapImage bi = new BitmapImage(new Uri(@"Imagens\\" + Container.utilizador_logado.First().Foto.ToString(), UriKind.Relative));
-            FotoPerfil.Background = new System.Windows.Media.ImageBrush(bi);
+            //MessageBox.Show(Container.utilizador_logado.First().Foto.ToString());
+            String z = "pack://application:,,,/Imagens/" + Container.utilizador_logado.First().Foto.ToString();
+            //MessageBox.Show(z);
+            Imagem.ImageSource= new BitmapImage(new Uri(z, UriKind.RelativeOrAbsolute));
+            //FotoPerfil.Background = new System.Windows.Media.ImageBrush(bi);
             username.Content = Container.utilizador_logado.First().Username.ToString();
             nome.Content= Container.utilizador_logado.First().NomePessoa.ToString();
             email.Content = Container.utilizador_logado.First().Email.ToString();
