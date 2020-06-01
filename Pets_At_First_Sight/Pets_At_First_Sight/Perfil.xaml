@@ -29,7 +29,7 @@
                 <RowDefinition Height="170"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Border CornerRadius="100" VerticalAlignment="Top" Margin="10" Grid.Column="0" Grid.Row="0" Width="150" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
+            <Border Name="FotoPerfil" CornerRadius="100" VerticalAlignment="Top" Margin="10" Grid.Column="0" Grid.Row="0" Width="150" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
                 <Border.Background>
                     <ImageBrush ImageSource="Imagens\ImgPerfil.jpg" />
                 </Border.Background>

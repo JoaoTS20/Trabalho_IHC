@@ -3,6 +3,8 @@ using System.Windows;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using System.Windows.Media.Imaging;
+using System.Security.Permissions;
 
 namespace Pets_At_First_Sight
 {
@@ -43,6 +45,9 @@ namespace Pets_At_First_Sight
         }*/
         private void dados_perfil()
         {
+            MessageBox.Show(Container.utilizador_logado.First().Foto.ToString());
+            BitmapImage bi = new BitmapImage(new Uri(@"Imagens\\" + Container.utilizador_logado.First().Foto.ToString(), UriKind.Relative));
+            FotoPerfil.Background = new System.Windows.Media.ImageBrush(bi);
             username.Content = Container.utilizador_logado.First().Username.ToString();
             nome.Content= Container.utilizador_logado.First().NomePessoa.ToString();
             email.Content = Container.utilizador_logado.First().Email.ToString();

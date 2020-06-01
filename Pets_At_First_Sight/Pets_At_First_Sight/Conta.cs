@@ -14,6 +14,7 @@ namespace Pets_At_First_Sight
         private String _Pass;
         private String _Localidade;
         private String _TipoConta;
+        private String _Foto;
 
         public String Email
         {
@@ -51,7 +52,11 @@ namespace Pets_At_First_Sight
             set { _TipoConta = value; }
         }
 
-
+        public String Foto
+        {
+            get { return _Foto; }
+            set { _Foto = value; }
+        }
 
 
     }
