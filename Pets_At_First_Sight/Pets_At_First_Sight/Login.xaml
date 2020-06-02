@@ -15,7 +15,7 @@
         </Button>
         <TextBox Name="Email" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="54,312" />
         <PasswordBox x:Name="PasswordBox" Height="38" materialDesign:HintAssist.Hint="Password" materialDesign:TextFieldAssist.HasClearButton="True" VerticalAlignment="Center" Margin="54,388,54,241" />
-        <Button Background="Transparent" BorderThickness="0" Margin="70,430,72,205" Click="Button_Click_1">
+        <Button Background="Transparent" BorderThickness="0" Height="35" Margin="70,430,72,205" Click="Button_Click_1">
             <Label Content="Esqueceu-se da palavra passe?"/>
         </Button>
         <Button Background="Transparent" BorderThickness="0" Margin="70,466,72,169" Click="Button_Click_2">

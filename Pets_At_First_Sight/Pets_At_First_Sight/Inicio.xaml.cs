@@ -106,48 +106,39 @@ namespace Pets_At_First_Sight
             String Raca = r.Content.ToString();
             String genero = g.Content.ToString();
 
-            if (flagAdo) //teste x== "Icons\\whiteheart.png"
+            foreach (ANIMAL zzs in Container.animais)
             {
-                foreach (ANIMAL zzs in Container.animais)
+                if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
                 {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    if (zzs.Adotado == false)
                     {
+                        zzs.Adotado = true;
                         Container.adocoes.Add(zzs);
 
                         b.BeginInit();
                         b.Kind = PackIconKind.Star;
-                         b.EndInit();
-                        flagAdo = false;
+                        b.EndInit();
+
                         new Adocoes();
-                        //new Inicio();
                         break;
-
                     }
-
-                }
-
-            }
-            else if (!flagAdo)
-            {
-                foreach (ANIMAL zzs in Container.animais)
-                {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    else if (zzs.Adotado)
                     {
                         Container.adocoes.Remove(zzs);
+                        zzs.Adotado = false;
 
                         b.BeginInit();
                         b.Kind = PackIconKind.StarOutline;
                         b.EndInit();
-                        flagAdo = true;
+
                         new Adocoes();
                         break;
-
                     }
 
+
                 }
+
             }
-
-
         }
 
         Boolean flagFav = true;
@@ -172,59 +163,50 @@ namespace Pets_At_First_Sight
             String Idades = y.Content.ToString();
             String Raca = r.Content.ToString();
             String genero = g.Content.ToString();
-            if (flagFav) //teste x== "Icons\\whiteheart.png"
+
+            foreach (ANIMAL zzs in Container.animais)
             {
-                foreach (ANIMAL zzs in Container.animais)
+                if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
                 {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    if (zzs.Favorito == false)
                     {
+                        zzs.Favorito = true;
                         Container.favoritos.Add(zzs);
-                        
+
                         b.BeginInit();
                         b.Kind = PackIconKind.Heart;
                         b.EndInit();
-                        flagFav = false;
+
                         new Favoritos();
-                        //new Inicio();
                         break;
-
                     }
-
-                }
-
-            }
-            else if (!flagFav)
-            {
-                foreach (ANIMAL zzs in Container.animais)
-                {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    else if (zzs.Favorito == true)
                     {
                         Container.favoritos.Remove(zzs);
-                        
+                        zzs.Favorito = false;
+
                         b.BeginInit();
                         b.Kind = PackIconKind.HeartOutline;
                         b.EndInit();
-                        flagFav = true;
+
                         new Favoritos();
                         break;
-
                     }
 
-                }
-            }
 
-            
+                }
+
+            }
         }
 
         private void ViewPost(object sender, MouseButtonEventArgs e)
         {
 
             Grid gr = (Grid)sender;
-            Image u = (Image)gr.Children[1];
-            Label r = (Label)gr.Children[2];
-            Label n = (Label)gr.Children[3];
-            Label y = (Label)gr.Children[4];
-            Label g = (Label)gr.Children[5];
+            Label r = (Label)gr.Children[1];
+            Label n = (Label)gr.Children[2];
+            Label y = (Label)gr.Children[3];
+            Label g = (Label)gr.Children[4];
 
             String Nome_Animal = n.Content.ToString();
             String Idades = y.Content.ToString();

@@ -20,16 +20,16 @@
                         <ColumnDefinition Width="224*"/>
                         <ColumnDefinition Width="151*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Background="Transparent" BorderThickness="0" Height="80" materialDesign:RippleAssist.IsDisabled="True" RenderTransformOrigin="4.444,-4.4" Margin="94,12,28,575">
-                        <materialDesign:PackIcon Kind="HeartOutline"  x:Name="img_bbt_adopt" HorizontalAlignment="Left" Width="60" Height="60" />
+                    <Button Background="Transparent" BorderThickness="0" Height="80" materialDesign:RippleAssist.IsDisabled="True" RenderTransformOrigin="4.444,-4.4" Margin="94,12,28,575" Click="Button_Click_1">
+                        <materialDesign:PackIcon Kind="{Binding ChangeFavIcon}"  x:Name="img_bbt_adopt" HorizontalAlignment="Left" Width="60" Height="60" />
                     </Button>
                     <Label FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Width="130" MaxWidth="300" Height="31" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Adicionar  aos" Margin="81,0,13,565" VerticalAlignment="Bottom" RenderTransformOrigin="-0.86,-1.217"/>
                     <Label FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Width="100" MaxWidth="300" Height="31" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="favoritos" Margin="98,0,26,540" VerticalAlignment="Bottom"/>
-                    <Button Background="Transparent" BorderThickness="0" Height="80" materialDesign:RippleAssist.IsDisabled="True" Margin="218,10,72,577" RenderTransformOrigin="4.444,-4.4" Grid.ColumnSpan="2">
+                    <!--<Button Background="Transparent" BorderThickness="0" Height="80" materialDesign:RippleAssist.IsDisabled="True" Margin="218,10,72,577" RenderTransformOrigin="4.444,-4.4" Grid.ColumnSpan="2">
                         <materialDesign:PackIcon Kind="StarOutline"  x:Name="img_bbt_fav" HorizontalAlignment="Left" Width="60" Height="60" />
                     </Button>
                     <Label FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Width="100" MaxWidth="300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Estou" Margin="214,70,61,562" Grid.ColumnSpan="2"/>
-                    <Label FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Width="100" MaxWidth="300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="interessado/a" Margin="215,95,60,538" Grid.ColumnSpan="2"/>
+                    <Label FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Width="100" MaxWidth="300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="interessado/a" Margin="215,95,60,538" Grid.ColumnSpan="2"/>-->
                     <Label Margin="0,0,142,446" FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Width="79" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41" Grid.ColumnSpan="2">Espécie:</Label>
                     <Label HorizontalContentAlignment="Left" FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Margin="1,182,0.2,448.2" Width="Auto" Height="Auto" Grid.Column="1" Content="{Binding Raca}"/>
                     <Label HorizontalAlignment="Right" FontSize="18" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Margin="145,145,150,487" Height="Auto" Grid.ColumnSpan="2" Width="Auto">Nome:</Label>

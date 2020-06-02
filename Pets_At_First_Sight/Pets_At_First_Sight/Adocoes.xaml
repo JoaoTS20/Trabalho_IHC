@@ -19,7 +19,7 @@
                                 <Grid MouseLeftButtonDown="ViewPost">
                                     <StackPanel HorizontalAlignment="Left" Height="60" Margin="265,05,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.289,0.546">
                                         <Button Background="Transparent" BorderThickness="0" Click="abandonar" Height="60" Margin="0,0,10,0" materialDesign:RippleAssist.IsDisabled="True">
-                                            <materialDesign:PackIcon Kind="Star"  x:Name="img_bbt_adopt" HorizontalAlignment="Left" Width="40" Height="40" />
+                                            <materialDesign:PackIcon Kind="{Binding ChangeAdoptIcon}"  x:Name="img_bbt_adopt" HorizontalAlignment="Left" Width="40" Height="40" />
                                         </Button>
                                     </StackPanel>
                                     <Label x:Name="Raca" Content="{Binding Raca}" FontSize="20" HorizontalAlignment="Left" Height="28" Margin="167.4,62.8,0,0" VerticalAlignment="Top" Width="82.2" FontFamily="Arial" Foreground="#FFF1E0E0"/>

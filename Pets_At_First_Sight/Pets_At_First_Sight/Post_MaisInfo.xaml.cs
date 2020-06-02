@@ -36,136 +36,107 @@ namespace Pets_At_First_Sight
             this.NavigationService.Navigate(inicio);
         }
 
-        Boolean flagAdo = true;
-
-        private void Adopt(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Button i = (Button)sender;
-            PackIcon b = (PackIcon)i.Content;
-            StackPanel s = (StackPanel)i.Parent;
-            Grid gr = (Grid)s.Parent;
-            Image u = (Image)gr.Children[1];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
-            Label r = (Label)gr.Children[2];
-            Label n = (Label)gr.Children[3];
-            Label y = (Label)gr.Children[4];
-            Label g = (Label)gr.Children[5];
+            Button starbutton = (Button)sender;
+            PackIcon icon = (PackIcon)starbutton.Content;
+            Grid gr = (Grid)starbutton.Parent;
+            Label name_label = (Label)gr.Children[9];
+            Label age_label = (Label)gr.Children[11];
 
-            String Nome_Bicho = n.Content.ToString();
-            String Idades = y.Content.ToString();
-            String Raca = r.Content.ToString();
-            String genero = g.Content.ToString();
+            String Name = name_label.Content.ToString();
+            String Age = age_label.Content.ToString();
 
-
-            if (flagAdo) //teste x== "Icons\\whiteheart.png"
+            foreach (ANIMAL zzs in Container.animais)
             {
-                foreach (ANIMAL zzs in Container.animais)
+                if (zzs.Nome == Name && zzs.Idade == Age)
                 {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
-                    {
-                        Container.adocoes.Add(zzs);
-
-                        b.BeginInit();
-                        b.Kind = PackIconKind.Star;
-                        b.EndInit();
-                        flagAdo = false;
-                        new Adocoes();
-                        //new Inicio();
-                        break;
-
-                    }
-
-                }
-
-            }
-            else if (!flagAdo)
-            {
-                foreach (ANIMAL zzs in Container.animais)
-                {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    if (zzs.Adotado)
                     {
                         Container.adocoes.Remove(zzs);
+                        zzs.Adotado = false;
 
-                        b.BeginInit();
-                        b.Kind = PackIconKind.StarOutline;
-                        b.EndInit();
-                        flagAdo = true;
+                        icon.BeginInit();
+                        icon.Kind = PackIconKind.StarOutline;
+                        icon.EndInit();
+
+                        new Post_MaisInfo();
                         new Adocoes();
+                        new Inicio();
+
+                        break;
+                    }
+                    else
+                    {
+                        zzs.Adotado = true;
+                        Container.adocoes.Add(zzs);
+
+                        icon.BeginInit();
+                        icon.Kind = PackIconKind.Star;
+                        icon.EndInit();
+
+                        new Post_MaisInfo();
+                        new Adocoes();
+                        new Inicio();
+
                         break;
 
                     }
 
                 }
+
             }
-
-
         }
 
-        Boolean flagFav = true;
-        private void Fave(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Button heartbutton = (Button)sender;
+            PackIcon icon = (PackIcon)heartbutton.Content;
+            Grid gr = (Grid)heartbutton.Parent;
+            Label name_label = (Label)gr.Children[9];
+            Label age_label = (Label)gr.Children[11];
 
-            //Um pequeno Bug Sai da página o botão deixa de funcionar kinda;
-            //Só copiar esta parte para para o adopt (com as devidas diferenças) do Lado Favoritos só copiar a parte da da Flagser Falsa e a definição da Labels e tals
+            String Name = name_label.Content.ToString();
+            String Age = age_label.Content.ToString();
 
-            Button i = (Button)sender;
-            PackIcon b = (PackIcon)i.Content;
-            StackPanel s = (StackPanel)i.Parent;
-            Grid gr = (Grid)s.Parent;
-            Image u = (Image)gr.Children[1];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
-            Label r = (Label)gr.Children[2];
-            Label n = (Label)gr.Children[3];
-            Label y = (Label)gr.Children[4];
-            Label g = (Label)gr.Children[5];
-
-            String Nome_Bicho = n.Content.ToString();
-            String Idades = y.Content.ToString();
-            String Raca = r.Content.ToString();
-            String genero = g.Content.ToString();
-            if (flagFav) //teste x== "Icons\\whiteheart.png"
+            foreach (ANIMAL zzs in Container.animais)
             {
-                foreach (ANIMAL zzs in Container.animais)
+                if (zzs.Nome == Name && zzs.Idade == Age)
                 {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
-                    {
-                        Container.favoritos.Add(zzs);
-
-                        b.BeginInit();
-                        b.Kind = PackIconKind.Heart;
-                        b.EndInit();
-                        flagFav = false;
-                        new Favoritos();
-                        //new Inicio();
-                        break;
-
-                    }
-
-                }
-
-            }
-            else if (!flagFav)
-            {
-                foreach (ANIMAL zzs in Container.animais)
-                {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
+                    if (zzs.Favorito)
                     {
                         Container.favoritos.Remove(zzs);
+                        zzs.Favorito = false;
 
-                        b.BeginInit();
-                        b.Kind = PackIconKind.HeartOutline;
-                        b.EndInit();
-                        flagFav = true;
+                        icon.BeginInit();
+                        icon.Kind = PackIconKind.HeartOutline;
+                        icon.EndInit();
+
+                        new Post_MaisInfo();
                         new Favoritos();
-                        break;
+                        new Inicio();
 
+                        break;
+                    }
+                    else
+                    {
+
+                        zzs.Favorito = true;
+                        Container.favoritos.Add(zzs);
+
+                        icon.BeginInit();
+                        icon.Kind = PackIconKind.Heart;
+                        icon.EndInit();
+
+                        new Post_MaisInfo();
+                        new Favoritos();
+                        new Inicio();
+
+                        break;
                     }
 
                 }
             }
-
-
         }
-
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Pets_At_First_Sight.Inicio;
 
 namespace Pets_At_First_Sight
 {
@@ -47,30 +48,25 @@ namespace Pets_At_First_Sight
             String Idades = y.Content.ToString();
             String Raca = r.Content.ToString();
             String genero = g.Content.ToString();
-            if (true)
+
+            foreach (ANIMAL zzs in Container.animais)
             {
-                foreach (ANIMAL zzs in Container.animais)
+                if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
                 {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
-                    {
-                        Container.adocoes.Remove(zzs);
-                        new Adocoes();
-                        Inicio inicio = new Inicio();
-                        inicio.Adopt(sender,e);
-                        break;
+                    Container.adocoes.Remove(zzs);
+                    zzs.Adotado = false;
+                    new Adocoes();
+                    new Inicio();
 
-                    }
-
+                    break;
                 }
+
             }
-
-
         }
 
         private void ViewPost(object sender, MouseButtonEventArgs e)
         {
             Grid gr = (Grid)sender;
-            Image u = (Image)gr.Children[0];
             Label r = (Label)gr.Children[1];
             Label n = (Label)gr.Children[2];
             Label y = (Label)gr.Children[3];

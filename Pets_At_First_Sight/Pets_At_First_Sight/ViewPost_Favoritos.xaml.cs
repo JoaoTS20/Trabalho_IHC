@@ -167,5 +167,56 @@ namespace Pets_At_First_Sight
 
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Button starbutton = (Button)sender;
+            PackIcon icon = (PackIcon)starbutton.Content;
+            Grid gr = (Grid)starbutton.Parent;
+            Label name_label = (Label)gr.Children[6];
+            Label age_label = (Label)gr.Children[8];
+
+            String Name = name_label.Content.ToString();
+            String Age = age_label.Content.ToString();
+
+            foreach (ANIMAL zzs in Container.animais)
+            {
+                if (zzs.Nome == Name && zzs.Idade == Age)
+                {
+                    if (zzs.Favorito)
+                    {
+                        Container.favoritos.Remove(zzs);
+                        zzs.Favorito = false;
+
+                        icon.BeginInit();
+                        icon.Kind = PackIconKind.HeartOutline;
+                        icon.EndInit();
+
+                        new ViewPost_Favoritos();
+                        new Favoritos();
+                        new Inicio();
+
+                        break;
+                    }
+                    else
+                    {
+                        zzs.Favorito = true;
+                        Container.favoritos.Add(zzs);
+
+                        icon.BeginInit();
+                        icon.Kind = PackIconKind.Heart;
+                        icon.EndInit();
+
+                        new ViewPost_Favoritos();
+                        new Favoritos();
+                        new Inicio();
+
+                        break;
+
+                    }
+
+                }
+
+            }
+        }
     }
 }

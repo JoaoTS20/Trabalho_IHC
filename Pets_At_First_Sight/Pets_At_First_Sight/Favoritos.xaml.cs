@@ -46,25 +46,22 @@ namespace Pets_At_First_Sight
             String Idades = y.Content.ToString();
             String Raca = r.Content.ToString();
             String genero = g.Content.ToString();
-            if (true)
+
+            foreach (ANIMAL zzs in Container.animais)
             {
-                foreach (ANIMAL zzs in Container.animais)
+                if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
                 {
-                    if (zzs.Nome == Nome_Bicho && zzs.Idade == Idades)
-                    {
-                        Container.favoritos.Remove(zzs);
-                        new Favoritos();
-                        Inicio inicio = new Inicio();
-                        inicio.Fave(sender, e);
-                        break;
-                    }
+                    Container.favoritos.Remove(zzs);
+                    zzs.Favorito = false;
+                    new Favoritos();
+                    new Inicio();
 
+                    break;
                 }
+
             }
-
-
-
         }
+
 
         private void ViewPost(object sender, MouseButtonEventArgs e)
         {
