@@ -128,5 +128,12 @@ namespace Pets_At_First_Sight
             Post x = new Post();
             this.NavigationService.Navigate(x);
         }
+
+        private void PackIcon_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Container.utilizador_logado.Clear();
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
+        }
     }
 }

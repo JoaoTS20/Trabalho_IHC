@@ -17,27 +17,30 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition  Height="200"/>
+            <RowDefinition  Height="265"/>
             <RowDefinition Name="InfosRow"/>
         </Grid.RowDefinitions>
         <!-- First grid, which includes the photo and username -->
-        <Grid Grid.Column="0" Grid.Row="0"  >
+        <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,0,1">
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="170"/>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="260"/>
+                <RowDefinition Height="0"/>
             </Grid.RowDefinitions>
-            <Border Name="FotoPerfil" CornerRadius="100" VerticalAlignment="Top" Margin="10" Grid.Column="0" Grid.Row="0" Width="150" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
+
+            <materialDesign:PackIcon Margin="300,30,0,0" Height="40" Width="40" Kind="ExitToApp" MouseDown="PackIcon_MouseDown"></materialDesign:PackIcon>
+            <Border Name="FotoPerfil" CornerRadius="100" VerticalAlignment="Top" Margin="112,57,113,0" Grid.Column="0" Grid.Row="0" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
                 <Border.Background>
                     <ImageBrush x:Name="Imagem"  ImageSource="Imagens\ImgPerfil.jpg" />
                 </Border.Background>
             </Border>
-            <Label Name="username" Grid.Column="0" Grid.Row="1"  FontSize="15" HorizontalContentAlignment="Center"  VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="150"/>
+            <Label Name="username" Grid.Column="0"  FontSize="15" HorizontalContentAlignment="Center"  VerticalAlignment="Top" HorizontalAlignment="Center" Height="53" Width="150" Margin="112,209,113,0" Grid.RowSpan="2"/>
         </Grid>
         <!-- Second grid, which includes "mais informações" and infos about the user -->
-        <Grid Grid.Row="1" Margin="0,44,0,10">
+        <Grid Grid.Row="1" Margin="0,24,0,10">
             <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
@@ -95,7 +98,7 @@
                     </ScrollViewer>
                     <!--</Grid>-->
                 </Expander>
-                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" ToolTip="MaterialDesignFloatingActionDarkButton" Margin="0,211,20,0" HorizontalAlignment="Right" Click="Button_Click">
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" ToolTip="MaterialDesignFloatingActionDarkButton" Margin="0,161,20,0" HorizontalAlignment="Right" Click="Button_Click">
                     <materialDesign:PackIcon
                     Kind="Plus"
                     Height="24"

@@ -152,5 +152,11 @@ namespace Pets_At_First_Sight
                 InputImage.Source = new BitmapImage(fileUri);
             }
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Login log = new Login();
+            this.NavigationService.Navigate(log);
+        }
     }
 }
