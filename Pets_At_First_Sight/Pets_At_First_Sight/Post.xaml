@@ -67,10 +67,10 @@
             <ComboBoxItem Content="Particular"/>
         </ComboBox>
 
-        <!--NOME DOADOR-->
+        <!--NOME DOADOR
         <Label FontSize="18" Height="35" VerticalAlignment="Top"  Content="User Name:" Margin="106,372,33.8,0" Grid.ColumnSpan="2"/>
         <Label FontSize="18" Height="35" x:Name="UserName" Margin="47.8,373,10.2,259" Grid.Column="1" Grid.ColumnSpan="2"/>
-
+        -->
         <!--VACINAS-->
         <Label FontSize="18" Height="35" VerticalAlignment="Top"  Content="Vacinas:" Margin="15,435,18,0" Grid.Column="1"/>
         <ComboBox FontSize="18" x:Name="Vacinas" Height="36" Margin="10,425,10,206" RenderTransformOrigin="3,2.472" Grid.Column="2" >

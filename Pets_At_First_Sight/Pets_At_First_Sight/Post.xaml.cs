@@ -54,7 +54,7 @@ namespace Pets_At_First_Sight
             String Idade = IdadeAnimal.Text.ToString();
             String Genero = GeneroAnimal.Text.ToString();
             String _TipoDoador = TipoDoador.Text.ToString();
-            String _NomeDoador = UserName.Content.ToString();
+            String _NomeDoador = Container.utilizador_logado.First().Username.ToString();
             String _Vacinas = Vacinas.Text.ToString();
             String _Chip = Chip.Text.ToString();
             String Testo = PostTexto.Text.ToString();
