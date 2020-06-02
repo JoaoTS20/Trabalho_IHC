@@ -36,14 +36,33 @@
         <!--IDADE-->
         <Label FontSize="20" Content="  Idade:" Height="35" Margin="14,134,11,498" Grid.Column="1"/>
         <ComboBox FontSize="18" x:Name="IdadeAnimal" Grid.Column="2" Height="34" Margin="10,127,10,506" >
-            <ComboBoxItem Content="Indefinida"/>
-            <ComboBoxItem Content="menos de 1"/>
-            <ComboBoxItem Content="1"/>
-            <ComboBoxItem Content="2"/>
-            <ComboBoxItem Content="3"/>
-            <ComboBoxItem Content="4"/>
-            <ComboBoxItem Content="5"/>
-            <ComboBoxItem Content="5+"/>
+            <ComboBoxItem Content="1 meses"/>
+            <ComboBoxItem Content="2 meses"/>
+            <ComboBoxItem Content="3 meses"/>
+            <ComboBoxItem Content="4 meses"/>
+            <ComboBoxItem Content="5 meses"/>
+            <ComboBoxItem Content="6 meses"/>
+            <ComboBoxItem Content="7 meses"/>
+            <ComboBoxItem Content="8 meses"/>
+            <ComboBoxItem Content="9 meses"/>
+            <ComboBoxItem Content="10 meses"/>
+            <ComboBoxItem Content="11 meses"/>
+            <ComboBoxItem Content="1 ano"/>
+            <ComboBoxItem Content="2 anos"/>
+            <ComboBoxItem Content="3 anos"/>
+            <ComboBoxItem Content="4 anos"/>
+            <ComboBoxItem Content="5 anos"/>
+            <ComboBoxItem Content="6 anos"/>
+            <ComboBoxItem Content="7 anos"/>
+            <ComboBoxItem Content="8 anos"/>
+            <ComboBoxItem Content="9 anos"/>
+            <ComboBoxItem Content="10 anos"/>
+            <ComboBoxItem Content="11 anos"/>
+            <ComboBoxItem Content="12 anos"/>
+            <ComboBoxItem Content="13 anos"/>
+            <ComboBoxItem Content="14 anos"/>
+            <ComboBoxItem Content="15 anos"/>
+            
         </ComboBox>
 
         <!--ESPÉCIE-->
