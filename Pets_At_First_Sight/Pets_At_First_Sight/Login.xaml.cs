@@ -49,7 +49,7 @@ namespace Pets_At_First_Sight
             }
             else if (IsValidPass(PasswordBox.Password.ToString()) == false)
             {
-                MessageBox.Show("Password inválida! Tem de conter pelo menos 8 caracteres, 1 número e 1 caracter especial/sinal de pontuação!");
+                MessageBox.Show("Password inválida!\nTem de conter pelo menos\n8 caracteres, 1 número\ne 1 caracter especial/sinal de pontuação!");
                 PasswordBox.Password = "";
             }
 
@@ -88,7 +88,7 @@ namespace Pets_At_First_Sight
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ainda não é possível recuperar a sua password. \n Pedimos desculpa.", "Oops!", MessageBoxButton.OK);
+            MessageBox.Show("Ainda não é possível recuperar a sua password. \nPedimos desculpa.", "Oops!", MessageBoxButton.OK);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

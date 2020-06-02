@@ -58,7 +58,6 @@ namespace Pets_At_First_Sight
                 if (Filtrar.Contains(animal) && Especie.SelectedItem != null && !animal.Raca.Equals(Especie.Text.ToString()))
                 {
                     Filtrar.Remove(animal);
-                    Especie.SelectedIndex = 1;
                 }
 
                 if (slide.Value != 0 && (idadeAnimal[1] == "anos" || idadeAnimal[1] == "ano") && Int32.Parse(idadeAnimal[0]) > slide.Value && Filtrar.Contains(animal))

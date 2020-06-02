@@ -58,7 +58,7 @@ namespace Pets_At_First_Sight
 
             if (IsValidPass(criar_pass.Password.ToString()) == false)
             {
-                MessageBox.Show("Password inválida! Tem de conter pelo menos 8 caracteres, 1 número e 1 sinal de pontuação!");
+                MessageBox.Show("Password inválida!\nTem de conter pelo menos\n8 caracteres, 1 número\ne 1 sinal de pontuação!");
                 criar_pass.Password = "";
             }
 

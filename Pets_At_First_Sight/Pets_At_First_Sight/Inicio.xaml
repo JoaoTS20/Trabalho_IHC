@@ -47,7 +47,7 @@
                 </ItemsControl>
             </Grid>
         </ScrollViewer>
-        <Button Content="Filtros" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="15" ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Background="#0D2020" Foreground="#DCE3E7" Margin="128.5,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Button_Click" Grid.Column="1">
+        <Button Content="Filtros" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="15" ToolTip="Filtros" Foreground="#DCE3E7" Margin="128.5,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Button_Click" Grid.Column="1">
         </Button>
     </Grid>
 </Page>

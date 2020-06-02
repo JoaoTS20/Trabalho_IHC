@@ -31,7 +31,7 @@
                 <RowDefinition Height="0"/>
             </Grid.RowDefinitions>
 
-            <materialDesign:PackIcon Margin="300,30,0,0" Height="40" Width="40" Kind="ExitToApp" MouseDown="PackIcon_MouseDown"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Margin="300,30,0,0" ToolTip="LogOut" Height="40" Width="40" Kind="ExitToApp" MouseDown="PackIcon_MouseDown"></materialDesign:PackIcon>
             <Border Name="FotoPerfil" CornerRadius="100" VerticalAlignment="Top" Margin="112,57,113,0" Grid.Column="0" Grid.Row="0" Height="150" BorderThickness="1"  BorderBrush="#FF000000">
                 <Border.Background>
                     <ImageBrush x:Name="Imagem"  ImageSource="Imagens\ImgPerfil.jpg" />

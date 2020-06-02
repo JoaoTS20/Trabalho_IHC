@@ -97,7 +97,7 @@
             <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Left" Width="158" Margin="10,0,0,0">
                 <CheckBox x:Name="Chip" Margin="2,22,2,23" Width="113"/>
             </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="123,21,123,0">
+            <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="125,21,120,0">
                 <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="25"  Content="Filtrar" HorizontalAlignment="Center" Margin="0,0,0,0" Width="124" Height="49" ToolTip="Filtrar" VerticalAlignment="Bottom" Click="Button_Click_1"/>
             </StackPanel>
 

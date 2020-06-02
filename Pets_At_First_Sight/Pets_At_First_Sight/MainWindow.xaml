@@ -13,7 +13,9 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Pets At First Sight" Height="701" Width="384">
+        Title="Pets At First Sight" Height="701" Width="384"
+        WindowStartupLocation="Manual"
+        Left="500" Top="15">
     
         <Frame  Source="Login.xaml" NavigationUIVisibility="Hidden"></Frame>
             <!--<TabControl x:Name="tabCo"   TabStripPlacement="Bottom">

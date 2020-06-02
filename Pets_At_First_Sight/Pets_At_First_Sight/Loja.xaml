@@ -41,8 +41,8 @@
                 </ItemsControl>
             </Grid>
         </ScrollViewer>
-        
-        <Button Content="Filtros" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="15" Background="#0D2020" Foreground="#DCE3E7" Margin="274,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Button_Click">
+
+        <Button Content="Filtros" Style="{StaticResource MaterialDesignRaisedDarkButton}" ToolTip="Filtros" materialDesign:ButtonAssist.CornerRadius="15" Foreground="#DCE3E7" Margin="274,0,0,557" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Button_Click">
         </Button>
     </Grid>
 </Page>
