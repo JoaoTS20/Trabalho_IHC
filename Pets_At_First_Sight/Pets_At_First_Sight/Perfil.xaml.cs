@@ -65,7 +65,7 @@ namespace Pets_At_First_Sight
             }
             
             //MessageBox.Show(z);
-            //MessageBox.Show(z);
+            MessageBox.Show(z);
             
             Imagem.ImageSource= new BitmapImage(new Uri(z, UriKind.RelativeOrAbsolute));
             //FotoPerfil.Background = new System.Windows.Media.ImageBrush(bi);
