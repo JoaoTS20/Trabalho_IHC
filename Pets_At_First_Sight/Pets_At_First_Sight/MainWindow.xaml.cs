@@ -35,8 +35,8 @@ namespace Pets_At_First_Sight
         public MainWindow()
         {
             InitializeComponent();
-            String s = "Imagens\\"; //Tem de ser assim
-            //Façam o mesmo depois para escrever o meses na idade
+            String s = "Imagens\\";
+
             Container.animais.Add(new ANIMAL() { Nome = "Cão Fofo", Idade = "5 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Filipa", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip="Sim", Mensagem="fuhsd", Adotado=false, Favorito=false });
             Container.animais.Add(new ANIMAL() { Nome = "Princesa", Idade = "10 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "M0dernCaty0ga", Tipo_Doador = "Abrigo", Vacinas = "Sim", Chip = "Não", Mensagem = "fuhsd", Adotado = false, Favorito = false });
             Container.animais.Add(new ANIMAL() { Nome = "Piu", Idade = "5 anos", Genero = "Feminino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "M0dernCaty0ga", Tipo_Doador = "Particular", Vacinas = "Sim", Chip = "Sim", Mensagem = "fuhsd", Adotado = false, Favorito = false });
@@ -54,22 +54,5 @@ namespace Pets_At_First_Sight
             Container.contas.Add(new Conta() { Email = "joaots@ua.pt", Pass = "Olábomdia.2", NomePessoa = "João Soares", Username = "J0hnnySoares", TipoConta = "Cliente", Localidade = "Canelas", Foto = "Joao.jpg" });
             InicioFiltros inicioFiltros = new InicioFiltros();
         }
-
-        //private void ApplicationStart(object sender, StartupEventArgs e)
-        //{
-        //Window login = new Login;
-        //login.Show();
-
-        //Determine if login was successful
-        //if ()
-        //{
-        //if (!loginVM.LoginSuccessful)
-        //{
-        // handle any cleanup and close/shutdown app
-        //}
-        //}
-
-        //show your MainWindow
-        // }
     }
 }

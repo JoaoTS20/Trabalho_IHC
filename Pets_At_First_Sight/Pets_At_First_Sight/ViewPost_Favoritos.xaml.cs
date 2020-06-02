@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Post_MaisInfo.xaml
-    /// </summary>
     public partial class ViewPost_Favoritos : Page
     {
         public ViewPost_Favoritos()
@@ -45,7 +42,7 @@ namespace Pets_At_First_Sight
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[1];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
+            String x = u.Source.ToString(); 
             Label r = (Label)gr.Children[2];
             Label n = (Label)gr.Children[3];
             Label y = (Label)gr.Children[4];
@@ -57,7 +54,7 @@ namespace Pets_At_First_Sight
             String genero = g.Content.ToString();
 
 
-            if (flagAdo) //teste x== "Icons\\whiteheart.png"
+            if (flagAdo)
             {
                 foreach (ANIMAL zzs in Container.animais)
                 {
@@ -70,7 +67,6 @@ namespace Pets_At_First_Sight
                         b.EndInit();
                         flagAdo = false;
                         new Adocoes();
-                        //new Inicio();
                         break;
 
                     }
@@ -104,16 +100,12 @@ namespace Pets_At_First_Sight
         Boolean flagFav = true;
         private void Fave(object sender, RoutedEventArgs e)
         {
-
-            //Um pequeno Bug Sai da página o botão deixa de funcionar kinda;
-            //Só copiar esta parte para para o adopt (com as devidas diferenças) do Lado Favoritos só copiar a parte da da Flagser Falsa e a definição da Labels e tals
-
             Button i = (Button)sender;
             PackIcon b = (PackIcon)i.Content;
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[1];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
+            String x = u.Source.ToString();
             Label r = (Label)gr.Children[2];
             Label n = (Label)gr.Children[3];
             Label y = (Label)gr.Children[4];
@@ -123,7 +115,7 @@ namespace Pets_At_First_Sight
             String Idades = y.Content.ToString();
             String Raca = r.Content.ToString();
             String genero = g.Content.ToString();
-            if (flagFav) //teste x== "Icons\\whiteheart.png"
+            if (flagFav)
             {
                 foreach (ANIMAL zzs in Container.animais)
                 {
@@ -136,7 +128,6 @@ namespace Pets_At_First_Sight
                         b.EndInit();
                         flagFav = false;
                         new Favoritos();
-                        //new Inicio();
                         break;
 
                     }

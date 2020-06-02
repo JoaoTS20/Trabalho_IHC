@@ -17,19 +17,14 @@ using static Pets_At_First_Sight.Inicio;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Adocoes.xaml
-    /// </summary>
     public partial class Adocoes : Page
     {
         public Adocoes()
         {
             InitializeComponent();
             My_Adocoes.ItemsSource = Container.adocoes;
-            CollectionViewSource.GetDefaultView(Container.adocoes).Refresh(); //faltava esta linha
-        }
-
-        
+            CollectionViewSource.GetDefaultView(Container.adocoes).Refresh(); 
+        }        
 
         private void abandonar(object sender, RoutedEventArgs e)
         {
@@ -38,7 +33,7 @@ namespace Pets_At_First_Sight
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[5];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
+            String x = u.Source.ToString();
             Label r = (Label)gr.Children[1];
             Label n = (Label)gr.Children[2];
             Label y = (Label)gr.Children[3];

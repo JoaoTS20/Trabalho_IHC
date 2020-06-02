@@ -41,24 +41,6 @@
         </Grid>
         <!-- Second grid, which includes "mais informações" and infos about the user -->
         <Grid Grid.Row="1" Margin="0,24,0,10">
-            <!--<Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition>
-                    <RowDefinition.Style>
-                        <Style TargetType="RowDefinition">
-                            <Setter Property="Height" Value="*" />
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsColumnVisible}" Value="False">
-                                    <Setter Property="Height" Value="0" />
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </RowDefinition.Style>
-                </RowDefinition>
-            </Grid.RowDefinitions>-->
 
             <StackPanel Margin="0,0,0,0">
                 <Expander HorizontalAlignment="Stretch" Header="Mais Informações">
@@ -78,7 +60,6 @@
                     </StackPanel>
                 </Expander>
                 <Expander  HorizontalAlignment="Stretch" Header="Ver Posts">
-                    <!--<Grid Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center">-->
                     <ScrollViewer Height="273">
                         <ItemsControl Name="My_Posts">
                             <ItemsControl.ItemTemplate>
@@ -96,7 +77,6 @@
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </ScrollViewer>
-                    <!--</Grid>-->
                 </Expander>
                 <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" ToolTip="MaterialDesignFloatingActionDarkButton" Margin="0,161,20,0" HorizontalAlignment="Right" Click="Button_Click">
                     <materialDesign:PackIcon
@@ -106,64 +86,7 @@
                 </Button>
 
             </StackPanel>
-
-            <!--<Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Mais_Info" Content="Mais Informações" Click="More_info_button" />
-            <StackPanel Height="0"  Visibility="Collapsed" Name="Infos" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-                <StackPanel Orientation="Horizontal">
-                    <Label x:Name="nome_para_ver_" HorizontalContentAlignment="Center">Nome:</Label>
-                    <Label x:Name="username" HorizontalContentAlignment="Center">Anthony Pereira</Label>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label HorizontalContentAlignment="Center">Email:</Label>
-                    <Label HorizontalContentAlignment="Center">anthonypereira@ua.pt</Label>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label HorizontalContentAlignment="Center">Localidade:</Label>
-                    <Label HorizontalContentAlignment="Center">Ovar</Label>
-                </StackPanel>
-            </StackPanel>-->
         </Grid>
-        <!-- Third grid, which includes "Criar novo Post" -->
-        <!--<Grid Grid.Column="0" Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Criar_Post"  Content="Criar Novo Post" Click="Criar_Post_Click" />
-        </Grid>
-        <! Fourth grid, which includes "Posts" -->
-        <!--<Grid Grid.Column="0" Grid.Row="3" Margin="0,0.6,10.2,483.4">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="730"/>
-            </Grid.RowDefinitions>-->
-        <!--<Button VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Name="Posts" Content="Posts" Margin="95,0,87.8,0" Width="182" />
-            <Grid Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center">
-                <ScrollViewer Margin="0,0,-12.2,603.6">
-                    <ItemsControl Name="My_Posts">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="25,0,32,10.5" Background="#B7CAD4">
-                                    <Image Grid.Row="0" Source="{Binding Url_Image}" Margin="10,22.8,185.6,10" />
-                                    <Label x:Name="Raca" Content="{Binding Raca}" HorizontalAlignment="Left" Height="22" Margin="137.4,22.8,0,0" VerticalAlignment="Top" Width="82.2" FontFamily="Arial" Foreground="#FFF1E0E0"/>
-                                    <Label x:Name="Nome" Content="{Binding Nome}" HorizontalAlignment="Left" Height="25.2" Margin="137.4,49.8,0,0" VerticalAlignment="Top" Width="157.2"/>
-                                    <Label x:Name="Idade" Content="{Binding Idade}" HorizontalAlignment="Left" Height="24.8" Margin="137.4,75,0,0" VerticalAlignment="Top" Width="160.8"/>
-                                    <Label x:Name="Genero" Content="{Binding Genero}" HorizontalAlignment="Left" Height="24.4" Margin="137.4,104.8,0,0" VerticalAlignment="Top" Width="82.2"/>
-                                </Grid>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </ScrollViewer>
-
-            </Grid>
-        </Grid>-->
-
-
     </Grid>
 
 </Page>

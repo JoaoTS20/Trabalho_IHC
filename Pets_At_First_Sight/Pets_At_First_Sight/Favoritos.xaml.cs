@@ -17,9 +17,6 @@ using System.Runtime.CompilerServices;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Favoritos.xaml
-    /// </summary>
     public partial class Favoritos : Page
     {
         public Favoritos()
@@ -27,7 +24,7 @@ namespace Pets_At_First_Sight
             InitializeComponent();
 
             My_Favoritos.ItemsSource = Container.favoritos;
-            CollectionViewSource.GetDefaultView(Container.favoritos).Refresh(); //faltava esta linha
+            CollectionViewSource.GetDefaultView(Container.favoritos).Refresh();
         }
         private void nãogosto(object sender, RoutedEventArgs e)
         {
@@ -36,7 +33,7 @@ namespace Pets_At_First_Sight
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[5];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
+            String x = u.Source.ToString();
             Label r = (Label)gr.Children[1];
             Label n = (Label)gr.Children[2];
             Label y = (Label)gr.Children[3];

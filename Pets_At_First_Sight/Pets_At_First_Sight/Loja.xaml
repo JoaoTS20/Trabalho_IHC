@@ -9,9 +9,6 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Início" Height="667" Width="375" Background="#DCE3E7">
 
-
-
-    <!---->
     <Grid>
 
         <Label x:Name="Titulo_Loja" Content="Loja" Margin="157,40,154,583" FontFamily="Arial" FontSize="25" FontWeight="Bold" VerticalAlignment="Center" Height="44"/>

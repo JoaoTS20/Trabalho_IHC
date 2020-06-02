@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Post_MaisInfo.xaml
-    /// </summary>
     public partial class ViewPost_Adocoes : Page
     {
         public ViewPost_Adocoes()

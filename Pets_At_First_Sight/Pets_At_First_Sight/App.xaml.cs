@@ -8,9 +8,6 @@ using System.Windows;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
     }

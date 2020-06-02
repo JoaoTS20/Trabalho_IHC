@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for InicioFiltros.xaml
-    /// </summary>
     public partial class InicioFiltros : Page
     {
         public InicioFiltros()

@@ -17,9 +17,7 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for CriarConta.xaml
-    /// </summary>
+   
     public partial class CriarConta : Page
     {
         public CriarConta()
@@ -109,7 +107,6 @@ namespace Pets_At_First_Sight
             }
             if (exist == 0)
             {
-                //MessageBox.Show("yay sou o primeiro");
                 return true;
             }
             else if (exist > 0) // nomeadamente se for 1, é porque já existe alguém com esse username

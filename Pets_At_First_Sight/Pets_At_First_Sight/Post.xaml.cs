@@ -10,23 +10,15 @@ using Microsoft.Win32;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
+ 
     public partial class Post : Page
     {
         public Post()
         {
             InitializeComponent();
-            //adicionarUser();
             InputImage.Source = new BitmapImage(new Uri("Imagens\\NoImage.jpg", UriKind.Relative));
 
         }
-
-        /*public void adicionarUser()
-        {
-            UserName.Content = Container.utilizador_logado.First().Username.ToString();
-        }*/
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -42,7 +34,6 @@ namespace Pets_At_First_Sight
             {
                 Uri fileUri = new Uri(openFileDialog.FileName);
                 InputImage.Source = new BitmapImage(fileUri);
-                //Console.Write(fileUri);
             }
         }
 
@@ -63,24 +54,8 @@ namespace Pets_At_First_Sight
             {
                 MessageBox.Show("Prencher todos os campos!!");
             }
-            /*if (InputImage.Source == z)
-            {
-                MessageBoxResult quit = MessageBox.Show("Não adicionou Imagem?", "Adicionar", MessageBoxButton.YesNo);
-                switch (quit)
-                {
-                    case MessageBoxResult.Yes:
-                        break;
-                    case MessageBoxResult.No:
-                        Url_Image_ = "Imagens\\NoImage.jpg";
-                       break ;
-                }
-
-            }*/
             else
             {
-                // String _TipoDoador = TipoDoador.SelectedItem.ToString();
-                //String s = "Imagens\\";
-
                 ANIMAL N1 = new ANIMAL()
                 {
                     Nome = Nome,
@@ -95,8 +70,7 @@ namespace Pets_At_First_Sight
                     Tipo_Doador = _TipoDoador
                 };
                 Container.animais.Add(N1);
-                MessageBox.Show(N1.ToString());
-                new Inicio(); //MILAGRE
+                new Inicio();
                 MessageBox.Show("Post Criado");
                 Perfil cursosPage = new Perfil();
                 this.NavigationService.Navigate(cursosPage);

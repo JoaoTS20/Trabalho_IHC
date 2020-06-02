@@ -8,9 +8,6 @@ using System.Security.Permissions;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Perfil.xaml
-    /// </summary>
     public partial class Perfil : Page
     {
         public Perfil()
@@ -22,30 +19,8 @@ namespace Pets_At_First_Sight
         }
 
         bool check = true;
-
-        /*private void More_info_button(object sender, System.Windows.RoutedEventArgs e)
-        {
-            if (check == true)
-            {
-                InfosRow.Height = new GridLength(150);
-                Infos.Height = 100;
-                Infos.Visibility = Visibility.Visible;
-                check = false;
-            } else
-            {
-                InfosRow.Height = new GridLength(70);
-                Infos.Height = 100;
-                Infos.Visibility = Visibility.Collapsed;
-                check = true;
-
-            }
-            
-           
-           
-        }*/
         private void dados_perfil()
         {
-            //MessageBox.Show(Container.utilizador_logado.First().Foto.ToString());
             String content = Container.utilizador_logado.First().Foto.ToString();
             String z = null;
             if (content.Contains("pack://application:"))
@@ -56,19 +31,14 @@ namespace Pets_At_First_Sight
                 z = "pack://application:,,,/Imagens/" + content;
             }
             
-            if (content.Contains("Imagens")) //OMG É ISTO HUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUEHUE
-                // huehuehuehuehue SOCORRO ISTO FINALMENTE FUNCIONA, HELP
+            if (content.Contains("Imagens"))
             {
                 int found = content.IndexOf("Imagens");
                 String subs = content.Substring(found);
                 z = "pack://application:,,,/Pets_At_First_Sight;component/" + subs;
             }
             
-            //MessageBox.Show(z);
-            //MessageBox.Show(z);
-            
             Imagem.ImageSource= new BitmapImage(new Uri(z, UriKind.RelativeOrAbsolute));
-            //FotoPerfil.Background = new System.Windows.Media.ImageBrush(bi);
             username.Content = Container.utilizador_logado.First().Username.ToString();
             nome.Content= Container.utilizador_logado.First().NomePessoa.ToString();
             email.Content = Container.utilizador_logado.First().Email.ToString();
@@ -87,11 +57,9 @@ namespace Pets_At_First_Sight
             List<ANIMAL> my = new List<ANIMAL>();
             foreach (ANIMAL m in Container.animais)
             {
-                //MessageBox.Show(username.Content.ToString());
-                //MessageBox.Show(m.User_Name);
+              
                 if (m.User_Name.Equals(username.Content.ToString()))
                 {
-                    //MessageBox.Show("Encontrei um post meu!");
                     my.Add(m);
                 }
             }

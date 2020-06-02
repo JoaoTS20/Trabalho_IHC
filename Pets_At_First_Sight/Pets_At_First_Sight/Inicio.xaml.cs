@@ -17,11 +17,6 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Inicio.xaml
-    /// </summary>
-    /// 
-
     public partial class Inicio : Page
     {
         public Inicio()
@@ -29,22 +24,11 @@ namespace Pets_At_First_Sight
 
             InitializeComponent();
 
-            //Dados_Originais();
             Posts.ItemsSource = Container.animais;
             CollectionViewSource.GetDefaultView(Container.animais).Refresh();
 
-            //refresh();
-
         }
 
-
-        //Função de pesquisar de exemplo de como tem de filtrar neste caso o pesquisa procurar ao fazer enter. se não tiver testo mostra normal após testo
-        //É assim que iremos filtrar no perfil
-        //No Favoritos é um boolean que irá ser adicionado ao coisos se verdade está preto e na lista se não branco e não na lista.
-        //Criar Post é só copiar Dados_Originais basicamente mas o texto e url(utilizar apenas imagens da pasta) é retirado da text box dos paramentros.
-        //Filtrar será algo do género também
-        //Boa NoITE
-        //PARA A LOJA É A MESMA LÓGICA E APENAS OUTRA CLASSE
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
             List<ANIMAL> Filtrar = new List<ANIMAL>();
@@ -71,8 +55,8 @@ namespace Pets_At_First_Sight
         }
         private void Dados_Originais()
         {
-            String s = "Imagens\\"; //Tem de ser assim
-            //Façam o mesmo depois para escrever o meses na idade
+            String s = "Imagens\\";
+
             Container.animais.Add(new ANIMAL() { Nome = "Cãoasdasd", Idade = "5 meses", Genero = "Masculino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Filipa" });
             Container.animais.Add(new ANIMAL() { Nome = "Princesa", Idade = "10 anos", Genero = "Feminino", Raca = "Gato", Url_Image = s + "stock_gato1.jpg", User_Name = "Anthony Pereira" });
             Container.animais.Add(new ANIMAL() { Nome = "Piu", Idade = "5 anos", Genero = "Feminino", Raca = "Cão", Url_Image = s + "stock_dog1.jpg", User_Name = "Anthony Pereira" });
@@ -95,7 +79,7 @@ namespace Pets_At_First_Sight
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[5];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
+            String x = u.Source.ToString();
             Label r = (Label)gr.Children[1];
             Label n = (Label)gr.Children[2];
             Label y = (Label)gr.Children[3];
@@ -145,15 +129,12 @@ namespace Pets_At_First_Sight
         public void Fave(object sender, RoutedEventArgs e)
         {
 
-            //Um pequeno Bug Sai da página o botão deixa de funcionar kinda;
-            //Só copiar esta parte para para o adopt (com as devidas diferenças) do Lado Favoritos só copiar a parte da da Flagser Falsa e a definição da Labels e tals
-
             Button i = (Button)sender;
             PackIcon b = (PackIcon)i.Content;
             StackPanel s = (StackPanel)i.Parent;
             Grid gr = (Grid)s.Parent;
             Image u = (Image)gr.Children[5];
-            String x = u.Source.ToString(); //Não dá o texto de forma correta
+            String x = u.Source.ToString();
             Label r = (Label)gr.Children[1];
             Label n = (Label)gr.Children[2];
             Label y = (Label)gr.Children[3];

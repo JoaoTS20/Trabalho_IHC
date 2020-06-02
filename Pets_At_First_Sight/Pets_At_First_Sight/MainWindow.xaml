@@ -18,51 +18,5 @@
         Left="500" Top="15">
     
         <Frame  Source="Login.xaml" NavigationUIVisibility="Hidden"></Frame>
-            <!--<TabControl x:Name="tabCo"   TabStripPlacement="Bottom">
-            <TabItem x:Name="Inicio" Height="40" Width="72.5" MaxWidth="73" >
-                <TabItem.Header>
-                    <Image Source="Icons/home_tab.png" Height="35" Width="48"></Image>
-                </TabItem.Header>
-                <TabItem.Content>
-                    <Frame x:Name="Inicio1" Source="Inicio.xaml"></Frame>
-                </TabItem.Content>
 
-            </TabItem>
-            <TabItem x:Name="tabcontrol80" Height="40" Width="71" MaxWidth="72">
-                <TabItem.Header>
-                    <Image Source="Icons/favoritos_tab.png" Height="35" Width="43"></Image>
-                </TabItem.Header>
-                <TabItem.Content>
-                    <Frame Source="Favoritos.xaml"></Frame>
-                </TabItem.Content>
-
-            </TabItem>
-            <TabItem Height="40" Width="71" MaxWidth="72">
-                <TabItem.Header>
-                    <Image Source="Icons/adocoes_tab.png" Height="35" Width="54"></Image>
-                </TabItem.Header>
-                <TabItem.Content>
-                    <Frame Source="Adocoes.xaml"></Frame>
-                </TabItem.Content>
-            </TabItem>
-            <TabItem Height="40" Width="71" MaxWidth="72">
-                <TabItem.Header>
-                    <Image Source="Icons/loja_tab.png" Height="35.41" Width="55.5"></Image>
-                </TabItem.Header>
-                <TabItem.Content>
-                    <Frame Source="Loja.xaml"></Frame>
-                </TabItem.Content>
-            </TabItem>
-
-            <TabItem Height="40" Width="71" MaxWidth="72">
-                <TabItem.Header>
-                    <Image Source="Icons/perfil_tab.png" Height="35" Width="61"></Image>
-                </TabItem.Header>
-                <TabItem.Content>
-                    <Frame Source="Perfil.xaml"></Frame>
-                </TabItem.Content>
-
-            </TabItem>
-        </TabControl>-->
-   
 </Window>

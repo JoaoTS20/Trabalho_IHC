@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Login.xaml
-    /// </summary>
     public partial class Login : Page
     {
         public Login()
@@ -64,7 +61,6 @@ namespace Pets_At_First_Sight
                         {
                             goodPass = true;
                             Container.utilizador_logado.Add(c);
-                            //MessageBox.Show(Container.utilizador_logado.First().Username.ToString());
                             MessageBox.Show("Login efetuado com sucesso!");
                             Windows App = new Windows();
                             this.NavigationService.Navigate(App);

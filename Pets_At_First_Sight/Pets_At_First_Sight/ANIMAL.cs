@@ -23,8 +23,6 @@ namespace Pets_At_First_Sight
 		private String _ChangeAdoptIcon;
 		private String _ChangeHeartIcon;
 
-		//Fiz só esta para teste as restantes é a mesma lógica.
-
 		public String Nome
 		{
 			get { return _Nome; }

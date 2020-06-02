@@ -15,16 +15,13 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Loja.xaml
-    /// </summary>
     public partial class Loja : Page
     {
         public Loja()
         {
             InitializeComponent();
             My_Loja.ItemsSource = Container.produtos;
-            CollectionViewSource.GetDefaultView(Container.produtos).Refresh(); //faltava esta linha
+            CollectionViewSource.GetDefaultView(Container.produtos).Refresh();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

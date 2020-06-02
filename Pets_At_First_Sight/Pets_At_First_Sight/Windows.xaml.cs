@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Pets_At_First_Sight
 {
-    /// <summary>
-    /// Interaction logic for Windows.xaml
-    /// </summary>
     public partial class Windows : Page
     {
         public Windows()
