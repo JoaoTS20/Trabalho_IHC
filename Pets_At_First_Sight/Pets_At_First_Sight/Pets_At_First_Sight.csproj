@@ -286,9 +286,6 @@
     <Resource Include="Imagens\Joao.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagens\dora.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Imagens\afonso.jpg" />
   </ItemGroup>
   <ItemGroup>
